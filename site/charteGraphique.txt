@@ -1,0 +1,24 @@
+couleurs
+
+#F5F7FA		bleu claire
+#F05228		orange
+#F5F7FA		bleu blanc
+#707070		gris
+#4152BC		violet
+#254463		bleu marine
+#61B8D0		bleu ciel
+
+
+polices
+
+Fjalla One Regular 
+Fjalla One Bold
+Segoe UI Regular
+
+
+
+
+
+*précompiler les requètes
+*ash le mot de passe (rainbow tabe) salt ou double ash BLOWFISH(XX,passeword)
+*comparaison des mp temps constant (timming attaque)

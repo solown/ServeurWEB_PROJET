@@ -1,0 +1,23 @@
+body {
+	background-color: #F5F7FA;
+}
+
+a.greyBtn {
+	color: #707070;
+	text-decoration: none;
+	font-size: 50px;
+	font-family: Fjalla One Regular;
+}
+
+.LoginBtn {
+	position: absolute;
+	bottom: 0.5;
+}
+
+.SignUpBtn {
+	position: absolute;
+	bottom: 0.5;
+	right: 0;
+}
+
+.btn {}
