@@ -32,10 +32,10 @@
                 
                 $query = "INSERT INTO STUDENT (surname, email, password_student, year) VALUES (:firstname, :mail, :pass, :year)";
                 $statement = $db->prepare($query);
-                $statement->bind(':firstname', $student_name);
-                $statement->bind(':mail', $student_mail);
-                $statement->bind(':pass', $student_pass);
-                $statement->bind(':year', $student_year);
+                $statement->bindValue(':firstname', $student_name);
+                $statement->bindValue(':mail', $student_mail);
+                $statement->bindValue(':pass', $student_pass);
+                $statement->bindValue(':year', $student_year);
                 $statement->execute();
                 
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
