@@ -15,3 +15,9 @@ table avec les images à coté
 images sur un disc et on enregistre le chemin 
 -> renomer alléatoire
 -> tag géographique
+
+
+drop table if exist message ;
+
+
+mettre les drop avant les create
