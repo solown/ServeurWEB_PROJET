@@ -14,7 +14,24 @@
             Un e-mail a été envoyé à l'adresse <?php echo $_POST['mail'];?>@etu.parisdescartes.fr afin de confirmer celle-ci.</br>
         </p>
         <?php 
-            echo PDO::query('SELECT * FROM STUDENT');
+            $host_bdd='tinder@ogg.elwinar.com';
+            $name_bdd='tinder';
+            $user_bdd='tinder';
+            $pass_bdd='tinder';
+        
+            try{
+                $bdd = new PDO ("pgsql:host=".$host_bdd.";dbname=".$name_bdd."", "".$user_bdd."", "".$pass_bdd."") or die(print_r($bdd->errorInfo()));
+                $bdd->exec("SET NAMES utf8");
+                $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+            }
+            
+            catch(Exeption $e){
+                die("Erreur!".$e->getMessage());
+            }
+            $query = "SELECT * FROM STUDENT";
+            $statement = $db->prepare($query);
+            $statement->execute();
+            echo $statement;
         ?>
 </body>
 </html>
