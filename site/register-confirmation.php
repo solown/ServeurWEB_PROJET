@@ -13,5 +13,9 @@
         <p>
             Un e-mail a été envoyé à l'adresse <?php echo $_POST['mail'];?>@etu.parisdescartes.fr afin de confirmer celle-ci.</br>
         </p>
+        <?php 
+            $dbconnect = pg_connect("dbname=tinder");
+            echo $dbconnect;
+        ?>
 </body>
 </html>
