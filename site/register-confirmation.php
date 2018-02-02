@@ -14,24 +14,24 @@
             Un e-mail a été envoyé à l'adresse <?php echo $_POST['mail'];?>@etu.parisdescartes.fr afin de confirmer celle-ci.</br>
         </p>
         <?php 
-            $host_bdd='tinder@ogg.elwinar.com';
-            $name_bdd='tinder';
-            $user_bdd='tinder';
-            $pass_bdd='tinder';
+            $host_db='localhost';
+            $name_db='tinder';
+            $user_db='tinder';
+            $pass_db='tinder';
         
             try{
-                $bdd = new PDO ("pgsql:host=".$host_bdd.";dbname=".$name_bdd."", "".$user_bdd."", "".$pass_bdd."") or die(print_r($bdd->errorInfo()));
-                $bdd->exec("SET NAMES utf8");
-                $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+                $db = new PDO("pgsql:host=".$host_db.";dbname=".$name_db."", "".$user_db."", "".$pass_db."") or die(print_r($db->errorInfo()));
+                $db->exec("SET NAMES utf8");
+                $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+                $query = "SELECT * FROM STUDENT";
+                $statement = $db->prepare($query);
+                $statement->execute();
+                echo $statement;
             }
             
             catch(Exeption $e){
                 die("Erreur!".$e->getMessage());
             }
-            $query = "SELECT * FROM STUDENT";
-            $statement = $db->prepare($query);
-            $statement->execute();
-            echo $statement;
         ?>
 </body>
 </html>
