@@ -1,3 +1,4 @@
+create database tinder_db
 drop table if exists student CASCADE;
 drop table if exists match CASCADE;
 drop table if exists message CASCADE;
