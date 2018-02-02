@@ -1,4 +1,3 @@
-create database tinder_db
 drop table if exists student CASCADE;
 drop table if exists match CASCADE;
 drop table if exists message CASCADE;
@@ -14,14 +13,14 @@ create table student (
 	id_student SERIAL primary key,
 	surname varchar(30) not null,
 	email varchar(50) not null,
-	password_student varchar(10) not null,
+	password_student varchar(32) not null,
 	year integer not null,
-	pic varchar(30) not null, 
+	pic varchar(30), 
 	description text,
-	score integer not null,
-	adjective_1 integer not null,
-	adjective_2 integer not null,
-	adjective_3 integer not null,
+	score integer default 0,
+	adjective_1 integer ,
+	adjective_2 integer ,
+	adjective_3 integer ,
 	validate_account boolean default false,
 	foreign key (adjective_1) references adjective(id_adjective) ,
 	foreign key (adjective_2) references adjective(id_adjective),
@@ -53,6 +52,84 @@ create table token (
 	id_student integer primary key,
 	foreign key (id_student) references student(id_student)
 );
-	
+
+insert into adjective (wording) values ('froid') ;
+insert into adjective (wording) values ('calculateur') ;
+insert into adjective (wording) values ('michto') ;
+insert into adjective (wording) values ('chaud') ;
+insert into adjective (wording) values ('studieux') ;
+insert into adjective (wording) values ('geek') ;
+insert into adjective (wording) values ('crédule') ;
+insert into adjective (wording) values ('stoner') ;
+insert into adjective (wording) values ('beau') ;
+insert into adjective (wording) values ('intelligent') ;
+insert into adjective (wording) values ('sportif') ;
+insert into adjective (wording) values ('magnifique') ;
+insert into adjective (wording) values ('universel') ;
+insert into adjective (wording) values ('ambicieux') ;
+insert into adjective (wording) values ('altruiste') ;
+insert into adjective (wording) values ('cupide') ;
+insert into adjective (wording) values ('sympatique') ;
+insert into adjective (wording) values ('rigoureux') ;
+insert into adjective (wording) values ('créatif') ;
+insert into adjective (wording) values ('coquin') ;
+insert into adjective (wording) values ('mauvais joueur') ;
+insert into adjective (wording) values ('franc') ;
+insert into adjective (wording) values ('serviable') ;
+insert into adjective (wording) values ('timide') ;
+insert into adjective (wording) values ('souple') ;
+insert into adjective (wording) values ('arogant') ;
+insert into adjective (wording) values ('charmant') ;
+insert into adjective (wording) values ('cinéphile') ;
+insert into adjective (wording) values ('gamer') ;
+insert into adjective (wording) values ('dynamique') ;
+insert into adjective (wording) values ('drole') ;
+insert into adjective (wording) values ('sudiste') ;
+insert into adjective (wording) values ('tyranique') ;
+insert into adjective (wording) values ('sociable') ;
+insert into adjective (wording) values ('fetard') ;
+insert into adjective (wording) values ('extravertis') ;
+insert into adjective (wording) values ('gourmand') ;
+insert into adjective (wording) values ('A l\'écoute') ;
+insert into adjective (wording) values ('vrai') ;
+insert into adjective (wording) values ('faux') ;
+insert into adjective (wording) values ('digne de confiance') ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
