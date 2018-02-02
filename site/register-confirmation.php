@@ -20,6 +20,7 @@
             $pass_db='tinder';
 
             $student_name = explode('.', $_POST['mail'])[0];
+            echo $student_name;
             $student_mail = $_POST['mail'];
             $student_pass = $_POST['password'];
             $student_year = $_POST['year'];
@@ -29,11 +30,12 @@
                 $db->exec("SET NAMES utf8");
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
                 
-                $query = "INSERT INTO STUDENT VALUES (:firstname :mail :pass)";
+                $query = "INSERT INTO STUDENT (surname, email, password_student, year) VALUES (:firstname, :mail, :pass, :year)";
                 $statement = $db->prepare($query);
                 $statement->bind(':firstname', $student_name);
                 $statement->bind(':mail', $student_mail);
                 $statement->bind(':pass', $student_pass);
+                $statement->bind(':year', $student_year);
                 $statement->execute();
                 
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
