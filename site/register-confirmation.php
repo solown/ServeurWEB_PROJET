@@ -18,13 +18,22 @@
             $name_db='tinder';
             $user_db='tinder';
             $pass_db='tinder';
+
+            $student_name = explode('.', $_POST['mail'])[0];
+            $student_mail = $_POST['mail'];
+            $student_pass = $_POST['password'];
+            $student_year = $_POST['year'];
         
             try{
                 $db = new PDO("pgsql:host=".$host_db.";dbname=".$name_db."", "".$user_db."", "".$pass_db."") or die(print_r($db->errorInfo()));
                 $db->exec("SET NAMES utf8");
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-                $query = "SELECT * FROM STUDENT";
+                
+                $query = "INSERT INTO STUDENT VALUES (:firstname :mail :pass)";
                 $statement = $db->prepare($query);
+                $statement->bind(':firstname', $student_name);
+                $statement->bind(':mail', $student_mail);
+                $statement->bind(':pass', $student_pass);
                 $statement->execute();
                 
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
