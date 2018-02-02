@@ -14,11 +14,3 @@ polices
 Fjalla One Regular 
 Fjalla One Bold
 Segoe UI Regular
-
-
-
-
-
-*précompiler les requètes
-*ash le mot de passe (rainbow tabe) salt ou double ash BLOWFISH(XX,passeword)
-*comparaison des mp temps constant (timming attaque)
