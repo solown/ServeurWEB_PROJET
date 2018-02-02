@@ -26,7 +26,10 @@
                 $query = "SELECT * FROM STUDENT";
                 $statement = $db->prepare($query);
                 $statement->execute();
-                echo $statement;
+                
+                while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                    echo $row['tags'];
+                }
             }
             
             catch(Exeption $e){
