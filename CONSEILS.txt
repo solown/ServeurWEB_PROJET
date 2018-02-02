@@ -1,0 +1,17 @@
+ADRESSE MAIL VALIDE 
+pas de reg ex
+valider 
+envoi mail "swift mail"
+lien UNIQUE token dedans
+page (le controleur recupère l'adress mail a valider)
+active adress mail
+
+
+table vaidation generation de token alléatoire avec une durée de vie limitée et la personne doit
+cliquer sur ce token
+
+
+table avec les images à coté
+images sur un disc et on enregistre le chemin 
+-> renomer alléatoire
+-> tag géographique
