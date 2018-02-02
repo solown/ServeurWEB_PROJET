@@ -28,7 +28,7 @@
                 $statement->execute();
                 
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                    echo $row['tags'];
+                    echo $row;
                 }
             }
             
