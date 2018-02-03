@@ -21,3 +21,14 @@ drop table if exist message ;
 
 
 mettre les drop avant les create
+
+
+
+
+
+
+
+*précompiler les requètes
+
+*ash le mot de passe (rainbow tabe) salt ou double ash BLOWFISH(XX,passeword)
+*comparaison des mp temps constant (timming attaque)
