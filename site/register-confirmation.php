@@ -24,7 +24,9 @@
             $student_mail = $_POST['mail'];
             $student_pass = $_POST['password'];
             $student_year = $_POST['year'];
-        
+            <?PHP
+            $password_hash = crypt($student_pass);
+          ?>
             try{
                 $db = new PDO("pgsql:host=".$host_db.";dbname=".$name_db."", "".$user_db."", "".$pass_db."") or die(print_r($db->errorInfo()));
                 $db->exec("SET NAMES utf8");
@@ -34,7 +36,7 @@
                 $statement = $db->prepare($query);
                 $statement->bindValue(':firstname', $student_name);
                 $statement->bindValue(':mail', $student_mail);
-                $statement->bindValue(':pass', $student_pass);
+                $statement->bindValue(':pass', $password_hash);
                 $statement->bindValue(':year', $student_year);
                 $statement->execute();
                 
