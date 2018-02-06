@@ -37,9 +37,8 @@
                 $statement = $db->prepare($query);
                 $statement->bindValue(':mail', $student_mail);
                 $statement->execute();
-                while ($password_hash=$statement->fetch(PDO::FETCH_ASSOC)) {
-                    echo $password_hash;
-                }
+                $password_hash = $statement->setFetchMode(PDO::FETCH_ASSOC);
+				 echo $password_hash;
 			}
             
             catch(Exeption $e){
