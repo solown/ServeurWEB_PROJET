@@ -36,8 +36,11 @@
         $statement = $db->prepare($query);
         $statement->bindValue(':mail', $student_mail);
         $statement->execute();
-        $password_hash = $statement->setFetchMode(PDO::FETCH_ASSOC);
-        echo $password_hash;
+
+        while($row = $statement->setFetchMode(PDO::FETCH_ASSOC)){
+          $password_hash = $row['password_student'];
+        }
+		echo $password_hash;
     }    
     catch(Exeption $e){
         die("Erreur!".$e->getMessage());
