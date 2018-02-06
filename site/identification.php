@@ -37,7 +37,7 @@
         $statement->bindValue(':mail', $student_mail);
         $statement->execute();
 
-        while($row = $statement->setFetchMode(PDO::FETCH_ASSOC)){
+        while($row = $statement->fetch(PDO::FETCH_ASSOC)){
           $password_hash = $row['password_student'];
         }
 		echo $password_hash;
