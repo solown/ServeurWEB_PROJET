@@ -24,7 +24,7 @@
             $name_db='tinder';
             $user_db='tinder';
             $pass_db='tinder';
-  			$password_entered=$_POST['pass'];
+  			$password_entered=$_POST['password'];
    			$student_mail=$_POST['mail'];
            
 
