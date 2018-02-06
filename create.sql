@@ -13,7 +13,7 @@ create table student (
 	id_student SERIAL primary key,
 	surname varchar(30) not null,
 	email varchar(50) not null,
-	password_student varchar(32) not null,
+	password_student text not null,
 	year integer not null,
 	pic varchar(30), 
 	description text,
