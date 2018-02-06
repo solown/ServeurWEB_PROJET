@@ -17,6 +17,15 @@
 		<?php echo $_POST['mail'];?>@etu.parisdescartes.fr afin de confirmer celle-ci.</br>
 	</p>
 	<?php 
+  function better_crypt($input, $rounds = 7)
+  {
+    $salt = "";
+    $salt_chars = array_merge(range('A','Z'), range('a','z'), range(0,9));
+    for($i=0; $i < 22; $i++) {
+      $salt .= $salt_chars[array_rand($salt_chars)];
+    }
+    return crypt($input, sprintf('$2a$%02d$', $rounds) . $salt);
+  }
             $host_db='localhost';
             $name_db='tinder';
             $user_db='tinder';
@@ -25,11 +34,10 @@
             $student_name = explode('.', $_POST['mail'])[0];
             echo $student_name;
             $student_mail = $_POST['mail'];
-            $student_pass = $_POST['password'];
+            $password_hash = better_crypt($_POST['password'], 10); 
             $student_year = $_POST['year'];
-            
-            $password_hash = crypt($student_pass);
-          
+           
+
             try{
                 $db = new PDO("pgsql:host=".$host_db.";dbname=".$name_db."", "".$user_db."", "".$pass_db."") or die(print_r($db->errorInfo()));
                 $db->exec("SET NAMES utf8");
