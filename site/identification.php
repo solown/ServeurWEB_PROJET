@@ -36,8 +36,10 @@
                 $query = "SELECT password_student FROM STUDENT WHERE email = :mail";
                 $statement = $db->prepare($query);
                 $statement->bindValue(':mail', $student_mail);
-                $password_hash=$statement->execute();
-                
+                $statement->execute();
+                while ($password_hash=$statement->fetch(PDO::FETCH_ASSOC)) {
+                    echo $password_hash;
+                }
 			}
             
             catch(Exeption $e){
