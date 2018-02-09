@@ -1,0 +1,29 @@
+
+body {
+    display:flex;
+    font-family: "Fjalla One";
+	font-size: x-large;
+}
+
+#drawing {
+    width:60%;
+	background-image: url(../images/five.png), url(../images/cloud.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height:100%;
+    display:inline-block;
+}
+
+form {
+    width: 30%;
+    margin:auto;
+    display:inline-block;
+}
+
+form * {
+    display: block;
+}
+
+form input {
+    margin-bottom:1em;
+}
