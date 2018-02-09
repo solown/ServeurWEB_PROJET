@@ -19,5 +19,5 @@ if(crypt($password_entered, $password_hash) == $password_hash) {
 else{
 	echo  'ERREUR d identification';
 }
-}
+
 ?>
