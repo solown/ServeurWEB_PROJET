@@ -19,9 +19,5 @@ if($db){
 	$statement->bindValue(':pass', $password_hash);
 	$statement->bindValue(':year', $student_year);
 	$statement->execute();
-
-	while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-		echo $row;
-	}
 }
 ?>

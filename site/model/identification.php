@@ -11,11 +11,10 @@ if($db) {
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
 		$password_hash = $row['password_student'];
 	}
-	echo $password_hash;
 }  
 
 if(crypt($password_entered, $password_hash) == $password_hash) {
-	echo  'identification réussie';
+	echo  'Identification réussie';
 }
 else{
 	echo  'ERREUR d identification';
