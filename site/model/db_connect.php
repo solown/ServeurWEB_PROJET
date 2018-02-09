@@ -14,6 +14,6 @@ function db_connect(){
 	catch(Exeption $e){
 		die("Erreur! ".$e->getMessage());
 	}
-	return db;
+	return $db;
 }
 ?>
