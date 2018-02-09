@@ -1,6 +1,7 @@
 <?php
 
 require("db_connect.php");
+require("better_crypt.php");
 
 $db = db_connect();
 
