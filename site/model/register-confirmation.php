@@ -1,15 +1,12 @@
 <?php
 
-function better_crypt($input, $rounds = 7) {
-	$salt = "";
-	$salt_chars = array_merge(range('A','Z'), range('a','z'), range(0,9));
-	for($i=0; $i < 22; $i++) {
-		$salt .= $salt_chars[array_rand($salt_chars)];
-	}
-	return crypt($input, sprintf('$2a$%02d$', $rounds) . $salt);
-}
-
 require("db_connect.php");
+
+$student_name =	 explode('.', $_POST['mail'])[0];
+$student_mail =	 $_POST['mail'];
+$password_hash = better_crypt($_POST['password'], 10); 
+$student_year =  $_POST['year'];
+
 $db = db_connect();
 if($db){
 	$query = "INSERT INTO STUDENT (surname, email, password_student, year) VALUES (:firstname, :mail, :pass, :year)";
