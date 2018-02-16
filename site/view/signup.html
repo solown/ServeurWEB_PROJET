@@ -15,15 +15,15 @@
 	<div id="drawing"></div>
 	<form action="/controller/register-confirmation.php" method="post">
 		<h2>Sign up</h2>
-		<label>E-mail :</label>
-		<input type="text" name="mail" style="display:inline-block" value="prenom.nom"></input>
-		<p style="display:inline-block">@etu.parisdescartes.fr</p>
-		<label>Password :</label>
-		<input type="password" name="password"></input>
-		<label>Year :</label>
-		<input type="radio" name="year" value="1" checked="checked" style="display: inline-block"></input> <label style="display:inline-block">1st year</label>
-		<input type="radio" name="year" value="2" style="display: inline-block"></input> <label style="display:inline-block">2nd year</label>
-		<input type="submit" value="Validate" style="display:block; width:50%"></input>
+		<label>E-mail </label><br>
+		<input type="text" name="mail" value="prenom.nom"></input>
+		<p>@etu.parisdescartes.fr</p><br>
+		<label>Password </label><br>
+		<input type="password" name="password"></input><br>
+		<label>Year </label>
+		<input type="checkbox" name="year" value="1" checked="checked" ></input> <label><span>1st year</span></label>
+		<input type="checkbox" name="year" value="2" ></input> <label><span>2nd year</span></label><br>
+		<input type="submit" value="Validate"></input>
 	</form>
 	<script src="../scripts/main.js"></script>
 </body>
