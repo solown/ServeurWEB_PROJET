@@ -13,16 +13,16 @@
 
 <body>
 	<div id="drawing"></div>
+	<img src="../images/signup_logo.png" class = "logtop">
 	<form action="/controller/register-confirmation.php" method="post">
-		<h2>Sign up</h2>
 		<label>E-mail </label><br>
 		<input type="text" name="mail" value="prenom.nom"></input>
 		<p>@etu.parisdescartes.fr</p><br>
 		<label>Password </label><br>
 		<input type="password" name="password"></input><br>
-		<label>Year </label>
-		<input type="checkbox" name="year" value="1" checked="checked" ></input> <label><span>1st year</span></label>
-		<input type="checkbox" name="year" value="2" ></input> <label><span>2nd year</span></label><br>
+		<label>Year </label><br>
+		<input type="checkbox" name="year" value="1" id="first" ></input> <label for="first"><span>DUT1</span></label>
+		<input type="checkbox" name="year" value="2" id="second"></input> <label for="second"><span>DUT2</span></label><br>
 		<input type="submit" value="Validate"></input>
 	</form>
 	<script src="../scripts/main.js"></script>
