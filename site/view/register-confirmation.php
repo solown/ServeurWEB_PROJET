@@ -18,16 +18,16 @@
 		</div>
 		<div class="col-5 right_part">
 			<div class="row">
-				<div class="col-8 offset-2 formulaire">
+				<div class="col-10 offset-1 formulaire text_center">
 					<div class="title_logo">
 						<div><img src="../images/singUp.svg" class="cloud2"></div>
 
 					</div>
-					<div classe="text_center">
+					<div>
 						<div>Un email de confirmation à été envoyé à</div>
-						<div class="inline purple">
-							<?php echo $_POST['mail'];?> </div>
-						<div class="inline">@etu.parisdescartes.fr</div>
+						<span class="purple">
+							<?php echo $_POST['mail'];?></span>
+						<span>@etu.parisdescartes.fr</span>
 					</div>
 				</div>
 			</div>
