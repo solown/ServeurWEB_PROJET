@@ -176,7 +176,7 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .welcome {
-	margin-top: 50%;
+	margin-top: 20%;
 	transform: translateY(-60%);
 }
 
@@ -188,4 +188,9 @@ input[type="checkbox"]:checked+label::before {
 .big_orange {
 	font-size: 4vw;
 	color: #F05228;
+}
+
+.welcome2 {
+	margin-top: 50%;
+	transform: translateY(-200%);
 }
