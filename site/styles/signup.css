@@ -1,90 +1,106 @@
+/*******************************************body**********************************************************************/
 
-body {
-    display:flex;
-    font-family: "Fjalla One";
-	font-size: x-large;
-	color : #707070;
-}
-
-#drawing {
-    width:60%;
+.left_part {
+	background-color: #F5F7FA;
 	background-image: url(../images/five.png), url(../images/cloud.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height:100%;
-    display:inline-block;
-	background-color : #F5F7FA;
+	background-repeat: no-repeat;
+	background-position: center 40%, center 40%;
+	background-size: 50% auto, 60% auto;
 }
-.logtop{
-	width : 17%;
-	height:24%;
-	position : absolute;
-	margin-left : 68%;
-	margin-top : 2%;
+
+.right_part {
+	text-align: left;
+	font-family: "Fjalla One";
+	color: #707070;
+	font-size: 1.5vw;
 }
-input[type="submit"]{
-	margin-top : 3%;
-	width:73%;
-	text-align:center;
-	vertical-align:middle;
-	background-color : #4152BC;
+
+.cloud2 {
+	width: 70%;
+	height: auto;
+}
+
+.title_logo {
+	margin-bottom: 5vh;
+	text-align: center;
+}
+
+.formulaire {
+	margin-top: 50%;
+	transform: translateY(-50%);
+}
+
+.inline {
+	display: inline-block;
+	width: 45%;
+}
+
+.etu {
+	font-size: 1vw;
+}
+
+.space_top {
+	margin-top: 2vh;
+	margin-bottom: -1vh;
+}
+
+input {
+	border: solid 1px #707070;
+	height: 2em;
+	font-size: 1vw;
+}
+
+input[type="submit"] {
+	margin-top: 3vh;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #4152BC;
 	font-family: "Fjalla One";
 	border: none;
-	font-size : 140%;
-	color : white;
-}
-input[type="text"],input[type="password"]{
-	height: 40px;
-}
-input[type="password"]{
-	width : 70%;
+	font-size: 1.7vw;
+	color: white;
 }
 
-form {
-    width: 30%;
-    margin:auto;
-	position : relative;
+input[type="password"] {
+	width: 100%;
+	color: #707070;
 }
 
-form * {
-    display: block;
+input[type="text"] {
+	width: 100%;
+	color: #707070;
 }
 
-form input {
-    margin-bottom:1em;
-	display : inline-block;
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+	position: absolute;
+	left: -9999px;
 }
 
-label{
-	display : inline-block;
+input[type="radio"]+label::before {
+	margin-top: 5%;
+	content: '';
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	/* dim. de la case */
+	border: 1px solid #707070;
 }
-p{
-	display : inline-block;
+
+input[type="radio"]:checked+label::before {
+	background: #4152BC;
 }
-span{
-	margin-left:22px;
+
+[type="radio"]:not(:checked)+label,
+[type="radio"]:checked+label {
+	position: relative;
+	/* permet de positionner les pseudo-éléments */
+	cursor: crosshair;
+	/* affiche un curseur adapté */
+	margin-right: 15%;
 }
-[type="checkbox"]:not(:checked),
-[type="checkbox"]:checked {
-  position: absolute;
-  left: -9999px;
-}
-input[type="checkbox"] + label::before{
-	margin-top : 5%;
-    content: '';
-  position: absolute;
-  width: 17px; height: 17px; /* dim. de la case */
-  border: 1px solid #aaa;
-  background: #f8f8f8;
-  border-radius: 3px; /* angles arrondis */
-  box-shadow: inset 0 1px 3px rgba(0,0,0,.3); /* légère ombre interne */
-}
-input[type="checkbox"]:checked + label::before{
-    background:#4152BC;
-}
-[type="checkbox"]:not(:checked) + label,
-[type="checkbox"]:checked + label {
-  position: relative; /* permet de positionner les pseudo-éléments */
-  cursor: pointer;    /* affiche un curseur adapté */
-  margin-right : 15%;
+
+span {
+	margin-left: 1.5vw;
 }

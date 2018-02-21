@@ -4,28 +4,56 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Sign up</title>
-	<link rel="stylesheet" href="../styles/main.css">
 	<link rel="stylesheet" href="../styles/signup.css">
-	<link rel="stylesheet" href="../styles/form.css">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="../styles/main.css">
 </head>
 
 <body>
-	<div id="drawing"></div>
-	<img src="../images/signup_logo.png" class = "logtop">
-	<form action="/controller/register-confirmation.php" method="post">
-		<label>E-mail </label><br>
-		<input type="text" name="mail" value="prenom.nom"></input>
-		<p>@etu.parisdescartes.fr</p><br>
-		<label>Password </label><br>
-		<input type="password" name="password"></input><br>
-		<label>Year </label><br>
-		<input type="checkbox" name="year" value="1" id="first" ></input> <label for="first"><span>DUT1</span></label>
-		<input type="checkbox" name="year" value="2" id="second"></input> <label for="second"><span>DUT2</span></label><br>
-		<input type="submit" value="Validate"></input>
-	</form>
-	<script src="../scripts/main.js"></script>
+
+	<div class="row ">
+		<div class="col-7 left_part ">
+		</div>
+		<div class="col-5 right_part">
+			<div class="row">
+				<div class="col-6 offset-3 formulaire">
+					<div class="title_logo">
+						<div><img src="../images/singUp.svg" class="cloud2"></div>
+
+					</div>
+					<div>
+						<form action="/controller/register-confirmation.php" method="post">
+							<div>
+								<div class="space_top"><label>Email</label></div>
+								<div class="inline">
+									<input type="text" name="mail"></input>
+								</div>
+								<div class="inline etu">@etu.parisdescartes.fr</div>
+							</div>
+							<div>
+								<div class="space_top"><label>Password</label></div>
+								<input type="password" name="password"></input><br>
+							</div>
+							<div>
+								<div class="space_top">
+									<label>Year</label>
+								</div>
+								<div class="etu">
+									<input type="radio" name="year" value="1" id="first"></input> <label for="first"><span>DUT1</span></label>
+									<input type="radio" name="year" value="2" id="second"></input> <label for="second"><span>DUT2</span></label>
+								</div>
+							</div>
+							<div>
+								<input type="submit" value="Sign up"></input>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
