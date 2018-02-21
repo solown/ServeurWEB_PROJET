@@ -1,4 +1,4 @@
-/*******************************************body**********************************************************************/
+/*******************************************sign up et tout le reste*****************************************************/
 
 .left_part {
 	background-color: #F5F7FA;
@@ -160,4 +160,35 @@ input[type="checkbox"]:checked+label::before {
 	cursor: crosshair;
 	/* affiche un curseur adapté */
 	margin-right: 15%;
+}
+
+
+/*********************************************************************loginPerso*****************************************/
+
+.left_part2 {
+	background-color: #F5F7FA;
+	background-image: url(../images/cloud.svg);
+	background-repeat: no-repeat;
+	background-position: center 40%;
+	background-size: 70% auto;
+	text-align: center;
+}
+
+.welcome {
+	margin-top: 50%;
+	transform: translateY(-60%);
+}
+
+.big_grey {
+	font-size: 6vw;
+	color: #707070;
+}
+
+.big_orange {
+	font-size: 4vw;
+	color: #F05228;
+}
+
+.left_part2 {
+	font-family: "Fjalla One";
 }
