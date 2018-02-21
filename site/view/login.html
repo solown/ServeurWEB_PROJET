@@ -5,38 +5,58 @@
 	<meta charset="utf-8" />
 	<title>Log In</title>
 	<link rel="stylesheet" href="../styles/main.css">
-	<link rel="stylesheet" href="../styles/login.css">
-	<link rel="stylesheet" href="../styles/form.css">
+	<link rel="stylesheet" href="../styles/signup_login.css">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
+	<div class="row ">
+		<div class="col-5 right_part ">
+			<div class="row">
+				<div class="col-6 offset-3 formulaire">
+					<div class="title_logo">
+						<div><img src="../images/login.svg" class="cloud2"></div>
 
-	<div id="title">
-	<img src="../images/doubleCloud.svg" />
-	<div class = "centered"> <h3>Log In </h3></div>
-	</div>
-	</div>
-	
-
-	<form action="/controller/identification.php" method="post">
-		<label>E-mail <br></label>
-		<input type="text" name="mail" value=""></input>
-		<p>@etu.parisdescartes.fr</p>
-		<label><br>Password <br></label>
-		<input type="password" name="password" class="pwdinput"></input>
-		<div id="keepfrgt">
-		<input type="checkbox" id="keeplog">
-		<label for="keeplog" class="labkeep"><span>Keep me loged in</span></label>
-		<label class="fgtpwd"><u>Forgot your password ?</u><label>
+					</div>
+					<div>
+						<form action="identification.php" method="post">
+							<div>
+								<div class="space_top">
+									<label>Email</label>
+								</div>
+								<div class="inline">
+									<input type="text" name="mail"></input>
+								</div>
+								<div class="inline etu">
+									@etu.parisdescartes.fr
+								</div>
+							</div>
+							<div>
+								<div class="space_top"><label>Password</label></div>
+								<input type="password" name="password"></input><br>
+							</div>
+							<div>
+								<div class="inline etu2"><input type="checkbox" id="keeplog">
+									<label for="keeplog"><span>Keep me loged in</span></label>
+								</div>
+								<div class="inline etu2 maxW">
+									<a href="accueil.html">Forgot your password ?</a>
+								</div>
+							</div>
+							<div>
+								<input type="submit" value="Login"></input>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
-		<input class="connect_btn" type="submit" value="Log In"></input>
-		
-	</form>
-	<div id="drawing">
+		<div class="col-7 left_part">
+
+		</div>
 	</div>
-	<script src="../scripts/main.js"></script>
 </body>
 
 </html>

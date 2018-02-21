@@ -39,6 +39,10 @@
 	font-size: 1vw;
 }
 
+.etu2 {
+	font-size: 0.8vw;
+}
+
 .space_top {
 	margin-top: 2vh;
 	margin-bottom: -1vh;
@@ -114,4 +118,46 @@ span {
 
 .purple {
 	color: #4152BC;
+}
+
+
+/************************************************login*****************************************/
+
+a {
+	text-decoration: none;
+	text-align: right;
+}
+
+.maxW {
+	width: 52%;
+	text-align: right;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+	position: absolute;
+	left: -9999px;
+}
+
+input[type="checkbox"]+label::before {
+	margin-top: 5%;
+	content: '';
+	position: absolute;
+	width: 1.2em;
+	height: 1.2em;
+	/* dim. de la case */
+	border: 1px solid #707070;
+}
+
+input[type="checkbox"]:checked+label::before {
+	background: #4152BC;
+}
+
+[type="checkbox"]:not(:checked)+label,
+[type="checkbox"]:checked+label {
+	position: relative;
+	/* permet de positionner les pseudo-éléments */
+	cursor: crosshair;
+	/* affiche un curseur adapté */
+	margin-right: 15%;
 }
