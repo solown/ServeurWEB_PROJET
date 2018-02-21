@@ -23,10 +23,11 @@
 						<div><img src="../images/singUp.svg" class="cloud2"></div>
 
 					</div>
-					<div>
+					<div classe="text_center">
 						<div>Un email de confirmation à été envoyé à</div>
-						<div>
-							<?php echo $_POST['mail'];?> @etu.parisdescartes.fr</div>
+						<div class="inline purple">
+							<?php echo $_POST['mail'];?> </div>
+						<div class="inline">@etu.parisdescartes.fr</div>
 					</div>
 				</div>
 			</div>

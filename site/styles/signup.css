@@ -104,3 +104,14 @@ input[type="radio"]:checked+label::before {
 span {
 	margin-left: 1.5vw;
 }
+
+
+/***********************************************************register conf*******************************************/
+
+.text_center {
+	text-align: center;
+}
+
+.purple {
+	color: #4152BC;
+}
