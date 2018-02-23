@@ -11,7 +11,8 @@ $a = $_POST['mail'] ;
 $a .= "@etu.parisdescartes.fr"; 
 $message = "hello";
 
-mail($student_mail, 'TEST', $message);
+$b = mail($student_mail, 'TEST', $message);
+echo($b);
 require("../model/register-confirmation.php");
 
 
