@@ -29,8 +29,8 @@ if(isset($_POST['btn_upload']))
     move_uploaded_file($filetmp,$filepath);
 /*    
     $sql = "INSERT INTO student (pic) VALUES ('$filepath')";
-    $result = mysql_query($sql);
-}*/
+    $result = mysql_query($sql);*/
+}
 ?>
 
 </body>
