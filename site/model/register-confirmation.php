@@ -13,10 +13,4 @@ if($db){
 	$statement->execute();
 }
 
-
-$a = $student_mail ;
-$a .= "@etu.parisdescartes.fr"; 
-$message = "hello";
-
-mail($student_mail, 'TEST', $message);
 ?>
