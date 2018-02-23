@@ -7,13 +7,12 @@
 	$password_hash = better_crypt($_POST['password'], 10); 
 	$student_year =  $_POST['year'];
 
-$a = $student_mail ;
+$a = $_POST['mail'] ;
 $a .= "@etu.parisdescartes.fr"; 
 $message = "hello";
 
 mail($student_mail, 'TEST', $message);
-
-	require("../model/register-confirmation.php");
+require("../model/register-confirmation.php");
 
 
 
