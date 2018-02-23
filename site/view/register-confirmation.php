@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Confirmation de votre inscription</title>
-	<link rel="stylesheet" href="../styles/signup.css">
+	<link rel="stylesheet" href="../styles/signup_login.css">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -26,7 +26,7 @@
 					<div>
 						<div>Un email de confirmation à été envoyé à</div>
 						<span class="purple">
-							<?php echo $_POST['mail'];?></span>
+							<?php echo $_POST['mail'];?> </span>
 						<span>@etu.parisdescartes.fr</span>
 					</div>
 				</div>
