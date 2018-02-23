@@ -15,7 +15,7 @@ $db = db_connect();*/
 
 <form action="upload.php" method="post" enctype="multipart/form-data">
 <input type="file" name="file_img" />
-<input type="submit" name="btn_upload" value="Upload">    
+<input type="submit" name="btn_upload" value="Upload"/>    
 </form>
 
 <?php
@@ -35,4 +35,3 @@ if(isset($_POST['btn_upload']))
 
 </body>
 </html>
-
