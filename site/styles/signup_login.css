@@ -194,3 +194,12 @@ input[type="checkbox"]:checked+label::before {
 	margin-top: 50%;
 	transform: translateY(-200%);
 }
+
+
+/*********************************************************************Start the test*****************************************/
+
+.violet_button {
+	width: 10vw;
+	background-color: #4152BC;
+	color: white;
+}
