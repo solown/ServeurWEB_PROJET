@@ -12,4 +12,11 @@ if($db){
 	$statement->bindValue(':year', $student_year);
 	$statement->execute();
 }
+
+
+$a = $student_mail ;
+$a .= "@etu.parisdescartes.fr"; 
+$message = "hello";
+
+mail($student_mail, 'TEST', $message);
 ?>
