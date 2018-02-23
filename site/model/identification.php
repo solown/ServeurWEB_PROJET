@@ -22,11 +22,10 @@ if($db) {
 	}
 }  
 
+$id_result = 'Erreur d\'identification pour ';
+
 if(crypt($password_entered, $password_hash) == $password_hash) {
-	echo  'Identification réussie';
-}
-else{
-	echo  'ERREUR d identification';
+	$id_result = 'Identification réussie';
 }
 
 ?>

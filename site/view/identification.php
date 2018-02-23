@@ -13,7 +13,7 @@
 <body style="text-align:center">
 
 	<p>
-		Bienvenue <?php echo $_POST['mail'];?>@etu.parisdescartes.fr ?>
+		<?php echo $id_result.' '.$_POST['mail']; ?> @etu.parisdescartes.fr
 		</br>
 	</p>
 	</body>
