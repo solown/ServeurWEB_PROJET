@@ -13,11 +13,11 @@
 
 <body>
 
-	<div class="row ">
+	<div class="row fullscreen_height">
 		<div class="col-7 left_part ">
 		</div>
 		<div class="col-5 right_part">
-			<div class="row">
+			<div class="row fullscreen_height">
 				<div class="col-10 offset-1 formulaire text_center">
 					<div class="title_logo">
 						<div><img src="../images/singUp.svg" class="cloud2"></div>
