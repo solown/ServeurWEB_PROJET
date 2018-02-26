@@ -18,7 +18,7 @@ function verifMail(champ) {
 
 
 function verifpassword(champ) {
-	if (champ.value.length < 20) {
+	if (champ.value.length < 8) {
 		surligne(champ, true);
 		return false;
 	} else {
@@ -35,7 +35,7 @@ function verifForm(e) {
 	if (passwordOK && mailOk)
 		return;
 	else {
-		alert("20 caractères MINIMUM pour le mot de passe et veuillez entrer la partie gauche de votre adresse étudiante");
+		alert("8 caractères MINIMUM pour le mot de passe et veuillez entrer la partie gauche de votre adresse étudiante");
 		e.preventDefault();
 	}
 
