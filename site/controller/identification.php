@@ -11,8 +11,6 @@
 
 	$id_result = 'Erreur d\'identification pour ';
 
-	echo crypt($password_entered, $password_hash); 
-
 	if(crypt($password_entered, $password_hash) == $password_hash) {
 		$id_result = 'Identification réussie';
 	}

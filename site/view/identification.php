@@ -15,6 +15,9 @@
 	<p>
 		<?php echo $id_result.' '.$_POST['mail']; ?>@etu.parisdescartes.fr
 		</br>
+		</br>
+		</br>
+		<a href="/">Home page</a>
 	</p>
 	</body>
 </html>
