@@ -7,14 +7,12 @@
 	$password_entered = $_POST['password'];
 	$password_hash;
 
-	require("../model/identification.php");
-
-	$id_result = 'Erreur d\'identification pour ';
+	require("../model/login.php");
 
 	if(crypt($password_entered, $password_hash) == $password_hash) {
-		$id_result = 'Identification réussie';
+		echo "OK";
 	}
+	else
+		echo "FAIL";
 
-	require("../view/identification.php");
-	
 ?>

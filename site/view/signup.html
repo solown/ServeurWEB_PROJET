@@ -23,17 +23,17 @@
 						<div><img src="../images/singUp.svg" class="cloud2"></div>
 					</div>
 					<div>
-						<form action="../controller/register-confirmation.php" method="post" onsubmit="verifForm(event)">
+						<form action="../controller/register-confirmation.php" method="post" onsubmit="checkForm(event)">
 							<div>
 								<div class="space_top"><label>Email</label></div>
 								<div class="inline">
-									<input type="text" name="mail" id="mail" placeholder="surname.name" onblur="verifMail(this)"></input>
+									<input type="text" name="mail" id="mail" placeholder="surname.name" onblur="checkMail(this)"></input>
 								</div>
 								<div class="inline etu">@etu.parisdescartes.fr</div>
 							</div>
 							<div>
 								<div class="space_top"><label>Password</label></div>
-								<input type="password" name="password" id="password" placeholder="8 characters required" onblur="verifpassword(this)"></input><br>
+								<input type="password" name="password" id="password" placeholder="8 characters required" onblur="checkPassword(this)"></input><br>
 							</div>
 							<div>
 								<div class="space_top">
@@ -53,7 +53,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="../scripts/signup.js"></script>
+	<script src="../scripts/checkForm.js"></script>
 </body>
 
 </html>
