@@ -15,6 +15,14 @@
 	font-size: 1.5vw;
 }
 
+.home-btn {
+	margin: 5%;
+	display: inline-block;
+	position: absolute;
+	font-family: "Fjalla One";
+	font-size: 1.5vw;
+}
+
 .cloud2 {
 	width: 70%;
 	height: auto;
@@ -110,7 +118,7 @@ span {
 }
 
 
-/***********************************************************register conf*******************************************/
+/***********************************************register conf*******************************************/
 
 .text_center {
 	text-align: center;
@@ -163,7 +171,7 @@ input[type="checkbox"]:checked+label::before {
 }
 
 
-/*********************************************************************loginPerso*****************************************/
+/*****************************************************loginPerso*****************************************/
 
 .left_part2 {
 	font-family: "Fjalla One";
@@ -191,6 +199,101 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .welcome2 {
-	margin-top: 50%;
-	transform: translateY(-200%);
+	position: absolute;
+	top: 30%;
+	transform: translateY(-60%);
+	left: 50%;
+	transform: translateX(-50%);
 }
+
+
+/**********************************************Start the test*****************************************/
+
+.violet_button {
+	width: 16vw;
+	background-color: #4152BC;
+	position: absolute;
+	top: 150%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.violet_button a {
+	color: white;
+	text-decoration: none;
+	font-size: 2.5em;
+	cursor: crosshair;
+}
+
+.violet_button a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+
+/**********************************************menu*****************************************/
+
+.menu a:hover {
+	text-decoration: none;
+	color: #4152BC;
+}
+
+.menu a {
+	margin-right: 15px;
+}
+
+.menu_active {
+	font-family: "Fjalla One";
+	color: #4152BC;
+	font-size: 2em;
+}
+
+.menu_inactive {
+	text-decoration: none;
+	font-family: "Segoe UI";
+	color: #254463;
+	font-size: 1em;
+}
+
+
+/**********************************************swipe*****************************************/
+
+.swipe_cloud {
+	width: 20vw;
+	height: auto;
+}
+
+.swipe_profil {
+	text-align: center;
+}
+
+.swipe_name {
+	color: #F05228;
+	font-family: "Fjalla One";
+	font-size: 5vw;
+}
+
+.swipe_adj {
+	color: #707070;
+	font-family: "Fjalla One";
+	font-size: 3vw;
+}
+
+.swipe_description {
+	color: #707070;
+	font-family: "Segoe UI";
+	font-size: 1.5vw;
+}
+
+.swipe_icon {
+	text-align: center;
+}
+
+.swipe_icon img {
+	margin-top: 75%;
+	width: 10vw;
+	height: auto;
+}
+
+
+/**********************************************final****************************************/

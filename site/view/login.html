@@ -15,19 +15,19 @@
 	<div class="row fullscreen-height">
 		<div class="col-5 right_part ">
 			<div class="row fullscreen_height">
+				<a class="home-btn" href="/">< Home page</a>
 				<div class="col-6 offset-3 formulaire">
 					<div class="title_logo">
 						<div><img src="../images/login.svg" class="cloud2"></div>
-
 					</div>
 					<div>
-						<form action="identification.php" method="post">
+						<form method="post" onsubmit="return login()">
 							<div>
 								<div class="space_top">
 									<label>Email</label>
 								</div>
 								<div class="inline">
-									<input type="text" name="mail"></input>
+									<input type="text" name="mail" placeholder="surname.name" onblur="checkMail(this)"></input>
 								</div>
 								<div class="inline etu">
 									@etu.parisdescartes.fr
@@ -35,7 +35,7 @@
 							</div>
 							<div>
 								<div class="space_top"><label>Password</label></div>
-								<input type="password" name="password"></input><br>
+								<input type="password" name="password" onblur="checkPassword(this)"></input><br>
 							</div>
 							<div>
 								<div class="inline etu2"><input type="checkbox" id="keeplog">
@@ -57,6 +57,8 @@
 
 		</div>
 	</div>
+<script src="../scripts/checkForm.js"></script>
+<script src="../scripts/login.js"></script>
 </body>
 
 </html>

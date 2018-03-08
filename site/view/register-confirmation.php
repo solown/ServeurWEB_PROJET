@@ -28,6 +28,10 @@
 						<span class="purple">
 							<?php echo $_POST['mail'];?> </span>
 						<span>@etu.parisdescartes.fr</span>
+						</br>
+						</br>
+						</br>
+						<a href="/">Home page</a>
 					</div>
 				</div>
 			</div>
