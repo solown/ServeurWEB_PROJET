@@ -21,7 +21,7 @@
 
 					</div>
 					<div>
-						<form action="identification.php" method="post">
+						<form method="post" onsubmit="return login()">
 							<div>
 								<div class="space_top">
 									<label>Email</label>
@@ -56,10 +56,12 @@
 		<div class="col-7 left_part2">
 			<div class="welcome">
 				<div class="big_grey">Welcome</div>
-				<div class="big_orange">Prénom</div>
+				<div class="big_orange"><?php echo($_GET['name']) ?></div>
 			</div>
 		</div>
 	</div>
+<script src="../scripts/checkForm.js"></script>
+<script src="../scripts/login.js"></script>
 </body>
 
 </html>
