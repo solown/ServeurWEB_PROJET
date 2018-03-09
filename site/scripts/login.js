@@ -6,7 +6,7 @@ function login() {
 			if(this.responseText == "OK"){
 				highlight(document.getElementsByName("mail")[0], false);
 				highlight(document.getElementsByName("password")[0], false);
-				window.location.href="../view/swipe.html";
+				window.location.href="../view/swipe.php";
 				
 			}
 			else {
