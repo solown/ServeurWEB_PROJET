@@ -6,6 +6,7 @@
 	<title>Log In</title>
 	<link rel="stylesheet" href="../styles/main.css">
 	<link rel="stylesheet" href="../styles/signup_login.css">
+	<link rel="stylesheet" href="../styles/animate.css">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -18,11 +19,11 @@
 		<a href="#" class="menu_inactive">messges</a>
 		<a href="#" class="menu_inactive">log out</a>
 	</div>
-	<div class="row fullscreen_height ">
-		<div class="col-3 swipe_icon">
-			<a href=""><img src="../images/recycling.png" alt="no"></a>
+	<div class="row fullscreen_height">
+		<div class="col-3 swipe_icon no">
+			<img src="../images/recycling.png" alt="no">
 		</div>
-		<div class="col-6 swipe_profil">
+		<div class="col-6 swipe_profil animated ">
 			<div class="swipe_face">
 				<img class="swipe_cloud" src="../images/swipe_picture.png" alt="cloud">
 			</div>
@@ -38,10 +39,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-3 swipe_icon">
-			<a href=""><img src="../images/heart.png" alt="yes"></a>
+		<div class="col-3 swipe_icon yes">
+			<img src="../images/heart.png" alt="yes">
 		</div>
 	</div>
+	<script src="../scripts/swipe.js"></script>
+
 </body>
 
 </html>
