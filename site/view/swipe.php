@@ -20,7 +20,7 @@ require("../model/swipe.php");
 	<div class="menu">
 		<a href="#" class="menu_active">swipe</a>
 		<a href="#" class="menu_inactive">my account</a>
-		<a href="#" class="menu_inactive">messges</a>
+		<a href="#" class="menu_inactive">messages</a>
 		<a href="#" class="menu_inactive">log out</a>
 	</div>
 	<div class="row fullscreen_height">
@@ -39,7 +39,7 @@ require("../model/swipe.php");
 					Belle - Intelligente - Sensible
 				</div>
 				<div class="swipe_description">
-					ID : <?php echo $_SESSION['id'];?> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</div>
 			</div>
 		</div>
