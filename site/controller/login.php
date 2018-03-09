@@ -14,6 +14,7 @@
 		echo "OK";
 		$_SESSION['id'] = $id_student;
 		echo $_SESSION['id'];
+		
 	}
 	else
 		echo "FAIL";

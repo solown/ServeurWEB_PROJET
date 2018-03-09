@@ -6,6 +6,7 @@ function login() {
 			if(this.responseText == "OK"){
 				highlight(document.getElementsByName("mail")[0], false);
 				highlight(document.getElementsByName("password")[0], false);
+				window.location.href="../view/updateprofile.html";
 				
 			}
 			else {
