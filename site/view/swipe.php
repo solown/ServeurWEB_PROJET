@@ -1,5 +1,9 @@
+<?php
+require("../model/swipe.php");
+?>
 <!DOCTYPE html>
 <html lang="fr">
+
 
 <head>
 	<meta charset="utf-8" />
@@ -35,7 +39,7 @@
 					Belle - Intelligente - Sensible
 				</div>
 				<div class="swipe_description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					ID : <?php echo $_SESSION['id'];?> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</div>
 			</div>
 		</div>
