@@ -1,3 +1,6 @@
+<?php>
+	session_start();
+<?>
 <!DOCTYPE HTML>
 <html lang="fr">
 <header>
@@ -44,7 +47,7 @@
 					ullamco laboris nisi ut aliquip ex ea commodo
 					consequat.
 		</div>
-		<textarea id="inputresume"placeholder="Décris toi :)"></textarea>
+		<textarea id="inputresume"name="resume" placeholder="Décris toi :)"></textarea>
 	</div>
 	<div class="buttonupdate" onclick="update()">
 	</div>
@@ -53,7 +56,20 @@
 	<script src="../scripts/updateprofile.js"></script>
 	
 
-<?php
+<?php	
+	require("../model/db_connect.php")
+	if(isset($_POST['buttonconfirm'])
+	{
+		$resume = $_POST['resume']
+		$db = db_connect();
+		if($db){
+			$query = "UPDATE student SET description = :inputresume WHERE id_student = :id"
+			$statement = $db->prepare($query):
+			$statement->bindvalue(':id', $_SESSION['id']);
+			$statement->bindvalue(':inputresume',$resume);
+		}
+	}
+
 	if(isset($_POST['input_btn']))
 	{
 		$filetmp = $_FILES["file_img"]["tmp_name"];
