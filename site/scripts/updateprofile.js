@@ -17,3 +17,7 @@ function confirm(){
 	document.getElementsByClassName('buttonupdate')[0].style.display = 'block';
 	
 }
+
+function addpicture(){
+	
+}
