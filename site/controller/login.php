@@ -10,7 +10,9 @@
 	require("../model/login.php");
 
 	if(crypt($password_entered, $password_hash) == $password_hash) {
+		session_start();
 		echo "OK";
+		$_SESSION['id'] = $id_student;		
 	}
 	else
 		echo "FAIL";

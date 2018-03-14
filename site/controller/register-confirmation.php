@@ -18,22 +18,24 @@ $token_hash = md5($student_mail);
 require_once("../model/create-token.php");
 require_once("../vendor/autoload.php");
 
-$transport = (new Swift_SmtpTransport("todo", 25))
-	->setUsername("user")
-	->setPassword("pass")
+$transport = (new Swift_SmtpTransport("smtp.gmail.com", 465, "ssl"))
+	->setUsername("raphael.neveu98@gmail.com")
+	->setPassword("password")
 ;
 
 $mailer = new Swift_Mailer($transport);
 
 $message = (new Swift_Message("Registration confirmation"))
-	->setFrom(["adresse@domaine.com" => "name"])
-	->setTo(["receiver@domaine.com" => "name"])
-	->setBody("Please, confirm your registration by clicking on the following link :\n")
+	->setFrom(["raphael.neveu98@gmail.com" => "Choose the right one"])
+	->setTo([$student_mail."@etu.parisdescartes.fr" => $student_name])
+//	->setBody("Please, confirm your registration by clicking on the following link : http://tinder.student.elwinar.com/view/loginPerso.php?token=".$token_hash."&name=".$student_name."\n")
+	->setBody("Please, confirm your registration by clicking on the following link : localhost/view/loginPerso.php?token=".$token_hash."&name=".$student_name."\n")
+
 ;
 
-//$result = $mailer->send($message);
+$result = $mailer->send($message);
 
-//if($result)
+if($result)
 	create_token($token_hash, $student_mail);
 
 ?>

@@ -1,5 +1,9 @@
+<?php
+require("../model/swipe.php");
+?>
 <!DOCTYPE html>
 <html lang="fr">
+
 
 <head>
 	<meta charset="utf-8" />
@@ -15,8 +19,8 @@
 <body>
 	<div class="menu">
 		<a href="#" class="menu_active">swipe</a>
-		<a href="#" class="menu_inactive">my account</a>
-		<a href="#" class="menu_inactive">messges</a>
+		<a href="../view/updateprofile.html" class="menu_inactive">my account</a>
+		<a href="#" class="menu_inactive">messages</a>
 		<a href="#" class="menu_inactive">log out</a>
 	</div>
 	<div class="row fullscreen_height">

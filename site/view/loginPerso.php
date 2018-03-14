@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
+<?php require("../model/confirm-account.php"); ?>
+
 <body>
 	<div class="row fullscreen_height">
 		<div class="col-5 right_part ">
@@ -21,7 +23,7 @@
 
 					</div>
 					<div>
-						<form action="identification.php" method="post">
+						<form method="post" onsubmit="return login()">
 							<div>
 								<div class="space_top">
 									<label>Email</label>
@@ -56,10 +58,12 @@
 		<div class="col-7 left_part2">
 			<div class="welcome">
 				<div class="big_grey">Welcome</div>
-				<div class="big_orange">Prénom</div>
+				<div class="big_orange"><?php echo($_GET['name']) ?></div>
 			</div>
 		</div>
 	</div>
+<script src="../scripts/checkForm.js"></script>
+<script src="../scripts/login.js"></script>
 </body>
 
 </html>
