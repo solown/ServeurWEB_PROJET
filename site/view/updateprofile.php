@@ -1,5 +1,5 @@
 <?php>
-	session_start();
+	//session_start();
 <?>
 <!DOCTYPE HTML>
 <html lang="fr">
@@ -57,7 +57,7 @@
 	
 
 <?php	
-	require("../model/db_connect.php")
+	/*require("../model/db_connect.php")
 	if(isset($_POST['buttonconfirm'])
 	{
 		$resume = $_POST['resume']
@@ -78,10 +78,10 @@
 		$filepath = "profile_pic/".$filename;
 		
 		move_uploaded_file($filetmp,$filepath);
-	/*    
+	    
 		$sql = "INSERT INTO student (pic) VALUES ('$filepath')";
-		$result = mysql_query($sql);*/
-	}
+		$result = mysql_query($sql);
+	}*/
 	?>
 
 
