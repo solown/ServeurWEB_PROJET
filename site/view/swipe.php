@@ -34,7 +34,7 @@ require("../model/swipe.php");
 			</div>
 			<div>
 				<div class="swipe_name">
-					<?php echo htmlspecialchars($name) ?>
+					<?php echo htmlspecialchars($tab_student[0][0]) ?>
 				</div>
 				<div class="swipe_adj">
 					Belle - Intelligente - Sensible

@@ -31,7 +31,7 @@ $message = (new Swift_Message("Registration confirmation"))
 	->setFrom(["find.the.r8.one@gmail.com" => "Choose the right one"])
 	->setTo([$student_mail."@etu.parisdescartes.fr" => $student_name])
 //	->setBody("Please, confirm your registration by clicking on the following link : http://tinder.student.elwinar.com/view/loginPerso.php?token=".$token_hash."&name=".$student_name."\n")
-	->setBody("Please, confirm your registration by clicking on the following link : $root/view/loginPerso.php?token=".$token_hash."&name=".$student_name."\n")
+	->setBody("Please, confirm your registration by clicking on the following link : http://tinder.student.elwinar.com/view/loginPerso.php?token=".$token_hash."&name=".$student_name."\n")
 
 ;
 
