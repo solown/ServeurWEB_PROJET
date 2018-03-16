@@ -37,15 +37,17 @@
 		<div class="adj">
 			<center>Belle-Intelligente-Sensible</center>
 		</div>
+		<form method="post">
 		<div class="resume" >
-			<?php echo htmlspecialchars($description) ?>
+			<?php echo htmlspecialchars($description)?>
 		</div>
-		<textarea id="inputresume"name="resume" placeholder="Décris toi :)"></textarea>
+		<input id="inputresume"name="resumestudent" placeholder="Décris toi :)" type="textarea"></input>
 	</div>
 	<div class="buttonupdate" onclick="update()">
 	</div>
-	<div class="buttonconfirm" onclick="confirm()">
-	</div>
+	<input class="buttonconfirm" onclick="confirm()"type="submit">
+	</input>
+	</form>
 	<script src="../scripts/updateprofile.js"></script>
 </body>
 </html>

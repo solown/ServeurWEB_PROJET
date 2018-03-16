@@ -17,7 +17,7 @@
 	
 	if(isset($_POST['buttonconfirm'])){
 	
-		$resume = $_POST['resume'];
+		$resume = $_POST['resumestudent'];
 		if($db){
 			$query = "UPDATE student SET description = :inputresume WHERE id_student = :id";
 			$statement = $db->prepare($query);
