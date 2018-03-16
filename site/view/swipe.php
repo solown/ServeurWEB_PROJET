@@ -48,7 +48,6 @@ require("../model/swipe.php");
 			<img src="../images/heart.png" alt="yes">
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="../scripts/swipe.js"></script>
 </body>
 

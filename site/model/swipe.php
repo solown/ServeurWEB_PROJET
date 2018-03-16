@@ -4,9 +4,9 @@ require("db_connect.php");
 $db = db_connect();
 if($db) {
 	
-	$query_get_score = "SELECT score, s2.score 
-	FROM student,
-	WHERE id_student = :id_score"
+	$query_get_score = "SELECT score 
+	FROM student
+	WHERE id_student = :id_score";
 	$statement = $db->prepare($query_get_score);
 	$statement->bindValue(':id_score', $_SESSION['id']); 
 	$statement->execute();
@@ -20,7 +20,7 @@ if($db) {
 	
 	$query_get_student = "SELECT surname, description
 	FROM student
-	WHERE score BETWEN :socre_min AND :score_max";
+	WHERE score BETWEEN :socre_min AND :score_max";
 	$statement->bindValue(':score_min ', $score_min);
 	$statement->bindValue(':score_max ', $score_max);
 	$statement = $db->prepare($query_get_student);
@@ -31,7 +31,7 @@ if($db) {
 	$tab_student = array();
 	
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){		
-		$tab_student[$count] = array($count=>array('name'=>$row['surname'], 'description'=>$row['description']));
+		$tab_student[$count] = array('name'=>$row['surname'], 'description'=>$row['description']);
 		$count=$count+1;
 	}
 	
