@@ -18,7 +18,7 @@ function create_token($token_hash, $mail_student) {
 
 		$insert_query = "INSERT INTO token values (:date, :token, true, :id)";
 		$insert_statement = $db->prepare($insert_query);
-		$insert_statement->bindValue(":date", date("d/m/Y"));
+		$insert_statement->bindValue(":date", date("Y-m-d"));
 		$insert_statement->bindValue(":token", $token_hash);
 		$insert_statement->bindValue(":id", $id_student);
 		$insert_statement->execute();
