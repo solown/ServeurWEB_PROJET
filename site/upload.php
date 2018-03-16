@@ -19,10 +19,11 @@ $db = db_connect();*/
 </form>
 
 <?php
+session_start();
 if(isset($_POST['btn_upload']))
 {
     $filetmp = $_FILES["file_img"]["tmp_name"];
-    $filename = $_FILES["file_img"]["name"];
+    $filename = $_SESSION['id'];
     $filetype = $_FILES["file_img"]["type"];
     $filepath = "profile_pic/".$filename;
     
