@@ -21,7 +21,7 @@ require("../model/swipe.php");
 		<a href="#" class="menu_active">swipe</a>
 		<a href="../view/updateprofile.php" class="menu_inactive">my account</a>
 		<a href="#" class="menu_inactive">messages</a>
-		<a href="#" class="menu_inactive">log out</a>
+		<a href="../view/accueil.html" class="menu_inactive">log out <?php session_destroy(); ?></a>
 	</div>
 	<div class="row fullscreen_height">
 		<div class="col-3 swipe_icon no">
@@ -29,11 +29,12 @@ require("../model/swipe.php");
 		</div>
 		<div class="col-6 swipe_profil animated ">
 			<div class="swipe_face">
-				<img class="swipe_cloud" src="../images/swipe_picture.png" alt="cloud">
+				<img class="swipe_cloud" src="../images/cloud.svg" alt="cloud">
+				<img class="swipe_picture" src="../images/alice.png" alt="picture">
 			</div>
 			<div>
 				<div class="swipe_name">
-					Alice
+					<?php echo htmlspecialchars($tab_student[0][0]) ?>
 				</div>
 				<div class="swipe_adj">
 					Belle - Intelligente - Sensible

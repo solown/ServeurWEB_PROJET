@@ -15,50 +15,51 @@
 	<div class="row fullscreen-height">
 		<div class="col-5 right_part ">
 			<div class="row fullscreen_height">
-				<a class="home-btn" href="/">< Home page</a>
-				<div class="col-6 offset-3 formulaire">
-					<div class="title_logo">
-						<div><img src="../images/login.svg" class="cloud2"></div>
-					</div>
-					<div>
-						<form method="post" onsubmit="return login()">
-							<div>
-								<div class="space_top">
-									<label>Email</label>
-								</div>
-								<div class="inline">
-									<input type="text" name="mail" onblur="checkMail(this)"></input>
-								</div>
-								<div class="inline etu">
-									@etu.parisdescartes.fr
-								</div>
+				<a class="home-btn" href="/">
+					< Home page</a>
+						<div class="col-6 offset-3 formulaire">
+							<div class="title_logo">
+								<div><img src="../images/login.png" class="cloud2"></div>
 							</div>
 							<div>
-								<div class="space_top"><label>Password</label></div>
-								<input type="password" name="password" onblur="checkPassword(this)"></input><br>
+								<form method="post" onsubmit="return login()">
+									<div>
+										<div class="space_top">
+											<label>Email</label>
+										</div>
+										<div class="inline">
+											<input type="text" name="mail" onblur="checkMail(this)"></input>
+										</div>
+										<div class="inline etu">
+											@etu.parisdescartes.fr
+										</div>
+									</div>
+									<div>
+										<div class="space_top"><label>Password</label></div>
+										<input type="password" name="password" onblur="checkPassword(this)"></input><br>
+									</div>
+									<div>
+										<div class="inline etu2"><input type="checkbox" id="keeplog">
+											<label for="keeplog"><span>Keep me loged in</span></label>
+										</div>
+										<div class="inline etu2 maxW">
+											<a href="./view/accueil.html">Forgot your password ?</a>
+										</div>
+									</div>
+									<div>
+										<input type="submit" value="Login"></input>
+									</div>
+								</form>
 							</div>
-							<div>
-								<div class="inline etu2"><input type="checkbox" id="keeplog">
-									<label for="keeplog"><span>Keep me loged in</span></label>
-								</div>
-								<div class="inline etu2 maxW">
-									<a href="./view/accueil.html">Forgot your password ?</a>
-								</div>
-							</div>
-							<div>
-								<input type="submit" value="Login"></input>
-							</div>
-						</form>
-					</div>
-				</div>
+						</div>
 			</div>
 		</div>
 		<div class="col-7 left_part">
 
 		</div>
 	</div>
-<script src="../scripts/checkForm.js"></script>
-<script src="../scripts/login.js"></script>
+	<script src="../scripts/checkForm.js"></script>
+	<script src="../scripts/login.js"></script>
 </body>
 
 </html>

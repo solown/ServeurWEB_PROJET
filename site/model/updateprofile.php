@@ -1,6 +1,6 @@
 
 <?php
-	/*fichier php updateprofile*/
+/*fichier php updateprofile*/
 	session_start();	
 	require("../model/db_connect.php");
 	$db = db_connect();
@@ -12,17 +12,18 @@
 		$description = $row['description'];
 	}
 	if (empty($description)){
-		$description = "Utilise cette zone pour te décrire";
+		$description = "Les parrains avec une description ont 50% de chance de match en plus";
 	}
 	
-	if(isset($_POST['buttonconfirm'])
-	{
-		$resume = $_POST['resume']
+	if(isset($_POST['buttonconfirm'])){
+	
+		$resume = $_POST['resumestudent'];
 		if($db){
 			$query = "UPDATE student SET description = :inputresume WHERE id_student = :id";
 			$statement = $db->prepare($query);
 			$statement->bindvalue(':id', $_SESSION['id']);
 			$statement->bindvalue(':inputresume',$resume);
+			$statement -> execute();
 		}
 	}
 

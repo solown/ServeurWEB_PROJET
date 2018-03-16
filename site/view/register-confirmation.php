@@ -20,7 +20,7 @@
 			<div class="row fullscreen_height">
 				<div class="col-10 offset-1 formulaire text_center">
 					<div class="title_logo">
-						<div><img src="../images/singUp.svg" class="cloud2"></div>
+						<div><img src="../images/singUp.png" class="cloud2"></div>
 
 					</div>
 					<div>

@@ -2,55 +2,22 @@ const yes = document.querySelector(".yes")
 const swipe_profil = document.querySelector(".swipe_profil")
 const no = document.querySelector(".no")
 
-
+var recycled = document.querySelector(".bounceOutLeft")
+var hearted = document.querySelector(".bounceOutRight")
 
 yes.addEventListener("click", () => {
-	$(document).trigger('swipe:yes');
-});
-
-$(document).on('swipe:yes', function () {
-	swipe_profil.classList.remove("bounceInDown");
 	swipe_profil.classList.add("bounceOutRight");
-	$(document).trigger('swipe:done');
+
 })
-
-
-
 no.addEventListener("click", () => {
-	$(document).trigger('swipe:no');
+	swipe_profil.classList.add("bounceOutLeft");
 })
 
-
-$(document).on('swipe:no', function () {
-	swipe_profil.classList.remove("bounceInDown");
-	swipe_profil.classList.add("bounceOutleft");
-	console.log("swipe:no");
-	setTimeout(function () {
-		//$(document).trigger('swipe:done');
-		console.log("swipe:done");
-	}, 1500);
-})
-
-$(document).on('swipe:no', function () {
-	$(document).trigger('swipe:done');
-})
-
-$(document).on('swipe:done', function () {
+function top_back() {
 	swipe_profil.classList.remove("bounceOutRight");
 	swipe_profil.classList.remove("bounceOutLeft");
 	swipe_profil.classList.add("bounceInDown");
-	console.log("je suis ici");
-})
-
-/*
-function swipe_yes() {
-	swipe_profil.classList.remove("bounceInDown");
-	swipe_profil.classList.add("bounceOutRight");
 }
 
-function swipe_add() {
-	swipe_profil.classList.remove("bounceOutRight");
-	swipe_profil.classList.add("bounceInDown");
-
-}
-*/
+swipe_profil.addEventListener("webkitAnimationEnd", top_back, false);
+swipe_profil.addEventListener("animationend", top_back, false);

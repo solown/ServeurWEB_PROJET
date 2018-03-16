@@ -184,8 +184,8 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .welcome {
-	margin-top: 20%;
-	transform: translateY(-60%);
+	margin-top: 40%;
+	transform: translateY(-70%);
 }
 
 .big_grey {
@@ -259,8 +259,19 @@ input[type="checkbox"]:checked+label::before {
 /**********************************************swipe*****************************************/
 
 .swipe_cloud {
-	width: 20vw;
+	margin-left: -10vw;
+	margin-top: -3vh;
+	width: 15vw;
 	height: auto;
+	position: relative;
+}
+
+.swipe_picture {
+	width: 13vw;
+	height: auto;
+	position: absolute;
+	margin-top: 5vh;
+	margin-left: -10vw;
 }
 
 .swipe_profil {
@@ -268,6 +279,7 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .swipe_name {
+	margin-top: 20vh;
 	color: #F05228;
 	font-family: "Fjalla One";
 	font-size: 5vw;
