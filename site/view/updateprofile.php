@@ -8,16 +8,17 @@
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 </header>
+
 <body>
 	<?php include('../model/updateprofile.php') ?>
 	<div class="menu">
 		<a href="../view/swipe.php" class="menu_inactive">swipe</a>
 		<a href="#" class="menu_active">my account</a>
 		<a href="#" class="menu_inactive">messages</a>
-		<a href="#" class="menu_inactive">log out</a>
+		<a href="../view/accueil.php" class="menu_inactive">log out <?php session_destroy(); ?></a>
 	</div>
 	<div id="mailclasse">
-		<p><b>DUT2</b></p><span>alicecapelle@etu.parisdecartes.fr</span>
+		<p><b>DUT <?php echo htmlspecialchars($yearstudent)?></b></p><span><?php echo htmlspecialchars($mailstudent) ?></span>
 	</div>
 	<div id="stats">
 		<h2>12 matchs</h2>
@@ -26,27 +27,28 @@
 	<div id="present">
 
 		<div class="image" onclick="addpicture()">
-				<input type=file class=input_btn name=upload_pic></input>
+			<input type=file class=input_btn name=upload_pic></input>
 		</div>
 		<div id="background">
 		</div>
 		<div class="name">
-			<center> Alice </center>
+			<center> <?php echo htmlspecialchars($name) ?> </center>
 		</div>
 		<div class="adj">
 			<center>Belle-Intelligente-Sensible</center>
 		</div>
 		<form method="post">
-		<div class="resume" >
-			<?php echo htmlspecialchars($description)?>
-		</div>
-		<input id="inputresume"name="resumestudent" placeholder="Décris toi :)" type="textarea"></input>
+			<div class="resume">
+				<?php echo htmlspecialchars($description)?>
+			</div>
+			<input id="inputresume" name="resumestudent" placeholder="Décris toi :)" type="textarea"></input>
 	</div>
 	<div class="buttonupdate" onclick="update()">
 	</div>
-	<input class="buttonconfirm" onclick="confirm()"type="submit" value="">
+	<input class="buttonconfirm" onclick="confirm()" type="submit" value="">
 	</input>
 	</form>
 	<script src="../scripts/updateprofile.js"></script>
 </body>
+
 </html>
