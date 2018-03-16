@@ -12,7 +12,7 @@
 <body>
 	<?php include('../model/updateprofile.php') ?>
 	<div class="menu">
-		<a href="#" class="menu_inactive">swipe</a>
+		<a href="../view/swipe.php" class="menu_inactive">swipe</a>
 		<a href="#" class="menu_active">my account</a>
 		<a href="#" class="menu_inactive">messages</a>
 		<a href="#" class="menu_inactive">log out</a>
@@ -37,7 +37,6 @@
 		<div class="adj">
 			<center>Belle-Intelligente-Sensible</center>
 		</div>
-		<?php echo $description ?>
 		<div class="resume" >
 			<?php echo htmlspecialchars($description) ?>
 		</div>

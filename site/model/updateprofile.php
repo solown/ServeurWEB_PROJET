@@ -12,7 +12,7 @@
 		$description = $row['description'];
 	}
 	if (empty($description)){
-		$description = "Utilise cette zone pour te décrire";
+		$description = "Les parrains avec une description ont 50% de chance de match en plus";
 	}
 	
 	if(isset($_POST['buttonconfirm'])){
@@ -23,6 +23,7 @@
 			$statement = $db->prepare($query);
 			$statement->bindvalue(':id', $_SESSION['id']);
 			$statement->bindvalue(':inputresume',$resume);
+			$statement -> execute();
 		}
 	}
 
