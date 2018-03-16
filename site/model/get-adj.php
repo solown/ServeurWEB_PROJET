@@ -6,16 +6,15 @@ $db = db_connect();
 
 if($db){
 
-		$id_query = "SELECT wording FROM adjective";
-		$id_statement = $db->prepare($id_query);
-		$id_statement->execute();
+		$adj_query = "SELECT wording FROM adjective";
+		$adj_statement = $db->prepare($adj_query);
+		$adj_statement->execute();
 		
 		$adjectives = array();
 
-		while($row = $id_statement->fetch(PDO::FETCH_ASSOC))
+		while($row = $adj_statement->fetch(PDO::FETCH_ASSOC))
 			array_push($adjectives, $row["wording"]);
 
-		$insert_statement->execute();
 		echo(json_encode($adjectives));
 }
 

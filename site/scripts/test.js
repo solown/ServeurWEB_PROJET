@@ -3,21 +3,24 @@ function get_adj() {
 
 	xhttp.onreadystatechange = function(){
 		if(this.readyState == 4 && this.status == 200){
-			if(this.responseText != "OK"){
-				var json = window.JSON ? JSON.parse(this.reponseText) : eval("("+this.responseText+")");
-				return json;
+			if(this.responseText != false){
+				var json = JSON.parse(this.responseText);
+				display_adj(json);
 			}
-			else {
-				alert("Erreur : impossible de charger les adjectifs...");
-				return null;
-			}
+			else
+				console.log("Erreur : impossible de charger les adjectifs...");
 		}
 	};
 
 	xhttp.open("GET", "../model/get-adj.php", true);
-
-	xhttp.send(null);
-	
+	xhttp.send();
 }
 
-alert(get_adj());
+function display_adj(adj) {
+	for(var i = 0; i < adj.length; ++i){
+		console.log(adj[i]);
+	}	
+}
+
+get_adj();
+
