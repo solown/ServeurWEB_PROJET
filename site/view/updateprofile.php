@@ -17,7 +17,7 @@
 		<a href="#" class="menu_inactive">log out</a>
 	</div>
 	<div id="mailclasse">
-		<p><b>DUT2</b></p><span>alicecapelle@etu.parisdecartes.fr</span>
+		<p><b>DUT <?php echo htmlspecialchars($yearstudent)?></b></p><span><?php echo htmlspecialchars($mailstudent) ?></span>
 	</div>
 	<div id="stats">
 		<h2>12 matchs</h2>
@@ -31,7 +31,7 @@
 		<div id="background">
 		</div>
 		<div class="name">
-			<center> Alice </center>
+			<center> <?php echo htmlspecialchars($name) ?> </center>
 		</div>
 		<div class="adj">
 			<center>Belle-Intelligente-Sensible</center>

@@ -4,12 +4,15 @@
 	session_start();	
 	require("../model/db_connect.php");
 	$db = db_connect();
-	$query = "SELECT description FROM student WHERE id_student = :id";
+	$query = "SELECT surname,description,email,year FROM student WHERE id_student = :id";
 	$statement = $db-> prepare($query);
 	$statement -> bindvalue(':id', $_SESSION['id']);
 	$statement -> execute();
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
 		$description = $row['description'];
+		$name = $row['surname'];
+		$yearstudent = $row['year'];
+		$mailstudent = $row['email'];
 	}
 	if (empty($description)){
 		$description = "Les parrains avec une description ont 50% de chance de match en plus";
