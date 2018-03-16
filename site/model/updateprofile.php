@@ -2,11 +2,22 @@
 <?php
 	/*fichier php updateprofile*/
 	session_start();	
-	require("../model/db_connect.php")
+	require("../model/db_connect.php");
+	$db = db_connect();
+	$query = "SELECT description FROM student WHERE id_student = :id";
+	$statement = $db-> prepare($query);
+	$statement -> bindvalue(':id', $_SESSION['id']);
+	$statement -> execute();
+	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
+		$description = $row['description'];
+	}
+	if (empty($description)){
+		$description = "Utilise cette zone pour te décrire";
+	}
+	
 	if(isset($_POST['buttonconfirm'])
 	{
 		$resume = $_POST['resume']
-		$db = db_connect();
 		if($db){
 			$query = "UPDATE student SET description = :inputresume WHERE id_student = :id";
 			$statement = $db->prepare($query);
