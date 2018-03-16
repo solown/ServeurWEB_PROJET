@@ -272,8 +272,6 @@ input[type="checkbox"]:checked+label::before {
 	position: absolute;
 	margin-top: 5vh;
 	margin-left: -10vw;
-	/*
-	margin-top: 5vh;*/
 }
 
 .swipe_profil {
