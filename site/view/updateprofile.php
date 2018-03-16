@@ -39,7 +39,7 @@
 		</div>
 		<?php echo $description ?>
 		<div class="resume" >
-			<?php echo $description ?>
+			<?php echo htmlspecialchars($description) ?>
 		</div>
 		<textarea id="inputresume"name="resume" placeholder="Décris toi :)"></textarea>
 	</div>
