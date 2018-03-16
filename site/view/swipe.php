@@ -19,7 +19,7 @@ require("../model/swipe.php");
 <body>
 	<div class="menu">
 		<a href="#" class="menu_active">swipe</a>
-		<a href="../view/updateprofile.html" class="menu_inactive">my account</a>
+		<a href="../view/updateprofile.php" class="menu_inactive">my account</a>
 		<a href="#" class="menu_inactive">messages</a>
 		<a href="#" class="menu_inactive">log out</a>
 	</div>
