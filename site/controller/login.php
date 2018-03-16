@@ -6,10 +6,11 @@
 	$student_mail =	 $_POST['mail'];
 	$password_entered = $_POST['password'];
 	$password_hash;
+	$validate_account;
 
 	require("../model/login.php");
 
-	if(crypt($password_entered, $password_hash) == $password_hash) {
+	if(crypt($password_entered, $password_hash) == $password_hash and $validate_account) {
 		session_start();
 		echo "OK";
 		$_SESSION['id'] = $id_student;		

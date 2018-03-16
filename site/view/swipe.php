@@ -29,7 +29,8 @@ require("../model/swipe.php");
 		</div>
 		<div class="col-6 swipe_profil animated ">
 			<div class="swipe_face">
-				<img class="swipe_cloud" src="../images/swipe_picture.png" alt="cloud">
+				<img class="swipe_cloud" src="../images/cloud.svg" alt="cloud">
+				<img class="swipe_picture" src="../images/alice.png" alt="picture">
 			</div>
 			<div>
 				<div class="swipe_name">
