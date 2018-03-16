@@ -19,7 +19,7 @@
 			<div class="row fullscreen_height">
 				<div class="col-6 offset-3 formulaire">
 					<div class="title_logo">
-						<div><img src="../images/login.svg" class="cloud2"></div>
+						<div><img src="../images/login.png" class="cloud2"></div>
 
 					</div>
 					<div>
@@ -58,12 +58,14 @@
 		<div class="col-7 left_part2">
 			<div class="welcome">
 				<div class="big_grey">Welcome</div>
-				<div class="big_orange"><?php echo($_GET['name']) ?></div>
+				<div class="big_orange">
+					<?php echo($_GET['name']) ?>
+				</div>
 			</div>
 		</div>
 	</div>
-<script src="../scripts/checkForm.js"></script>
-<script src="../scripts/login.js"></script>
+	<script src="../scripts/checkForm.js"></script>
+	<script src="../scripts/login.js"></script>
 </body>
 
 </html>
