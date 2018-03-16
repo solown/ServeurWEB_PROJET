@@ -13,5 +13,4 @@ if($db) {
 		$name = $row['surname'];
 		$description = $row['description'];
 	}
-?>
-
+}
