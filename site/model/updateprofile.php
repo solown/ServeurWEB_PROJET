@@ -1,6 +1,6 @@
 
 <?php
-	/*fichier php updateprofile*/
+/*fichier php updateprofile*/
 	session_start();	
 	require("../model/db_connect.php");
 	$db = db_connect();
@@ -15,9 +15,9 @@
 		$description = "Utilise cette zone pour te décrire";
 	}
 	
-	if(isset($_POST['buttonconfirm'])
-	{
-		$resume = $_POST['resume']
+	if(isset($_POST['buttonconfirm'])){
+	
+		$resume = $_POST['resume'];
 		if($db){
 			$query = "UPDATE student SET description = :inputresume WHERE id_student = :id";
 			$statement = $db->prepare($query);
