@@ -5,7 +5,7 @@ $db = db_connect();
 if($db) {
 	
 	$query_get_score = "SELECT score, s2.score 
-	FROM student,
+	FROM student
 	WHERE id_student = :id_score";
 	$statement = $db->prepare($query_get_score);
 	$statement->bindValue(':id_score', $_SESSION['id']); 
@@ -31,7 +31,7 @@ if($db) {
 	$tab_student = array();
 	
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){		
-		$tab_student[$count] = array($count=>array('name'=>$row['surname'], 'description'=>$row['description']));
+		$tab_student[$count] = array('name'=>$row['surname'], 'description'=>$row['description']);
 		$count=$count+1;
 	}
 	
