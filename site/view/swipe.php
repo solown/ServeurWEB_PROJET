@@ -17,6 +17,8 @@ require("../model/swipe.php");
 </head>
 
 <body>
+	<?php echo $_SESSION['id'] ?>
+
 	<div class="menu">
 		<a href="#" class="menu_active">swipe</a>
 		<a href="../view/updateprofile.php" class="menu_inactive">my account</a>
