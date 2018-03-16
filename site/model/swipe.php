@@ -5,7 +5,7 @@ $db = db_connect();
 if($db) {
 	$query_get_student = "SELECT surname, description
 	FROM student
-	WHERE s1.id_student = 4"
+	WHERE id_student = 4"
 	$statement = $db->prepare($query_get_student);
 	$statement->execute();
 	
