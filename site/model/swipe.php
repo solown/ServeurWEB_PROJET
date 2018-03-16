@@ -6,7 +6,7 @@ if($db) {
 	
 	$query_get_score = "SELECT score, s2.score 
 	FROM student,
-	WHERE id_student = :id_score"
+	WHERE id_student = :id_score";
 	$statement = $db->prepare($query_get_score);
 	$statement->bindValue(':id_score', $_SESSION['id']); 
 	$statement->execute();
