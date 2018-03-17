@@ -14,7 +14,7 @@
 
 <body>
 	<div class="row fullscreen-height">
-		<div class="col-4">
+		<div id="left-adj-container" class="col-4">
 		</div>
 
 		<div class="col-4">
@@ -26,7 +26,7 @@
 			</form>
 		</div>
 
-		<div class="col-4">
+		<div id="right-adj-container" class="col-4">
 		</div>
 	</div>
 

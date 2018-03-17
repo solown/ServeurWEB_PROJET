@@ -1,23 +1,23 @@
+(function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
+'use strict';
+
 var text;
 
-
-function update(){
+function update() {
 	document.getElementsByClassName('resume')[0].style.display = 'none';
 	document.getElementById('inputresume').style.display = 'block';
 	document.getElementsByClassName('buttonupdate')[0].style.display = 'none';
 	document.getElementsByClassName('buttonconfirm')[0].style.display = 'block';
 }
 
-function confirm(){
-	text=document.getElementById('inputresume').value
-	document.getElementsByClassName('resume')[0].innerHTML =  text;
+function confirm() {
+	text = document.getElementById('inputresume').value;
+	document.getElementsByClassName('resume')[0].innerHTML = text;
 	document.getElementById('inputresume').style.display = 'none';
 	document.getElementsByClassName('resume')[0].style.display = 'block';
 	document.getElementsByClassName('buttonconfirm')[0].style.display = 'none';
 	document.getElementsByClassName('buttonupdate')[0].style.display = 'block';
-	
 }
 
-function addpicture(){
-	
-}
+function addpicture() {}
+},{}]},{},[1]);
