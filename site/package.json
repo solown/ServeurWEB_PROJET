@@ -2,7 +2,7 @@
 	"name": "choose-the-right-one",
 	"version": "1.0.0",
 	"scripts": {
-		"build": "babel scripts-dev -d scripts && cd scripts && for file in `ls`; do browserify $file -o $file; done"
+		"build": "files=`ls scripts-dev`; babel scripts-dev -d scripts && cd scripts && for file in $files; do browserify $file -o $file; done"
 	},
 	"dependencies": {
 		"browserify": "^16.1.1",
