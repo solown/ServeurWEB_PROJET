@@ -15,7 +15,7 @@
 		<a href="../view/swipe.php" class="menu_inactive">swipe</a>
 		<a href="#" class="menu_active">my account</a>
 		<a href="#" class="menu_inactive">messages</a>
-		<a href="../view/accueil.html" class="menu_inactive">log out <?php session_destroy(); ?></a>
+		<a href="../view/accueil.html" class="menu_inactive">log out</a>
 	</div>
 	<div id="mailclasse">
 		<p><b>DUT <?php echo htmlspecialchars($yearstudent)?></b></p><span><?php echo htmlspecialchars($mailstudent) ?></span>
