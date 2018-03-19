@@ -52,6 +52,13 @@ create table token (
 	id_student integer primary key,
 	foreign key (id_student) references student(id_student)
 );
+create table token_keep_me_logged (
+	birth date,
+	token varchar(32),
+	is_alive boolean default true,
+	id_student integer primary key,
+	foreign key (id_student) references student(id_student)
+);
 
 insert into adjective (wording) values ('froid') ;
 insert into adjective (wording) values ('calculateur') ;
