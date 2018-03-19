@@ -24,6 +24,7 @@ class Adjective extends React.Component {
 		this.y = Math.random()*1;
 		this.size = 2 + Math.random()*2;
 		this.color = "rgb(" + (Math.random() * 25) + "," + (Math.random() * 25) + "," + (55 + Math.random() * 200) + ")";
+		this.state = {display: "block"};
 		this.clickHandler = this.clickHandler.bind(this);
 	}
 
@@ -34,6 +35,13 @@ class Adjective extends React.Component {
 			if(adj_inputs[i].value === ''){
 				adj_inputs[i].value = this.props.wording;
 				adj_inputs[i].style.color = this.color;
+				this.setState({display: 'none'});
+				let adj_comp = this;
+				let adj_obj = {adj: adj_comp, input: adj_inputs[i]};	
+				adj_inputs[i].onclick = function() { 
+					this.adj.setState({display: "block"});
+					this.input.value = '';
+				}.bind(adj_obj);
 				break;
 			}
 		}
@@ -41,12 +49,13 @@ class Adjective extends React.Component {
 
 	render(){
 		return (
-			<div onClick={this.clickHandler} style={{
+			<div className="adj" onClick={this.clickHandler} style={{
 						position: "absolute",
 						marginLeft: this.x * 100 + '%',
 						marginTop: this.y * 100 + '%',
 						fontSize: this.size + 'vw',
-						color: this.color
+						color: this.color,
+						display: this.state.display
 						}}>
 				{this.props.wording}
 			</div>
@@ -78,8 +87,10 @@ function display_adj(adj) {
 }
 
 get_adj();
-let adj_inputs = document.getElementsByClassName("adj-input");
-for(let i = 0; i < adj_inputs.length; ++i){
-	adj_inputs[i].onclick = function() { this.value = '';};
-}
+//let adj_inputs = document.getElementsByClassName("adj-input");
+//for(let i = 0; i < adj_inputs.length; ++i){
+//		adj_inputs[i].onclick = function() { 
+//		this.value = '';
+//	};
+//}
 

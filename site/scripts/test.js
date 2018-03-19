@@ -18117,6 +18117,7 @@ var Adjective = function (_React$Component2) {
 		_this2.y = Math.random() * 1;
 		_this2.size = 2 + Math.random() * 2;
 		_this2.color = "rgb(" + Math.random() * 25 + "," + Math.random() * 25 + "," + (55 + Math.random() * 200) + ")";
+		_this2.state = { display: "block" };
 		_this2.clickHandler = _this2.clickHandler.bind(_this2);
 		return _this2;
 	}
@@ -18130,6 +18131,13 @@ var Adjective = function (_React$Component2) {
 				if (adj_inputs[i].value === '') {
 					adj_inputs[i].value = this.props.wording;
 					adj_inputs[i].style.color = this.color;
+					this.setState({ display: 'none' });
+					var adj_comp = this;
+					var adj_obj = { adj: adj_comp, input: adj_inputs[i] };
+					adj_inputs[i].onclick = function () {
+						this.adj.setState({ display: "block" });
+						this.input.value = '';
+					}.bind(adj_obj);
 					break;
 				}
 			}
@@ -18139,12 +18147,13 @@ var Adjective = function (_React$Component2) {
 		value: function render() {
 			return _react2.default.createElement(
 				"div",
-				{ onClick: this.clickHandler, style: {
+				{ className: "adj", onClick: this.clickHandler, style: {
 						position: "absolute",
 						marginLeft: this.x * 100 + '%',
 						marginTop: this.y * 100 + '%',
 						fontSize: this.size + 'vw',
-						color: this.color
+						color: this.color,
+						display: this.state.display
 					} },
 				this.props.wording
 			);
@@ -18178,10 +18187,10 @@ function display_adj(adj) {
 }
 
 get_adj();
-var adj_inputs = document.getElementsByClassName("adj-input");
-for (var i = 0; i < adj_inputs.length; ++i) {
-	adj_inputs[i].onclick = function () {
-		this.value = '';
-	};
-}
+//let adj_inputs = document.getElementsByClassName("adj-input");
+//for(let i = 0; i < adj_inputs.length; ++i){
+//		adj_inputs[i].onclick = function() { 
+//		this.value = '';
+//	};
+//}
 },{"react":26,"react-dom":23}]},{},[27]);
