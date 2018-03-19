@@ -18116,19 +18116,35 @@ var Adjective = function (_React$Component2) {
 		_this2.x = Math.random() * 0.5;
 		_this2.y = Math.random() * 1;
 		_this2.size = 2 + Math.random() * 2;
+		_this2.color = "rgb(" + Math.random() * 25 + "," + Math.random() * 25 + "," + (55 + Math.random() * 200) + ")";
+		_this2.clickHandler = _this2.clickHandler.bind(_this2);
 		return _this2;
 	}
 
 	_createClass(Adjective, [{
+		key: "clickHandler",
+		value: function clickHandler() {
+			var adj_inputs = document.getElementsByClassName("adj-input");
+
+			for (var i = 0; i < adj_inputs.length; ++i) {
+				if (adj_inputs[i].value === '') {
+					adj_inputs[i].value = this.props.wording;
+					adj_inputs[i].style.color = this.color;
+					break;
+				}
+			}
+		}
+	}, {
 		key: "render",
 		value: function render() {
 			return _react2.default.createElement(
 				"div",
-				{ style: {
+				{ onClick: this.clickHandler, style: {
 						position: "absolute",
 						marginLeft: this.x * 100 + '%',
 						marginTop: this.y * 100 + '%',
-						fontSize: this.size + 'vw'
+						fontSize: this.size + 'vw',
+						color: this.color
 					} },
 				this.props.wording
 			);
@@ -18162,4 +18178,10 @@ function display_adj(adj) {
 }
 
 get_adj();
+var adj_inputs = document.getElementsByClassName("adj-input");
+for (var i = 0; i < adj_inputs.length; ++i) {
+	adj_inputs[i].onclick = function () {
+		this.value = '';
+	};
+}
 },{"react":26,"react-dom":23}]},{},[27]);

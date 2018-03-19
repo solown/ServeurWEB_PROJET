@@ -23,15 +23,30 @@ class Adjective extends React.Component {
 		this.x = Math.random()*0.5;
 		this.y = Math.random()*1;
 		this.size = 2 + Math.random()*2;
+		this.color = "rgb(" + (Math.random() * 25) + "," + (Math.random() * 25) + "," + (55 + Math.random() * 200) + ")";
+		this.clickHandler = this.clickHandler.bind(this);
+	}
+
+	clickHandler(){
+		let adj_inputs = document.getElementsByClassName("adj-input");	
+
+		for (let i = 0; i < adj_inputs.length; ++i){
+			if(adj_inputs[i].value === ''){
+				adj_inputs[i].value = this.props.wording;
+				adj_inputs[i].style.color = this.color;
+				break;
+			}
+		}
 	}
 
 	render(){
 		return (
-			<div style={{
+			<div onClick={this.clickHandler} style={{
 						position: "absolute",
 						marginLeft: this.x * 100 + '%',
 						marginTop: this.y * 100 + '%',
-						fontSize: this.size + 'vw'
+						fontSize: this.size + 'vw',
+						color: this.color
 						}}>
 				{this.props.wording}
 			</div>
@@ -63,4 +78,8 @@ function display_adj(adj) {
 }
 
 get_adj();
+let adj_inputs = document.getElementsByClassName("adj-input");
+for(let i = 0; i < adj_inputs.length; ++i){
+	adj_inputs[i].onclick = function() { this.value = '';};
+}
 

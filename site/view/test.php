@@ -19,9 +19,9 @@
 
 		<div class="col-4">
 			<form>
-				<input type="text" name="adj1"></input>
-				<input type="text" name="adj2"></input>
-				<input type="text" name="adj3"></input>
+				<input class="adj-input" type="text" name="adj1"></input>
+				<input class="adj-input" type="text" name="adj2"></input>
+				<input class="adj-input" type="text" name="adj3"></input>
 				<input type="submit" value="Valider"></input>
 			</form>
 		</div>
