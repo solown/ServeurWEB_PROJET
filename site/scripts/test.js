@@ -18132,6 +18132,7 @@ var Adjective = function (_React$Component2) {
 					adj_inputs[i].value = this.props.wording;
 					adj_inputs[i].style.color = this.color;
 					this.setState({ display: 'none' });
+
 					var adj_comp = this;
 					var adj_obj = { adj: adj_comp, input: adj_inputs[i] };
 					adj_inputs[i].onclick = function () {
@@ -18182,15 +18183,18 @@ function get_adj() {
 
 function display_adj(adj) {
 	var half = Math.trunc(adj.length / 2);
-	_reactDom2.default.render(_react2.default.createElement(AdjectiveContainer, { adj: adj.splice(0, half) }), document.getElementById("left-adj-container"));
-	_reactDom2.default.render(_react2.default.createElement(AdjectiveContainer, { adj: adj.splice(0, adj.length) }), document.getElementById("right-adj-container"));
+	_reactDom2.default.render(_react2.default.createElement(AdjectiveContainer, { adj: adj.splice(0, half) }), document.getElementById("left-adj-container"), show_adj);
+	_reactDom2.default.render(_react2.default.createElement(AdjectiveContainer, { adj: adj.splice(0, adj.length) }), document.getElementById("right-adj-container"), show_adj);
+}
+
+function show_adj() {
+	var $adj = $('.adj');
+	console.log($adj);
+	$adj.each(function () {
+		var random_delay = Math.random() * 2000;
+		$(this).hide().delay(random_delay).fadeIn(1000);
+	});
 }
 
 get_adj();
-//let adj_inputs = document.getElementsByClassName("adj-input");
-//for(let i = 0; i < adj_inputs.length; ++i){
-//		adj_inputs[i].onclick = function() { 
-//		this.value = '';
-//	};
-//}
 },{"react":26,"react-dom":23}]},{},[27]);

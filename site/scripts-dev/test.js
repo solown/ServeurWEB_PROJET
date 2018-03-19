@@ -36,6 +36,7 @@ class Adjective extends React.Component {
 				adj_inputs[i].value = this.props.wording;
 				adj_inputs[i].style.color = this.color;
 				this.setState({display: 'none'});
+
 				let adj_comp = this;
 				let adj_obj = {adj: adj_comp, input: adj_inputs[i]};	
 				adj_inputs[i].onclick = function() { 
@@ -82,15 +83,18 @@ function get_adj() {
 
 function display_adj(adj) {
 	let half = Math.trunc(adj.length/2);
-	ReactDOM.render(<AdjectiveContainer adj={adj.splice(0, half)}/>, document.getElementById("left-adj-container"));
-	ReactDOM.render(<AdjectiveContainer adj={adj.splice(0, adj.length)}/>, document.getElementById("right-adj-container"));
+	ReactDOM.render(<AdjectiveContainer adj={adj.splice(0, half)}/>, document.getElementById("left-adj-container"), show_adj);
+	ReactDOM.render(<AdjectiveContainer adj={adj.splice(0, adj.length)}/>, document.getElementById("right-adj-container"), show_adj);
+}
+
+function show_adj() {
+	var $adj = $('.adj');
+	console.log($adj);
+	$adj.each(function(){
+		let random_delay = Math.random() * 2000;
+		$(this).hide().delay(random_delay).fadeIn(1000);
+	});
+
 }
 
 get_adj();
-//let adj_inputs = document.getElementsByClassName("adj-input");
-//for(let i = 0; i < adj_inputs.length; ++i){
-//		adj_inputs[i].onclick = function() { 
-//		this.value = '';
-//	};
-//}
-
