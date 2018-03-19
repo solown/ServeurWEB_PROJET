@@ -5,6 +5,7 @@ if(!isset($_SESSION['id']))
 {
     header('Location: ../view/logout.php');
 }
+echo $_SESSION['id'];
 ?>
 	<!DOCTYPE html>
 	<html lang="fr">
