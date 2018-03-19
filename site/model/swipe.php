@@ -1,5 +1,4 @@
 <?php
-
 require("db_connect.php");
 $db = db_connect();
 if($db) {
@@ -8,7 +7,7 @@ if($db) {
 	FROM student
 	WHERE id_student = :id_score";
 	$statement = $db->prepare($query_get_score);
-	$statement->bindValue(':id_score', isset($_SESSION['id']); 
+	$statement->bindValue(':id_score', isset($_SESSION['id'])); 
 	$statement->execute();
 	
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
