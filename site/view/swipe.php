@@ -21,7 +21,7 @@ require("../model/swipe.php");
 		<a href="#" class="menu_active">swipe</a>
 		<a href="../view/updateprofile.php" class="menu_inactive">my account</a>
 		<a href="#" class="menu_inactive">messages</a>
-		<a href="../view/accueil.html" class="menu_inactive">log out</a>
+		<a href="../view/logout.php" class="menu_inactive">log out</a>
 	</div>
 	<div class="row fullscreen_height">
 		<div class="col-3 swipe_icon no">
