@@ -1,5 +1,7 @@
-<?php session_destroy(); 
-exit();
+<?php 
+session_start();
 echo $_SESSION['id'];
- //header('Location: ../index.php');
+session_destroy(); 
+echo $_SESSION['id'];
+//header('Location: ../index.php');
 ?>
