@@ -22,8 +22,8 @@ if($db) {
 	FROM student
 	WHERE score BETWEEN :score_min AND :score_max";
 	$statement = $db->prepare($query_get_student);
-	$statement->bindValue(':score_min ', $score_min);
-	$statement->bindValue(':score_max ', $score_max);
+	$statement->bindValue(':score_min', $score_min, PDO::PARAM_INT);
+	$statement->bindValue(':score_max', $score_max, PDO::PARAM_INT);
 	$statement->execute();
 	
 
