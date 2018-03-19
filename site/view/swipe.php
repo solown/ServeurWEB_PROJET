@@ -1,6 +1,7 @@
 <?php
 require("../model/swipe.php");
-if(!isset($_SESSION['id']))
+session_start();
+if(isset($_SESSION['id']==null))
 {
     header('Location: ../view/logout.php');
 }
