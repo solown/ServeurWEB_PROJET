@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require("db_connect.php");
 $db = db_connect();
 if($db) {
@@ -20,10 +20,10 @@ if($db) {
 	
 	$query_get_student = "SELECT surname, description
 	FROM student
-	WHERE score BETWEEN :socre_min AND :score_max";
+	WHERE score BETWEEN :score_min AND :score_max";
+	$statement = $db->prepare($query_get_student);
 	$statement->bindValue(':score_min ', $score_min);
 	$statement->bindValue(':score_max ', $score_max);
-	$statement = $db->prepare($query_get_student);
 	$statement->execute();
 	
 
