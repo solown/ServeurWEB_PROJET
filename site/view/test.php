@@ -10,6 +10,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<style>
+		.adj-input { display:block; }
+		.title_logo { margin-top:25%; }
+	</style>
 </head>
 
 <body>
@@ -18,10 +23,17 @@
 		</div>
 
 		<div class="col-4">
+			<div class="title_logo">
+				<h1>Who are you ?</h1>
+				<h3>Click on what describes you the best !</h3>
+			</div>
 			<form>
-				<input class="adj-input" type="text" name="adj1"></input>
-				<input class="adj-input" type="text" name="adj2"></input>
-				<input class="adj-input" type="text" name="adj3"></input>
+				<input class="adj-input" type="text" name="adj1" onkeypress="return false"></input>
+				</br>
+				<input class="adj-input" type="text" name="adj2" onkeypress="return false"></input>
+				</br>
+				<input class="adj-input" type="text" name="adj3" onkeypress="return false"></input>
+				</br>
 				<input type="submit" value="Valider"></input>
 			</form>
 		</div>

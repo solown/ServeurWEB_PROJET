@@ -17,12 +17,19 @@ class AdjectiveContainer extends React.Component {
 };
 
 class Adjective extends React.Component {
-	
+
 	constructor(props){
 		super(props);
 		this.x = Math.random()*0.5;
-		this.y = Math.random()*1;
+		//this.y = Math.random()*1;
+	
+		//Act like a static variable	
+		if(Adjective.yPos === undefined)
+			Adjective.yPos = 0;
+
+		this.y = Adjective.yPos;
 		this.size = 2 + Math.random()*2;
+		Adjective.yPos += this.size/40;
 		this.color = "rgb(" + (Math.random() * 25) + "," + (Math.random() * 25) + "," + (55 + Math.random() * 200) + ")";
 		this.state = {display: "block"};
 		this.clickHandler = this.clickHandler.bind(this);
@@ -84,6 +91,7 @@ function get_adj() {
 function display_adj(adj) {
 	let half = Math.trunc(adj.length/2);
 	ReactDOM.render(<AdjectiveContainer adj={adj.splice(0, half)}/>, document.getElementById("left-adj-container"), show_adj);
+	Adjective.yPos = 0;
 	ReactDOM.render(<AdjectiveContainer adj={adj.splice(0, adj.length)}/>, document.getElementById("right-adj-container"), show_adj);
 }
 

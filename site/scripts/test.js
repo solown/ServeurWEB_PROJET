@@ -18114,8 +18114,13 @@ var Adjective = function (_React$Component2) {
 		var _this2 = _possibleConstructorReturn(this, (Adjective.__proto__ || Object.getPrototypeOf(Adjective)).call(this, props));
 
 		_this2.x = Math.random() * 0.5;
-		_this2.y = Math.random() * 1;
+		//this.y = Math.random()*1;
+
+		if (Adjective.yPos === undefined) Adjective.yPos = 0;
+
+		_this2.y = Adjective.yPos;
 		_this2.size = 2 + Math.random() * 2;
+		Adjective.yPos += _this2.size / 40;
 		_this2.color = "rgb(" + Math.random() * 25 + "," + Math.random() * 25 + "," + (55 + Math.random() * 200) + ")";
 		_this2.state = { display: "block" };
 		_this2.clickHandler = _this2.clickHandler.bind(_this2);
@@ -18184,6 +18189,7 @@ function get_adj() {
 function display_adj(adj) {
 	var half = Math.trunc(adj.length / 2);
 	_reactDom2.default.render(_react2.default.createElement(AdjectiveContainer, { adj: adj.splice(0, half) }), document.getElementById("left-adj-container"), show_adj);
+	Adjective.yPos = 0;
 	_reactDom2.default.render(_react2.default.createElement(AdjectiveContainer, { adj: adj.splice(0, adj.length) }), document.getElementById("right-adj-container"), show_adj);
 }
 
