@@ -309,3 +309,39 @@ input[type="checkbox"]:checked+label::before {
 
 
 /**********************************************final****************************************/
+
+.slogan2 {
+	position: absolute;
+	bottom: 5%;
+	width: 100%;
+	font-family: "Fjalla One";
+	font-size: 2.5vw;
+	color: #F05228;
+	text-align: center;
+}
+
+.final_section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 15vh;
+}
+
+.final_title a {
+	font-family: "Fjalla One";
+	font-size: 2.5vw;
+	color: #4152BC;
+	opacity: 0.5;
+}
+
+.final_section img {
+	width: 15vw;
+	height: auto;
+}
+
+.final_title a:hover {
+	color: #4152BC;
+	opacity: 1;
+	text-decoration: none;
+}
