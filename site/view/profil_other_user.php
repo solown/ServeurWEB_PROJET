@@ -29,6 +29,7 @@ if(!isset($_SESSION['id']))
 			<a href="../view/logout.php" class="menu_inactive">log out</a>
 		</div>
 		<div class="back"></div>
+		<div class="picture_profil"><img src="../images/alice.png" alt=""></div>
 		<div class="cloud_profil"><img src="../images/cloud.svg" alt=""></div>
 		<div class="row">
 			<div class="col-3 final_section">

@@ -245,14 +245,14 @@ input[type="checkbox"]:checked+label::before {
 .menu_active {
 	font-family: "Fjalla One";
 	color: #4152BC;
-	font-size: 2em;
+	font-size: 2vw;
 }
 
 .menu_inactive {
 	text-decoration: none;
 	font-family: "Segoe UI";
 	color: #254463;
-	font-size: 1em;
+	font-size: 1vw;
 }
 
 
@@ -360,8 +360,19 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .cloud_profil img {
-	margin-left: 10%;
-	margin-top: 10%;
-	width: 95vh;
+	position: absolute;
+	left: 10%;
+	top: 25%;
+	width: 90vh;
 	height: auto;
+	z-index: 1;
+}
+
+.picture_profil img {
+	position: absolute;
+	margin-left: 17%;
+	margin-top: 5%;
+	width: 30vh;
+	height: auto;
+	z-index: 9;
 }
