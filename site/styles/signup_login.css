@@ -345,3 +345,23 @@ input[type="checkbox"]:checked+label::before {
 	opacity: 1;
 	text-decoration: none;
 }
+
+
+/**********************************************profil_other_user****************************************/
+
+.back {
+	position: absolute;
+	top: 0;
+	left: 25vw;
+	height: 100%;
+	width: 100%;
+	background-color: #F5F7FA;
+	z-index: -1;
+}
+
+.cloud_profil img {
+	margin-left: 10%;
+	margin-top: 10%;
+	width: 95vh;
+	height: auto;
+}
