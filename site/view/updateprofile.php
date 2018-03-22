@@ -26,7 +26,7 @@ if(!isset($_SESSION['id']))
 			<a href="../view/logout.php" class="menu_inactive">log out</a>
 		</div>
 		<div id="mailclasse">
-			<p><b>DUT <?php echo htmlspecialchars($yearstudent)?></b></p><span><?php echo htmlspecialchars($mailstudent) ?></span>
+			<p><b>DUT <?php echo htmlspecialchars($yearstudent)?></b></p><span><?php echo htmlspecialchars($mailstudent) ?>@etu.parisdescartes.fr</span>
 		</div>
 		<div id="stats">
 			<h2>12 matchs</h2>
