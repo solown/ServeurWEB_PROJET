@@ -31,15 +31,14 @@ if(!isset($_SESSION['id']))
 		<div class="back"></div>
 		<div class="picture_profil"><img src="../images/alice.png" alt=""></div>
 		<div class="cloud_profil"><img src="../images/cloud.svg" alt=""></div>
-		<div class="row">
-			<div class="col-3 final_section">
-
-			</div>
-
-			<div class="col-3 offset-6 final_section">
-
-			</div>
+		<div class="year_email_profil">DUT1 - anissa.belleudy@etu.parisdescartes.fr</div>
+		<div class="stats_profil">
+			<div>2 matchs</div>
+			<div>0 parainage</div>
 		</div>
+		<div class="name_profil">Anissa</div>
+		<div class="adj_profil">Drole - Belle - Sexy</div>
+		<div class="description_profil">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 	</body>
 
 	</html>
