@@ -1,11 +1,11 @@
 
 <?php
 /*fichier php updateprofile*/
-	session_start();
-	$id = session_id();
+	
+	$id = $_SESSION['id'];
 	require("../model/db_connect.php");
 	$db = db_connect();
-	$query = "SELECT surname,description,email,year FROM student WHERE id_student = :id";
+	$query = "SELECT surname, description, email, year FROM student WHERE id_student = :id";
 	$statement = $db-> prepare($query);
 	/*$statement -> bindvalue(':id', $_SESSION['id']);*/
 	$statement -> bindvalue(':id', $id);
