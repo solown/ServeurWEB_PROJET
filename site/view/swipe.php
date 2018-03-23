@@ -39,7 +39,7 @@ if(!isset($_SESSION['id']))
 				</div>
 				<div>
 					<div class="swipe_name">
-						<?php echo htmlspecialchars($tab_student[0][0]) ?>
+						<?php echo htmlspecialchars($tab_student[0]['name']) ?>
 					</div>
 					<div class="swipe_adj">
 						Belle - Intelligente - Sensible
