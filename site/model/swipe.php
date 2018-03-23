@@ -28,12 +28,15 @@ if($db) {
 
 	$count = 0;
 	$tab_student = array();
-	var_dump($statement_student);
+	//var_dump($statement_student);
 	
 	while($row = $statement_student->fetch(PDO::FETCH_ASSOC)){	
-		var_dump($row);	
-		$tab_student[$count] = array('name'=>$row['surname'], 'description'=>$row['description']);
+		array_push($tab_student, array('name'=>$row['surname'], 'description'=>$row['description']));
 		$count=$count+1;
+	}
+
+	for($i = 0; $i < count($tab_student); $i++){
+		var_dump($tab_student[$i]);
 	}
 	
 	
