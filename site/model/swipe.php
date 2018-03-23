@@ -1,6 +1,7 @@
 <?php
 require("db_connect.php");
 $db = db_connect();
+$tab_student = array();
 if($db) {
 	
 	$query_get_score = "SELECT score 
@@ -27,7 +28,7 @@ if($db) {
 	
 
 	$count = 0;
-	$tab_student = array();
+	
 	//var_dump($statement_student);
 	
 	while($row = $statement_student->fetch(PDO::FETCH_ASSOC)){	
