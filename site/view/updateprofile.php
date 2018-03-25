@@ -29,8 +29,8 @@ if(!isset($_SESSION['id']))
 			<p><b>DUT <?php echo htmlspecialchars($yearstudent)?></b></p><span><?php echo htmlspecialchars($mailstudent) ?>@etu.parisdescartes.fr</span>
 		</div>
 		<div id="stats">
-			<h2>12 matchs</h2>
-			<h2> 1 filleule</h2>
+			<h2><?php echo htmlspecialchars($match)?></h2>
+			<h2> <?php echo htmlspecialchars($god_son_exist)</h2>
 		</div>
 		<div id="present">
 
@@ -44,7 +44,7 @@ if(!isset($_SESSION['id']))
 					<?php echo htmlspecialchars($name) ?> </center>
 			</div>
 			<div class="adj">
-				<center>Belle-Intelligente-Sensible</center>
+				<center><?php echo htmlspecialchars(adj1) ?>-<?php echo htmlspecialchars(adj2) ?>-<?php echo htmlspecialchars(adj3) ?></center>
 			</div>
 			<form method="post">
 				<div class="resume">

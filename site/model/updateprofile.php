@@ -11,7 +11,7 @@
 	require("../model/db_connect.php");
 	$db = db_connect();
 	//Récupération des valeurs à afficher via une requête
-	$query = "SELECT surname, description, email, year FROM student WHERE id_student = :id";
+	$query = "SELECT surname, description, email, year, adjective_1, adjective_2, adjective_3 FROM student WHERE id_student = :id";
 	$statement = $db-> prepare($query);
 	$statement -> bindvalue(':id', $id);
 	$statement -> execute();
@@ -21,12 +21,47 @@
 		$name = $row['surname'];
 		$yearstudent = $row['year'];
 		$mailstudent = $row['email'];
+		$adj1 = $row['adjective_1'];
+		$adj2 = $row['adjective_2'];
+		$adj3 = $row['adjective_3'];
 	}
 	//Première lettre du nom en UPPER CASE
 	$name = ucfirst($name)
 	if (empty($description)){
 		$description = "Les parrains avec une description ont 50% de chance de match en plus";
 	}
+	if ($yearstudent == 2){
+		$query = "SELECT COUNT * from match WHERE id_student_god_father =:id";
+		$statement = $db-> prepare($query);
+		$statement -> bindvalue(':id',$id);
+		$statement -> execute();
+		$match = $result->fetchColumn(); 
+		while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+			$god_son_exist = $row['statement']
+		}
+	}
+	else if($yearstudent==1){
+		$query = "SELECT COUNT * from match WHERE id_student_god_son =:id";
+		$statement = $db-> prepare($query);
+		$statement -> bindvalue(':id',$id);
+		$statement -> execute();
+		$match = $result->fetchColumn(); 
+		while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+			$god_father_exist = $row['statement']
+		}
+	}
+	if $god_son_exist== true or god_father_exist==true{
+		$god_son_exist = 1
+		$god_father_exist=1
+	}else{
+		$god_son_exist = 0
+		$god_father_exist= 0
+	}
+	
+	
+	
+	
+	
 	//UPDATE de la description
 	if(isset($_POST['buttonconfirm'])){
 	
