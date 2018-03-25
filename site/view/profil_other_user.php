@@ -4,6 +4,11 @@ if(!isset($_SESSION['id']))
 {
     header('Location: ../view/logout.php');
 }
+if (isset($_POST['email']){
+	$email = $_POST['email']; 
+} /*else {
+	    header('Location: ../view/swipe.php');
+}*/
 ?>
 	<!DOCTYPE html>
 	<html lang="fr">
