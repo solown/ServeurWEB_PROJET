@@ -41,7 +41,7 @@
 		}*/
 	}
 	else if($yearstudent==1){
-		$sql = "SELECT COUNT (*) from match WHERE id_student_god_son =:id"
+		$sql = "SELECT COUNT (*) from match WHERE id_student_god_son =:id";
 		$result = $db->prepare($sql);
 		$result -> bindvalue(':id',$id); 
 		$result->execute(); 
