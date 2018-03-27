@@ -31,32 +31,32 @@
 		$description = "Les parrains avec une description ont 50% de chance de match en plus";
 	}
 	if ($yearstudent == 2){
-		$query = "SELECT COUNT * from match WHERE id_student_god_father =:id";
-		$statement = $db-> prepare($query);
-		$statement -> bindvalue(':id',$id);
-		$statement -> execute();
-		$match = $result->fetchColumn(); 
-		while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+		$sql = "SELECT count(*) FROM match WHERE id_student_god_father =:id"; 
+		$result = $db->prepare($sql);
+		$result -> bindvalue(':id',$id); 
+		$result->execute(); 
+		$match = $result->fetchColumn();
+		/*while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
 			$god_son_exist = $row['statement'];
-		}
+		}*/
 	}
 	else if($yearstudent==1){
-		$query = "SELECT COUNT * from match WHERE id_student_god_son =:id";
-		$statement = $db-> prepare($query);
-		$statement -> bindvalue(':id',$id);
-		$statement -> execute();
-		$match = $result->fetchColumn(); 
-		while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+		$query = "SELECT COUNT * from match WHERE id_student_god_son =:id"
+		$result = $db->prepare($sql);
+		$result -> bindvalue(':id',$id); 
+		$result->execute(); 
+		$match = $result->fetchColumn();
+		/*while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
 			$god_father_exist = $row['statement'];
-		}
+		}*/
 	}
-	if ($god_son_exist== true or god_father_exist==true){
+	/*if ($god_son_exist== true or god_father_exist==true){
 		$god_son_exist = 1;
 		$god_father_exist=1;
 	}else{
 		$god_son_exist = 0;
 		$god_father_exist= 0;
-	}
+	}*/
 	
 	
 	

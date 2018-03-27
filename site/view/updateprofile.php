@@ -30,7 +30,7 @@ if(!isset($_SESSION['id']))
 		</div>
 		<div id="stats">
 			<h2><?php echo htmlspecialchars($match)?></h2>
-			<h2> <?php echo htmlspecialchars($god_son_exist) ?></h2>
+			<h2> temp </h2>
 		</div>
 		<div id="present">
 
