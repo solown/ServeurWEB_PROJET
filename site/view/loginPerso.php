@@ -59,7 +59,7 @@
 			<div class="welcome">
 				<div class="big_grey">Welcome</div>
 				<div class="big_orange">
-					<?php echo($_GET['name']) ?>
+					<?php echo htmlspecialchars($_GET['name'],ENT_QUOTES, 'UTF-8') ?>
 				</div>
 			</div>
 		</div>
