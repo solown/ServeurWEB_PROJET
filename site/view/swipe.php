@@ -24,7 +24,7 @@ if(!isset($_SESSION['id']))
 	<body>
 		<script type="text/javascript">
 			console.log("debut de la recuperation des data");
-			var php_tab_student = <?php echo json_encode($php_variable); ?>;
+			var php_tab_student = <?php echo json_encode($tab_student); ?>;
 			var tab_student = JSON.parse(php_tab_student);
 			console.log("fin");
 			console.log(php_tab_student);
