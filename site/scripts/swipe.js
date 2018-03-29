@@ -1,8 +1,6 @@
 const yes = document.querySelector(".yes");
 const swipe_profil = document.querySelector(".swipe_profil");
 const no = document.querySelector(".no");
-
-
 var recycled = document.querySelector(".bounceOutLeft");
 var hearted = document.querySelector(".bounceOutRight");
 

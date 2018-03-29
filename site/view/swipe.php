@@ -22,6 +22,13 @@ if(!isset($_SESSION['id']))
 	</head>
 
 	<body>
+		<script type="text/javascript">
+			var php_tab_student = <?php echo json_encode($php_variable); ?>;
+			var tab_student = JSON.parse(php_tab_student);
+			console.log(tab_student);
+		</script>
+
+
 		<div class="menu">
 			<a href="#" class="menu_active">swipe</a>
 			<a href="../view/updateprofile.php" class="menu_inactive">my account</a>
@@ -39,7 +46,7 @@ if(!isset($_SESSION['id']))
 				</div>
 				<div>
 					<div class="swipe_name" id="swipe_name">
-						<?php echo htmlspecialchars($tab_student[0]['name']) ?>
+						Alice
 					</div>
 					<div class="swipe_adj">
 						Belle - Intelligente - Sensible
