@@ -6,7 +6,10 @@ var hearted = document.querySelector(".bounceOutRight");
 
 yes.addEventListener("click", () => {
 	swipe_profil.classList.add("bounceOutRight");
-
+	document.getElementById("swipe_name").innerHTML = tab_student[0].name;
+	document.getElementById("swipe_name").innerHTML = tab_student[0].description;
+	tab_student.splice(0,1);
+	console.log(tab_student);
 });
 
 no.addEventListener("click", () => {
@@ -19,11 +22,7 @@ function top_back() {
 	swipe_profil.classList.add("bounceInDown");
 }
 
-function get_student_nom(){
-}
 
-function get_student_description(){
-}
 
 swipe_profil.addEventListener("webkitAnimationEnd", top_back, false);
 swipe_profil.addEventListener("animationend", top_back, false);
