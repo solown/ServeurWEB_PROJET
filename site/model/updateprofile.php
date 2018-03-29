@@ -28,7 +28,7 @@
 	//Récuperation des string des adjectifs
 	$query = "SELECT wording FROM student WHERE id_adjective = :idadj";
 	$statement = $db-> prepare($query);
-	$statement -> bindvalue(':id', $adj1);
+	$statement -> bindvalue(':idadj', $adj1);
 	$statement -> execute();
 	//Stockage des résultats dans les variables
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
@@ -36,7 +36,7 @@
 	}
 	$query = "SELECT wording FROM student WHERE id_adjective = :idadj";
 	$statement = $db-> prepare($query);
-	$statement -> bindvalue(':id', $adj2);
+	$statement -> bindvalue(':idadj', $adj2);
 	$statement -> execute();
 	//Stockage des résultats dans les variables
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
@@ -44,7 +44,7 @@
 	}
 	$query = "SELECT wording FROM student WHERE id_adjective = :idadj";
 	$statement = $db-> prepare($query);
-	$statement -> bindvalue(':id', $adj3);
+	$statement -> bindvalue(':idadj', $adj3);
 	$statement -> execute();
 	//Stockage des résultats dans les variables
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
