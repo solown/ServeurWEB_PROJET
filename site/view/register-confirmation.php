@@ -26,7 +26,7 @@
 					<div>
 						<div>Un email de confirmation à été envoyé à</div>
 						<span class="purple">
-							<?php echo $_POST['mail'];?> </span>
+							<?php echo htmlentities($_POST['mail'], ENT_QUOTES, 'UTF-8')?> </span>
 						<span>@etu.parisdescartes.fr</span>
 						</br>
 						</br>
