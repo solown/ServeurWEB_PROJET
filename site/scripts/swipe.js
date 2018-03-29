@@ -23,5 +23,11 @@ function top_back() {
 	swipe_profil.classList.add("bounceInDown");
 }
 
+function get_student_nom(){
+}
+
+function get_student_description(){
+}
+
 swipe_profil.addEventListener("webkitAnimationEnd", top_back, false);
 swipe_profil.addEventListener("animationend", top_back, false);
