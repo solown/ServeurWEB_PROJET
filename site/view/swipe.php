@@ -38,7 +38,7 @@ if(!isset($_SESSION['id']))
 					<img class="swipe_picture" src="../images/alice.png" alt="picture">
 				</div>
 				<div>
-					<div class="swipe_name">
+					<div class="swipe_name" id="swipe_name">
 						<?php echo htmlspecialchars($tab_student[0]['name']) ?>
 					</div>
 					<div class="swipe_adj">
