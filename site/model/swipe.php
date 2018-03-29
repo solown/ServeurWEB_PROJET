@@ -27,6 +27,7 @@ if($db) {
 	$statement_student->bindValue(':student_id', $_SESSION['id']);
 	$statement_student->execute();
 	
+	$tab_student = Array();
 
 	$count = 0;
 	
