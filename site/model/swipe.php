@@ -24,7 +24,7 @@ if($db) {
 	$statement_student = $db->prepare($query_get_student);
 	$statement_student->bindValue(':score_min', $score_min, PDO::PARAM_INT);
 	$statement_student->bindValue(':score_max', $score_max, PDO::PARAM_INT);
-	$statement_student->bindValue(':student_id', $SESSION['id']);
+	$statement_student->bindValue(':student_id', $_SESSION['id']);
 	$statement_student->execute();
 	
 
