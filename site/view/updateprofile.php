@@ -29,8 +29,8 @@ if(!isset($_SESSION['id']))
 			<p><b>DUT <?php echo htmlspecialchars($yearstudent)?></b></p><span><?php echo htmlspecialchars($mailstudent) ?>@etu.parisdescartes.fr</span>
 		</div>
 		<div id="stats">
-			<h2><?php echo htmlspecialchars($match)?></h2>
-			<h2> temp </h2>
+			<h2><?php echo htmlspecialchars($match) matchs?></h2>
+			<h2> 0 filleule </h2>
 		</div>
 		<div id="present">
 
