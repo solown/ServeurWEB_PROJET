@@ -34,6 +34,7 @@
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
 		$word1 = $row['wording'];
 	}
+	$word1 = ucfirst($word1)
 	$query = "SELECT wording FROM adjective WHERE id_adjective = :idadj";
 	$statement = $db-> prepare($query);
 	$statement -> bindvalue(':idadj', $adj2);
@@ -42,6 +43,7 @@
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
 		$word2 = $row['wording'];
 	}
+	$word2 = ucfirst($word2)
 	$query = "SELECT wording FROM adjective WHERE id_adjective = :idadj";
 	$statement = $db-> prepare($query);
 	$statement -> bindvalue(':idadj', $adj3);
@@ -50,6 +52,7 @@
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
 		$word3 = $row['wording'];
 	}
+	$word3 = ucfirst($word3)
 	//Première lettre du nom en UPPER CASE
 	$name = ucfirst($name);
 	if (empty($description)){
