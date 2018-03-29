@@ -6,10 +6,6 @@ var hearted = document.querySelector(".bounceOutRight");
 
 yes.addEventListener("click", () => {
 	swipe_profil.classList.add("bounceOutRight");
-	document.getElementById("swipe_name").innerHTML = tab_student[0].name;
-	document.getElementById("swipe_name").innerHTML = tab_student[0].description;
-	tab_student.splice(0,1);
-	console.log(tab_student);
 });
 
 no.addEventListener("click", () => {
@@ -20,7 +16,6 @@ function top_back() {
 	swipe_profil.classList.remove("bounceOutRight");
 	swipe_profil.classList.remove("bounceOutLeft");
 	swipe_profil.classList.add("bounceInDown");
-	
 }
 
 

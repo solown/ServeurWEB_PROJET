@@ -35,9 +35,4 @@ if($db) {
 		array_push($tab_student, array('name'=>$row['surname'], 'description'=>$row['description']));
 		$count=$count+1;
 	}
-	
-	$array_size = count($tab_student);
-	
-	
-	
 }
