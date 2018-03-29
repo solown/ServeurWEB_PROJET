@@ -8,7 +8,7 @@ if($db) {
 	FROM student
 	WHERE student_id = :student_id";
 	$statement_score = $db->prepare($query_get_score);
-	$statement_score->bindValue(':id_student', $_SESSION['id']); 
+	$statement_score->bindValue(':student_id', $_SESSION['id']); 
 	$statement_score->execute();
 	
 	while($row = $statement_score->fetch(PDO::FETCH_ASSOC)){
