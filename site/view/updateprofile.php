@@ -44,7 +44,7 @@ if(!isset($_SESSION['id']))
 					<?php echo htmlspecialchars($name) ?> </center>
 			</div>
 			<div class="adj">
-				<center><?php echo htmlspecialchars($adj1) ?>-<?php echo htmlspecialchars($adj2) ?>-<?php echo htmlspecialchars($adj3) ?></center>
+				<center><?php echo htmlspecialchars($word1) ?>-<?php echo htmlspecialchars($word2) ?>-<?php echo htmlspecialchars($word3) ?></center>
 			</div>
 			<form method="post">
 				<div class="resume">

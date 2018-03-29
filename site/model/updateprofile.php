@@ -26,29 +26,29 @@
 		$adj3 = $row['adjective_3'];
 	}
 	//Récuperation des string des adjectifs
-	$query = "SELECT wording FROM student WHERE id_adjective = :idadj";
+	$query = "SELECT wording FROM adjective WHERE id_adjective = :idadj";
 	$statement = $db-> prepare($query);
 	$statement -> bindvalue(':idadj', $adj1);
 	$statement -> execute();
 	//Stockage des résultats dans les variables
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
-		$adj1 = $row['wording'];
+		$word1 = $row['wording'];
 	}
-	$query = "SELECT wording FROM student WHERE id_adjective = :idadj";
+	$query = "SELECT wording FROM adjective WHERE id_adjective = :idadj";
 	$statement = $db-> prepare($query);
 	$statement -> bindvalue(':idadj', $adj2);
 	$statement -> execute();
 	//Stockage des résultats dans les variables
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
-		$adj2 = $row['wording'];
+		$word2 = $row['wording'];
 	}
-	$query = "SELECT wording FROM student WHERE id_adjective = :idadj";
+	$query = "SELECT wording FROM adjective WHERE id_adjective = :idadj";
 	$statement = $db-> prepare($query);
 	$statement -> bindvalue(':idadj', $adj3);
 	$statement -> execute();
 	//Stockage des résultats dans les variables
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
-		$adj3 = $row['wording'];
+		$word3 = $row['wording'];
 	}
 	//Première lettre du nom en UPPER CASE
 	$name = ucfirst($name);
@@ -82,10 +82,6 @@
 		$god_son_exist = 0;
 		$god_father_exist= 0;
 	}*/
-	
-	
-	
-	
 	
 	//UPDATE de la description
 	if(isset($_POST['buttonconfirm'])){
