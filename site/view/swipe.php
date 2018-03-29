@@ -27,7 +27,6 @@ if(!isset($_SESSION['id']))
 			var php_tab_student = <?php echo json_encode($tab_student); ?>;
 			console.log("fin");
 			console.log(php_tab_student);
-			console.log(tab_student);
 			console.log("fin des log");
 		</script>
 
@@ -54,7 +53,7 @@ if(!isset($_SESSION['id']))
 					<div class="swipe_adj">
 						Belle - Intelligente - Sensible
 					</div>
-					<div class="swipe_description">
+					<div class="swipe_description" id="swipe_description"> <!-- TODO : Only keep id -->
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 					</div>
 				</div>

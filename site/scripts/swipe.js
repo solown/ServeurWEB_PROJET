@@ -17,6 +17,7 @@ function top_back() {
 	swipe_profil.classList.remove("bounceOutRight");
 	swipe_profil.classList.remove("bounceOutLeft");
 	swipe_profil.classList.add("bounceInDown");
+	
 }
 
 function get_student_nom(){
@@ -25,5 +26,16 @@ function get_student_nom(){
 function get_student_description(){
 }
 
+function setNewProfile(){
+	if(php_tab_student.length <= 0) return;
+	
+	document.getElementById("swipe_name").innerHTML = php_tab_student[0].name;
+	if(php_tab_student[0].description != null) //TODO Remove when we'll have a clean DB
+		document.getElementById("swipe_description").innerHTML = php_tab_student[0].description;
+	php_tab_student.splice(0, 1);
+	
+	top_back();
+}	
+
 swipe_profil.addEventListener("webkitAnimationEnd", top_back, false);
-swipe_profil.addEventListener("animationend", top_back, false);
+swipe_profil.addEventListener("animationend", setNewProfile, false);
