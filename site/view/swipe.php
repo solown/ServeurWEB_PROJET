@@ -28,6 +28,8 @@ if(!isset($_SESSION['id']))
 			console.log("fin");
 			console.log(php_tab_student);
 			console.log("fin des log");
+			var tab_student = <?php echo json_encode($tab_student); ?>;
+			var array_size = <?php echo json_encode($array_size); ?>;			
 		</script>
 
 
