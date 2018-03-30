@@ -23,12 +23,16 @@ function top_back() {
 
 
 function setNewProfile(){
-	if(php_tab_student.length <= 0) return;
+	if(students.length <= 0) return;
 	
-	document.getElementById("swipe_name").innerHTML = php_tab_student[0].name;
-	if(php_tab_student[0].description != null) //TODO Remove when we'll have a clean DB
-		document.getElementById("swipe_description").innerHTML = php_tab_student[0].description;
-	php_tab_student.splice(0, 1);
+	document.getElementById("swipe_name").innerHTML = students[0].surname;
+	if(students[0].description != null) //TODO Remove when we'll have a clean DB
+		document.getElementById("swipe_description").innerHTML = students[0].description;
+
+	var adjs = students[0].adj1 + " - " + students[0].adj2 + " - " + students[0].adj3;
+	document.getElementById("swipe_adj").innerHTML = adjs;
+
+	students.splice(0, 1);
 	
 	top_back();
 }	

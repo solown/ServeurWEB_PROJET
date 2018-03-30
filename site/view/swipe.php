@@ -24,9 +24,11 @@ if(!isset($_SESSION['id']))
 	<body>
 		<script type="text/javascript">
 			console.log("debut de la recuperation des data");
-			var php_tab_student = <?php echo json_encode($tab_student); ?>;
+			var students = <?php echo json_encode($tab_student); ?>;
+			console.log(students);
+			//students = JSON.parse(students);
 			console.log("fin");
-			console.log(php_tab_student);
+			console.log(students);
 			console.log("fin des log");
 		</script>
 
@@ -50,7 +52,7 @@ if(!isset($_SESSION['id']))
 					<div class="swipe_name" id="swipe_name">
 						Alice
 					</div>
-					<div class="swipe_adj">
+					<div class="swipe_adj" id="swipe_adj">
 						Belle - Intelligente - Sensible
 					</div>
 					<div class="swipe_description" id="swipe_description"> <!-- TODO : Only keep id -->
