@@ -5,10 +5,12 @@ var recycled = document.querySelector(".bounceOutLeft");
 var hearted = document.querySelector(".bounceOutRight");
 
 yes.addEventListener("click", () => {
+	setTimeout(function() { setNewProfile();}, 1000);
 	swipe_profil.classList.add("bounceOutRight");
 });
 
 no.addEventListener("click", () => {
+	setTimeout(function() { setNewProfile();}, 1000);
 	swipe_profil.classList.add("bounceOutLeft");
 });
 
@@ -32,4 +34,4 @@ function setNewProfile(){
 }	
 
 swipe_profil.addEventListener("webkitAnimationEnd", top_back, false);
-swipe_profil.addEventListener("animationend", setNewProfile, false);
+swipe_profil.addEventListener("animationend", top_back, false);
