@@ -39,3 +39,4 @@ if($db) {
 		$count=$count+1;
 	}
 }
+?>

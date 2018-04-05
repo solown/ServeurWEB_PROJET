@@ -6,6 +6,10 @@ class Student {
 	private $adj1;
 	private $adj2;
 	private $adj3;
+	private $year;
+	private $email;
+	private $pic;
+	
 
 	public function __construct($surname, $description, $adj1, $adj2, $adj3) {
 		$this->surname = $surname;
@@ -13,6 +17,10 @@ class Student {
 		$this->adj1 = $adj1;
 		$this->adj2 = $adj2;
 		$this->adj3 = $adj3;
+		$this->year = $year;
+		$this->email = $email;
+		$this->pic = $pic;
+		
 	}
 
 	public function getSurname() {
@@ -26,6 +34,16 @@ class Student {
 	public function getAdjectives() {
 		return array($this->adj1, $this->adj2, $this->adj3);
 	}
+	
+	public function getYear(){
+		return $this->year;
+	}
+	public function getEmail(){
+		return $this->email;
+	}
+	public function getPic(){
+		return $this->pic;
+	}
 
 	public function to_array(){
 		$return = array(
@@ -33,7 +51,10 @@ class Student {
 			'description' => $this->description,
 			'adj1' => $this->adj1,
 			'adj2' => $this->adj2,
-			'adj3' => $this->adj3
+			'adj3' => $this->adj3,
+			'year' => $this->year;
+			'email' => $this->email;
+			'pic' => $this->pic;
 		);
 		return $return;
 	}
