@@ -4,11 +4,13 @@ if(!isset($_SESSION['id']))
 {
     header('Location: ../view/logout.php');
 }
+
 if (isset($_POST['email']){
 	$email = $_POST['email']; 
-} /*else {
-	    header('Location: ../view/swipe.php');
-}*/
+} else {
+	    header('Location: ../view/notfound.html');
+}
+require("../model/profil_other_user.php");
 ?>
 	<!DOCTYPE html>
 	<html lang="fr">
@@ -36,7 +38,9 @@ if (isset($_POST['email']){
 		<div class="back"></div>
 		<div class="picture_profil"><img src="../images/alice.png" alt=""></div>
 		<div class="cloud_profil"><img src="../images/cloud.svg" alt=""></div>
-		<div class="year_email_profil">DUT1 - anissa.belleudy@etu.parisdescartes.fr</div>
+		<div class="year_email_profil">
+			<?php echo($student.getYear()); ?> -
+			<?php echo($student.getEmail()); ?>@etu.parisdescartes.fr</div>
 		<div class="stats_profil">
 			<div>2 matchs</div>
 			<div>0 parainage</div>
