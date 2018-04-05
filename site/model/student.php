@@ -59,9 +59,9 @@ class Student {
 			'adj1' => $this->adj1,
 			'adj2' => $this->adj2,
 			'adj3' => $this->adj3,
-			'year' => $this->year;
-			'email' => $this->email;
-			'pic' => $this->pic;
+			'year' => $this->year,
+			'email' => $this->email,
+			'pic' => $this->pic
 		);
 		return $return;
 	}
