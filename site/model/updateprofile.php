@@ -21,40 +21,22 @@
 		$name = $row['surname'];
 		$yearstudent = $row['year'];
 		$mailstudent = $row['email'];
-		$adj1 = $row['adjective_1'];
-		$adj2 = $row['adjective_2'];
-		$adj3 = $row['adjective_3'];
 	}
-	//Récuperation des string des adjectifs
-	$query = "SELECT wording FROM adjective WHERE id_adjective = :idadj";
-	$statement = $db-> prepare($query);
-	$statement -> bindvalue(':idadj', $adj1);
-	$statement -> execute();
-	//Stockage des résultats dans les variables
-	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
-		$word1 = $row['wording'];
+	//get adjective in one request
+	$query_get_student = 
+		"SELECT A.wording as adj1, A2.wording as adj2, A3.wording as adj3, S.surname, S.description
+		FROM ADJECTIVE A, ADJECTIVE A2, ADJECTIVE A3, STUDENT S
+		WHERE  S.adjective_1 = A.id_adjective AND S.adjective_2 = A2.id_adjective AND S.adjective_3 = A3.id_adjective"; 
+	$statement_student = $db->prepare($query_get_student);
+	$statement_student->bindValue(':score_min', $score_min, PDO::PARAM_INT);
+	$statement_student->bindValue(':score_max', $score_max, PDO::PARAM_INT);
+	$statement_student->bindValue(':student_id', $_SESSION['id']);
+	$statement_student->execute();
+	while($row = $statement_student->fetch(PDO::FETCH_ASSOC)){
+		$word1 = ['adj1'];
+		$word2 = ['adj2'];
+		$word3 = ['adj3'];
 	}
-	$word1 = ucfirst($word1);
-	$query = "SELECT wording FROM adjective WHERE id_adjective = :idadj";
-	$statement = $db-> prepare($query);
-	$statement -> bindvalue(':idadj', $adj2);
-	$statement -> execute();
-	//Stockage des résultats dans les variables
-	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
-		$word2 = $row['wording'];
-	}
-	$word2 = ucfirst($word2);
-	$query = "SELECT wording FROM adjective WHERE id_adjective = :idadj";
-	$statement = $db-> prepare($query);
-	$statement -> bindvalue(':idadj', $adj3);
-	$statement -> execute();
-	//Stockage des résultats dans les variables
-	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
-		$word3 = $row['wording'];
-	}
-	$word3 = ucfirst($word3);
-	//Première lettre du nom en UPPER CASE
-	$name = ucfirst($name);
 	if (empty($description)){
 		$description = "Les parrains avec une description ont 50% de chance de match en plus";
 	}
