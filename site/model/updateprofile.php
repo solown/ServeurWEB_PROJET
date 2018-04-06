@@ -28,7 +28,7 @@
 		FROM ADJECTIVE A, ADJECTIVE A2, ADJECTIVE A3, STUDENT S
 		WHERE id_student=:student_id AND S.adjective_1 = A.id_adjective AND S.adjective_2 = A2.id_adjective AND S.adjective_3 = A3.id_adjective"; 
 	$statement_student = $db->prepare($query_get_student);
-	$statement_student->bindValue(':student_id', id);
+	$statement_student->bindValue(':student_id', $id);
 	$statement_student->execute();
 	while($row = $statement_student->fetch(PDO::FETCH_ASSOC)){
 		$word1 = ['adj1'];
