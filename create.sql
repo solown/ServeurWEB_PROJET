@@ -12,7 +12,7 @@ create table adjective (
 create table student (
 	id_student SERIAL primary key,
 	surname varchar(30) not null,
-	email varchar(50) not null,
+	email varchar(50) not null UNIQUE,
 	password_student text not null,
 	year integer not null,
 	pic varchar(30), 
