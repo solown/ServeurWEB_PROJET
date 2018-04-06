@@ -15,6 +15,5 @@ if($db) {
 		$id_student = $row['id_student'];
 		$validate_account = $row['validate_account'];
 	}
-}  
-
+}
 ?>
