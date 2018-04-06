@@ -11,7 +11,7 @@ class Student {
 	private $pic;
 	
 
-	public function __construct($surname, $description, $adj1, $adj2, $adj3, $year=NULL, $email=NULL, $pic=NULL) {
+	public function __construct($surname, $description=NULL, $adj1=NULL, $adj2=NULL, $adj3=NULL, $year=NULL, $email=NULL, $pic=NULL) {
 		$this->surname = $surname;
 		$this->description = $description;
 		$this->adj1 = $adj1;
@@ -59,9 +59,9 @@ class Student {
 			'adj1' => $this->adj1,
 			'adj2' => $this->adj2,
 			'adj3' => $this->adj3,
-			'year' => $this->year,
+			/*'year' => $this->year,
 			'email' => $this->email,
-			'pic' => $this->pic
+			'pic' => $this->pic*/
 		);
 		return $return;
 	}
