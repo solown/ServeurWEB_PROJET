@@ -3,7 +3,7 @@ function db_connect(){
 	$host_db='localhost';
 	$name_db='tinder';
 	$user_db='tinder';
-	$pass_db='tinder';
+	$pass_db='tinder123';
 
 	$db;
 	try{
