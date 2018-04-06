@@ -5,8 +5,8 @@ if(!isset($_SESSION['id']))
     header('Location: ../view/logout.php');
 }
 
-if (isset($_POST['email'])){
-	$email = $_POST['email']; 
+if (isset($_GET['email'])){
+	$email = $_GET['email']; 
 } else {
 	    header('Location: ../view/notfound.html');
 }
