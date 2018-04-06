@@ -11,25 +11,21 @@ class Student {
 	private $pic;
 	
 
-	public function __construct($surname, $description, $adj1, $adj2, $adj3, $year, $email, $pic) {
+	public function __construct($surname, $description=NULL, $adj1=NULL, $adj2=NULL, $adj3=NULL, $year=NULL, $email=NULL, $pic=NULL) {
 		$this->surname = $surname;
 		$this->description = $description;
 		$this->adj1 = $adj1;
 		$this->adj2 = $adj2;
 		$this->adj3 = $adj3;
-		$this->year = $year;
-		$this->email = $email;
-		$this->pic = $pic;
+		if(!$year==NULL & !$email==NULL & !$pic==NULL){
+			$this->year = $year;
+			$this->email = $email;
+			$this->pic = $pic;
+		}
+		
 		
 	}
-	public function __construct($surname, $description, $adj1, $adj2, $adj3) {
-		$this->surname = $surname;
-		$this->description = $description;
-		$this->adj1 = $adj1;
-		$this->adj2 = $adj2;
-		$this->adj3 = $adj3;
-		
-	}
+
 	public function getSurname() {
 		return $this->surname;
 	}
@@ -42,6 +38,10 @@ class Student {
 		return array($this->adj1, $this->adj2, $this->adj3);
 	}
 	
+	public function getStringAdjectives() {
+		return $this->adj1." - ".adj2." - ".adj3;
+	}
+
 	public function getYear(){
 		return $this->year;
 	}
@@ -59,9 +59,9 @@ class Student {
 			'adj1' => $this->adj1,
 			'adj2' => $this->adj2,
 			'adj3' => $this->adj3,
-			'year' => $this->year,
+			/*'year' => $this->year,
 			'email' => $this->email,
-			'pic' => $this->pic
+			'pic' => $this->pic*/
 		);
 		return $return;
 	}

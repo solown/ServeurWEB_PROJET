@@ -5,8 +5,8 @@ if(!isset($_SESSION['id']))
     header('Location: ../view/logout.php');
 }
 
-if (isset($_POST['email']){
-	$email = $_POST['email']; 
+if (isset($_GET['email'])){
+	$email = $_GET['email']; 
 } else {
 	    header('Location: ../view/notfound.html');
 }
@@ -36,18 +36,24 @@ require("../model/profil_other_user.php");
 			<a href="../view/logout.php" class="menu_inactive">log out</a>
 		</div>
 		<div class="back"></div>
-		<div class="picture_profil"><img src="../images/alice.png" alt=""></div>
+		<div class="picture_profil"><img src="<?php echo($student->getPic()); ?>" alt=""></div>
 		<div class="cloud_profil"><img src="../images/cloud.svg" alt=""></div>
 		<div class="year_email_profil">
-			<?php echo($student.getYear()); ?> -
-			<?php echo($student.getEmail()); ?>@etu.parisdescartes.fr</div>
+			<?php echo($student->getYear()); ?> -
+			<?php echo($student->getEmail()); ?>@etu.parisdescartes.fr</div>
 		<div class="stats_profil">
 			<div>2 matchs</div>
 			<div>0 parainage</div>
 		</div>
-		<div class="name_profil">Anissa</div>
-		<div class="adj_profil">Drole - Belle - Sexy</div>
-		<div class="description_profil">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		<div class="name_profil">
+			<?php echo($student->getName()); ?>
+		</div>
+		<div class="adj_profil">
+			<?php echo($student->getStringAdjectives()); ?>
+		</div>
+		<div class="description_profil">
+			<?php echo($student->getDescription()); ?>
+		</div>
 	</body>
 
 	</html>
