@@ -36,23 +36,23 @@ require("../model/profil_other_user.php");
 			<a href="../view/logout.php" class="menu_inactive">log out</a>
 		</div>
 		<div class="back"></div>
-		<div class="picture_profil"><img src="<?php echo($student.getPic()); ?>" alt=""></div>
+		<div class="picture_profil"><img src="<?php echo($student->getPic()); ?>" alt=""></div>
 		<div class="cloud_profil"><img src="../images/cloud.svg" alt=""></div>
 		<div class="year_email_profil">
-			<?php echo($student.getYear()); ?> -
-			<?php echo($student.getEmail()); ?>@etu.parisdescartes.fr</div>
+			<?php echo($student->getYear()); ?> -
+			<?php echo($student->getEmail()); ?>@etu.parisdescartes.fr</div>
 		<div class="stats_profil">
 			<div>2 matchs</div>
 			<div>0 parainage</div>
 		</div>
 		<div class="name_profil">
-			<?php echo($student.getName()); ?>
+			<?php echo($student->getName()); ?>
 		</div>
 		<div class="adj_profil">
-			<?php echo($student.getStringAdjectives()); ?>
+			<?php echo($student->getStringAdjectives()); ?>
 		</div>
 		<div class="description_profil">
-			<?php echo($student.getDescription()); ?>
+			<?php echo($student->getDescription()); ?>
 		</div>
 	</body>
 
