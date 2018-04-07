@@ -8,6 +8,10 @@ function login() {
 				highlight(document.getElementsByName("password")[0], false);
 				window.location.href="../view/swipe.php";
 				
+			} else if(this.responseText == "FIRST"){
+				highlight(document.getElementsByName("mail")[0], false);
+				highlight(document.getElementsByName("password")[0], false);
+				window.location.href="../view/test.php";
 			}
 			else {
 				highlight(document.getElementsByName("mail")[0], true);

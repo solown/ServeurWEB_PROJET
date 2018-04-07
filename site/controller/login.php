@@ -7,13 +7,17 @@
 	$password_entered = $_POST['password'];
 	$password_hash;
 	$validate_account;
+	$adj1; //If it's the first connection, adj1 will be null
 
 	require("../model/login.php");
 
 	if(crypt($password_entered, $password_hash) == $password_hash and $validate_account) {
 		session_start();
-		echo "OK";
-		$_SESSION['id'] = $id_student;		
+		$_SESSION['id'] = $id_student;
+		if(is_null($adj1))
+			echo "FIRST";
+		else	
+			echo "OK";
 	}
 	else
 		echo "FAIL";

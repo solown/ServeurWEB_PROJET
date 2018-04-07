@@ -28,7 +28,7 @@
 				<h1>Who are you ?</h1>
 				<h3>Click on what describes you the best !</h3>
 			</div>
-			<form>
+			<form method="POST" action="../model/add_adjs.php">
 				<input class="adj-input" type="text" name="adj1" onkeypress="return false"></input>
 				</br>
 				<input class="adj-input" type="text" name="adj2" onkeypress="return false"></input>

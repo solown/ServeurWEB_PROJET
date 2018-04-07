@@ -3,6 +3,7 @@ drop table if exists match CASCADE;
 drop table if exists message CASCADE;
 drop table if exists adjective CASCADE;
 drop table if exists token CASCADE;
+drop table if exists token_keep_me_logged CASCADE;
 
 create table adjective (
 	id_adjective SERIAL primary key,
@@ -50,8 +51,9 @@ create table token (
 	token varchar(32),
 	is_alive boolean default true,
 	id_student integer primary key,
-	foreign key (id_student) references student(id_student)
+	foreign key (id_student) references student(id_student) on delete cascade
 );
+
 create table token_keep_me_logged (
 	birth date,
 	token varchar(32),
@@ -97,7 +99,7 @@ insert into adjective (wording) values ('sociable') ;
 insert into adjective (wording) values ('fetard') ;
 insert into adjective (wording) values ('extravertis') ;
 insert into adjective (wording) values ('gourmand') ;
-insert into adjective (wording) values ('A l\'écoute') ;
+insert into adjective (wording) values ('A l''écoute') ;
 insert into adjective (wording) values ('vrai') ;
 insert into adjective (wording) values ('faux') ;
 insert into adjective (wording) values ('digne de confiance') ;
