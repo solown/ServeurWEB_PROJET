@@ -18116,6 +18116,7 @@ var Adjective = function (_React$Component2) {
 		_this2.x = Math.random() * 0.5;
 		//this.y = Math.random()*1;
 
+		//Act like a static variable	
 		if (Adjective.yPos === undefined) Adjective.yPos = 0;
 
 		_this2.y = Adjective.yPos;
@@ -18201,6 +18202,11 @@ function show_adj() {
 		$(this).hide().delay(random_delay).fadeIn(1000);
 	});
 }
+
+var adj_inputs = document.getElementsByClassName("adj-input");
+Array.from(adj_inputs).forEach(function (item) {
+	item.value = "";
+});
 
 get_adj();
 },{"react":26,"react-dom":23}]},{},[27]);

@@ -105,4 +105,7 @@ function show_adj() {
 
 }
 
+let adj_inputs = document.getElementsByClassName("adj-input");
+Array.from(adj_inputs).forEach(function(item) { item.value = "" } );	
+
 get_adj();
