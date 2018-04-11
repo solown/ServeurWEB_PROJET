@@ -3,7 +3,7 @@
 require("better_crypt.php");
 require("../model/register-student.php");
 
-$student_name =	ucwords( explode('.', $_POST['mail'])[0]);
+$student_name =	explode('.', $_POST['mail'])[0];
 $student_mail =	 $_POST['mail'];
 $password_hash = better_crypt($_POST['password'], 10); 
 $student_year =  $_POST['year'];
