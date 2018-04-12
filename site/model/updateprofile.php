@@ -31,9 +31,9 @@
 	$statement_student->bindvalue(':student_id', $id);
 	$statement_student->execute();
 	while($row = $statement_student->fetch(PDO::FETCH_ASSOC)){
-		$word1 = ['adj1'];
-		$word2 = ['adj2'];
-		$word3 = ['adj3'];
+		$word1 = $row['adj1'];
+		$word2 = $row['adj2'];
+		$word3 = $row['adj3'];
 	}
 	if (empty($description)){
 		$description = "Les parrains avec une description ont 50% de chance de match en plus";
