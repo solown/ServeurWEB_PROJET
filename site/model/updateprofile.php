@@ -67,14 +67,13 @@
 	}*/
 	
 	//UPDATE de la description
-	if(isset($_POST['buttonconfirm'])){
+	if(isset($_POST['updatedescribe'])){
 	
-		$resume = $_POST['resumestudent'];
-		if($db){
+			$resume = $_POST['resumestudent'];
 			$query = "UPDATE student SET description = :inputresume WHERE id_student = :id";
 			$statement = $db->prepare($query);
-			$statement->bindvalue(':id', $_SESSION['id']);
 			$statement->bindvalue(':inputresume',$resume);
+			$statement->bindvalue(':id', $_SESSION['id']);
 			$statement -> execute();
 		}
 	}

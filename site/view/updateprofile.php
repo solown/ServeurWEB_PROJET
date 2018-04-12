@@ -50,11 +50,12 @@ if(!isset($_SESSION['id']))
 				<div class="resume">
 					<?php echo htmlspecialchars($description)?>
 				</div>
-				<input id="inputresume" name="resumestudent" placeholder="Décris toi :)" type="textarea"></input>
+				<input id="inputresume" name="resumestudent" placeholder="Ici tu peux te décrire mais aussi dire si tu cherches de l'aide ou si tu veux en donner ou bien si tu cherches des compagnons de jeux ou de sorties"
+				type="textarea"></input>
 		</div>
 		<div class="buttonupdate" onclick="update()">
 		</div>
-		<input class="buttonconfirm" onclick="confirm()" type="submit" value="">
+		<input class="buttonconfirm" name="updatedescribe" onclick="confirm()" type="submit" value="">
 		</input>
 		</form>
 		<script src="../scripts/updateprofile.js"></script>
