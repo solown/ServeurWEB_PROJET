@@ -75,7 +75,7 @@
 			$statement->bindvalue(':inputresume',$resume);
 			$statement->bindvalue(':id', $_SESSION['id']);
 			$statement -> execute();
-		}
+		
 	}
 	//UPDATE de l'image
 	if(isset($_POST['input_btn']))
