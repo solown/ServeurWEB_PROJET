@@ -10,6 +10,11 @@ if($db){
 	$statement = $db->prepare($query);
 	$statement->bindValue(':token', $_GET['token']);
 	$statement->execute();
+	
+	$query = "DELETE FROM TOKEN WHERE token = :token"; 
+	$statement = $db->prepare($query);
+	$statement->bindValue(':token', $_GET['token']);
+	$statement->execute();
 }
 
 ?>
