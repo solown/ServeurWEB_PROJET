@@ -4,6 +4,7 @@ require("better_crypt.php");
 require("../model/register-student.php");
 
 $student_name =	explode('.', $_POST['mail'])[0];
+$student_name = strtoupper($student_name[0]) . substr($student_name, 1, strlen($student_name) -1 );
 $student_mail =	 $_POST['mail'];
 $password_hash = better_crypt($_POST['password'], 10); 
 $student_year =  $_POST['year'];
@@ -31,7 +32,7 @@ $message = (new Swift_Message("Registration confirmation"))
 	->setFrom(["find.the.r8.one@gmail.com" => "Choose the right one"])
 	->setTo([$student_mail."@etu.parisdescartes.fr" => $student_name])
 //	->setBody("Please, confirm your registration by clicking on the following link : http://tinder.student.elwinar.com/view/loginPerso.php?token=".$token_hash."&name=".$student_name."\n")
-	->setBody("Please, confirm your registration by clicking on the following link : http://tinder.student.elwinar.com/view/loginPerso.php?token=".$token_hash."&name=".$student_name."\n")
+	->setBody("Please, confirm your registration by clicking on the following link : " . $_SERVER['SERVER_NAME'] . "/view/loginPerso.php?token=".$token_hash."&name=".$student_name."\n")
 
 ;
 
