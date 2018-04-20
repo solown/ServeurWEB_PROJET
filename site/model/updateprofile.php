@@ -75,6 +75,7 @@
 			$statement->bindvalue(':inputresume',$resume);
 			$statement->bindvalue(':id', $_SESSION['id']);
 			$statement -> execute();
+			$_POST['updatedescribe'] = $resume
 		
 	}
 	//UPDATE de l'image
@@ -89,5 +90,6 @@
 	    
 		$sql = "INSERT INTO student (pic) VALUES ('$filepath')";
 		$result = mysql_query($sql);
+		
 	}
 ?>

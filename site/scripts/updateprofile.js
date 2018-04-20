@@ -18,6 +18,3 @@ function confirm(){
 	
 }
 
-function addpicture(){
-	
-}

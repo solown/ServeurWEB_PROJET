@@ -57,8 +57,8 @@ if(!isset($_SESSION['id']))
 		</div>
 		<input class="buttonconfirm" name="updatedescribe" onclick="confirm()" type="submit" value="">
 		</input>
+		<input  class="cancelupdate" name="N_cancelupdate" onclick="confirm()"value=""></input>
 		</form>
 		<script src="../scripts/updateprofile.js"></script>
 	</body>
-
-	</html>
+</html>
