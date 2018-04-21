@@ -9,6 +9,7 @@ if($db) {
 	$statement = $db->prepare($query);
 	$statement->bindValue(':mail', $student_mail);
 	$statement->execute();
+	
 
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
 		$id_student = $row['id_student'];

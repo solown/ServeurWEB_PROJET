@@ -30,6 +30,7 @@ if(!isset($_SESSION['id']))
 			console.log("fin");
 			console.log(students);
 			console.log("fin des log");
+
 		</script>
 
 
@@ -45,14 +46,15 @@ if(!isset($_SESSION['id']))
 			</div>
 			<div class="col-6 swipe_profile animated ">
 				<div class="swipe_face">
-					<img class="swipe_picture" id="swipe_picture" src="../images/alice.png" alt="picture">
+					<div class="img_profile swipe_picture"><img id="swipe_picture" src="../images/alice.png" alt="picture"></div>
 				</div>
 				<div class="swipe_profile_content">
 					<div class="swipe_name" id="swipe_name">
 					</div>
 					<div class="swipe_adj" id="swipe_adj">
 					</div>
-					<div class="swipe_description" id="swipe_description"> <!-- TODO : Only keep id -->
+					<div class="swipe_description" id="swipe_description">
+						<!-- TODO : Only keep id -->
 					</div>
 				</div>
 			</div>
@@ -62,4 +64,5 @@ if(!isset($_SESSION['id']))
 		</div>
 		<script src="../scripts/swipe.js"></script>
 	</body>
-</html>
+
+	</html>

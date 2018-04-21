@@ -12,8 +12,8 @@ if($db) {
 	$statement->bindValue(':mail', $student_mail);
 	$statement->execute();
 	
-	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
-		$student = new Student($row['surname'], $row['description'], $row['adj1'], $row['adj2'], $row['adj3'], $row['year'], $row['email'], $row['pic']);
-	}
+	$row = $statement->fetch(PDO::FETCH_ASSOC);
+	$student = new Student($row['surname'], $row['description'], $row['adj1'], $row['adj2'], $row['adj3'], $row['year'], $row['email'], $row['pic']);
 	
-}  
+	
+}

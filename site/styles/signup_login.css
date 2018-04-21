@@ -263,7 +263,8 @@ input[type="checkbox"]:checked+label::before {
 	background-image: url("../images/cloud.svg");
 	background-repeat: no-repeat;
 	background-position: center;
-	min-height:13vh;
+	min-height:20vh;
+	margin-bottom:15vh;
 }
 
 .swipe_picture {
@@ -283,7 +284,6 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .swipe_name {
-	margin-top: 20vh;
 	color: #F05228;
 	font-family: "Fjalla One";
 	font-size: 5vw;
@@ -369,16 +369,19 @@ input[type="checkbox"]:checked+label::before {
 	top: 25%;
 	width: 90vh;
 	height: auto;
+}
+
+.cloud_profil {
 	z-index: 1;
 }
 
-.picture_profil img {
+.picture_profil {
 	position: absolute;
+	width: 30vh;
+	height: 30vh;
+	z-index: 9;
 	margin-left: 17%;
 	margin-top: 5%;
-	width: 30vh;
-	height: auto;
-	z-index: 9;
 }
 
 .year_email_profil {
@@ -402,7 +405,7 @@ input[type="checkbox"]:checked+label::before {
 .name_profil {
 	position: absolute;
 	margin-top: 12%;
-	margin-left: 41%;
+	margin-left: 40%;
 	font-family: "Fjalla One";
 	font-size: 4vw;
 	color: #F05228;
@@ -412,7 +415,7 @@ input[type="checkbox"]:checked+label::before {
 .adj_profil {
 	position: absolute;
 	margin-top: 21%;
-	margin-left: 21%;
+	margin-left: 19%;
 	font-family: "Fjalla One";
 	font-size: 3vw;
 	color: #707070;
