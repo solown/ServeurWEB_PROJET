@@ -24,11 +24,7 @@ function sign_up() {
 
 				request.onreadystatechange = function(){
 					if(request.readyState == 4){
-						var redirect = new XMLHttpRequest();
-						redirect.open("POST", "../view/register-confirmation.php", true);
-						redirect.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-						var mail = document.getElementsByName("mail")[0].value;
-						redirect.send("&mail=" + mail);
+						window.location.href="../view/register-confirmation.php";
 					}
 				}
 				
