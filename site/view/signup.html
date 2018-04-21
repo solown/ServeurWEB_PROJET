@@ -24,7 +24,8 @@
 						<div><img src="../images/singUp.png" class="cloud2"></div>
 					</div>
 					<div>
-						<form action="../controller/register-confirmation.php" method="post" onsubmit="checkForm(event)" id="formsignup">
+
+						<form action="../controller/register-confirmation.php" method="post" onsubmit="return sign_up()" id="formsignup">
 							<div>
 								<div class="space_top"><label>Email</label></div>
 								<div class="inline">
@@ -55,6 +56,7 @@
 		</div>
 	</div>
 	<script src="../scripts/checkForm.js"></script>
+<script src="../scripts/sign_up.js"></script>
 </body>
 
 </html>
