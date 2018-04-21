@@ -54,7 +54,7 @@ require("../model/profil_other_user.php");
 			<?php echo($student->getStringAdjectives()); ?>
 		</div>
 		<div class="description_profil">
-			<?php echo($student->getDescription()); ?>
+			<?php echo htmlspecialchars($student->getDescription()); ?>
 		</div>
 	</body>
 
