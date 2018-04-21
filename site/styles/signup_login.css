@@ -259,19 +259,19 @@ input[type="checkbox"]:checked+label::before {
 /**********************************************swipe*****************************************/
 
 .swipe_face {
-	margin:auto;
+	margin: auto;
 	background-image: url("../images/cloud.svg");
 	background-repeat: no-repeat;
 	background-position: center;
-	min-height:20vh;
-	margin-bottom:15vh;
+	min-height: 20vh;
+	margin-bottom: 15vh;
 }
 
 .swipe_picture {
 	width: 13vw;
-	height: auto;
-	margin:auto;
-	margin-top:2em;
+	height: 13vw;
+	margin: auto;
+	margin-top: 2em;
 }
 
 .swipe_profile {
@@ -279,8 +279,8 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .swipe_profile_content {
-	display:flex;
-	flex-direction:column;
+	display: flex;
+	flex-direction: column;
 }
 
 .swipe_name {
@@ -302,15 +302,16 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .swipe_icon {
-	display:flex;
+	display: flex;
 	text-align: center;
 }
 
 .swipe_icon img {
-	margin:auto;
+	margin: auto;
 	width: 10vw;
 	height: auto;
 }
+
 
 /**********************************************final****************************************/
 
