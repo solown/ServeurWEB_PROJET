@@ -17,13 +17,9 @@ class Student {
 		$this->adj1 = $adj1;
 		$this->adj2 = $adj2;
 		$this->adj3 = $adj3;
-		if(!$year==NULL & !$email==NULL & !$pic==NULL){
-			$this->year = $year;
-			$this->email = $email;
-			$this->pic = $pic;
-		}
-		
-		
+		if(!$year == NULL) 	$this->year = $year;
+		if(!$email == NULL) $this->email = $email;
+		if(!$pic == NULL) 	$this->pic = $pic;
 	}
 
 	public function getSurname() {
