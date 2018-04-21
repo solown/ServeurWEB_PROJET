@@ -286,7 +286,6 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .swipe_name {
-	margin-top: 20vh;
 	color: #F05228;
 	font-family: "Fjalla One";
 	font-size: 5vw;
