@@ -20,9 +20,7 @@ function sign_up() {
 				var year = document.getElementsByName("year")[0].value;
 		
 				xhttp.send("mail=" + mail + "&password=" + password + "&year=" + year);
-				if(this.responseText == "END"){
-					window.location.href="../view/register-confirmation.php";
-				}
+				window.location.href="../view/register-confirmation.php";
 				
 			}
 		}
