@@ -6,7 +6,7 @@ if(!isset($_SESSION['id']))
 }
 
 if (isset($_GET['email'])){
-	$email = $_GET['email']; 
+	$student_mail = $_GET['email']; 
 } else {
 	    header('Location: ../view/notfound.html');
 }
