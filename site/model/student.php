@@ -27,7 +27,7 @@ class Student {
 	}
 
 	public function getDescription() {
-		return $this->surname;
+		return $this->description;
 	}
 
 	public function getAdjectives() {
