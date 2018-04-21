@@ -12,9 +12,7 @@ if($db) {
 	$statement->bindValue(':mail', $student_mail);
 	$statement->execute();
 	$row = $statement->fetch(PDO::FETCH_ASSOC);
-		echo '<pre>';
-		print_r $row;
-		echo '</pre>';
+		echo $row['surname'];
 		$student = new Student($row['surname'], $row['description'], $row['adj1'], $row['adj2'], $row['adj3'], $row['year'], $row['email'], $row['pic']);
 	
 	
