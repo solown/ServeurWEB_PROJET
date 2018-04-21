@@ -17,5 +17,3 @@ if($db){
 
 		echo(json_encode($adjectives));
 }
-
-?>
