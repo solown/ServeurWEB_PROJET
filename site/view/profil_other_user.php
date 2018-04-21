@@ -39,6 +39,7 @@ require("../model/profil_other_user.php");
 		<div class="picture_profil img_profil"><img src="<?php echo($student->getPic()); ?> " alt=""></div>
 		<div class="cloud_profil"><img src="../images/cloud.svg" alt=""></div>
 		<div class="year_email_profil">
+			DUT
 			<?php echo($student->getYear()); ?> -
 			<?php echo($student->getEmail()); ?>@etu.parisdescartes.fr</div>
 		<div class="stats_profil">
