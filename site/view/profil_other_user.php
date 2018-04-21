@@ -36,7 +36,7 @@ require("../model/profil_other_user.php");
 			<a href="../view/logout.php" class="menu_inactive">log out</a>
 		</div>
 		<div class="back"></div>
-		<div class="picture_profil img_profil"><img src="../images/alice.png" alt=""></div>
+		<div class="picture_profil img_profil"><img src="<?php echo($student->getPic()); ?> " alt=""></div>
 		<div class="cloud_profil"><img src="../images/cloud.svg" alt=""></div>
 		<div class="year_email_profil">
 			<?php echo($student->getYear()); ?> -
