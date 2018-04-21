@@ -6,7 +6,7 @@ function register_student($student_name, $student_mail, $password_hash, $student
 
 	$db = db_connect();
 	if($db){
-		$query = "INSERT INTO STUDENT (surname, email, password_student, year, score) VALUES (:firstname, :mail, :pass, :year, 500)";
+		$query = "INSERT INTO STUDENT (surname, email, password_student, year, score, pic) VALUES (:firstname, :mail, :pass, :year, 500, ..\images\images_student\alice.png)";
 		$statement = $db->prepare($query);
 		$statement->bindValue(':firstname', $student_name);
 		$statement->bindValue(':mail', $student_mail);
