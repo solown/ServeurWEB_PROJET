@@ -11,9 +11,9 @@ if($db) {
 	$statement = $db->prepare($query);
 	$statement->bindValue(':mail', $student_mail);
 	$statement->execute();
+	
 	$row = $statement->fetch(PDO::FETCH_ASSOC);
-		echo 'while';
-		$student = new Student($row['surname'], $row['description'], $row['adj1'], $row['adj2'], $row['adj3'], $row['year'], $row['email'], $row['pic']);
+	$student = new Student($row['surname'], $row['description'], $row['adj1'], $row['adj2'], $row['adj3'], $row['year'], $row['email'], $row['pic']);
 	
 	
 }
