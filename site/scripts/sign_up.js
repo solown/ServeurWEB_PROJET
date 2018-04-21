@@ -11,7 +11,7 @@ function sign_up() {
 
 				var mail = document.getElementsByName("mail")[0].value;
 				var password = document.getElementsByName("password")[0].value;
-				var year = document.getElementsByName("etu")[0].value;
+				var year = document.getElementsByName("year")[0].value;
 		
 				xhttp.send("mail=" + mail + "&password=" + password + "&year=" + year);
 				
