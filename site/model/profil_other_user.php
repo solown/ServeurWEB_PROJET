@@ -10,10 +10,8 @@ if($db) {
 	FROM ADJECTIVE A, ADJECTIVE A2, ADJECTIVE A3, STUDENT S WHERE S.email = :mail AND S.adjective_1 = A.id_adjective AND S.adjective_2 = A2.id_adjective AND S.adjective_3 = A3.id_adjective";
 	$statement = $db->prepare($query);
 	$statement->bindValue(':mail', $student_mail);
-	$statement->fetch(PDO::FETCH_ASSOC);
+	$statement->execute();
 
 
 		$student = new Student($statement['surname'], $statement['description'], $statement['adj1'], $statement['adj2'], $statement['adj3'], $statement['year'], $statement['email'], $statement['pic']);
-
-	
 }
