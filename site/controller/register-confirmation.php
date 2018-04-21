@@ -40,5 +40,5 @@ $result = $mailer->send($message);
 
 if($result)
 	create_token($token_hash, $student_mail);
-
+echo "END";
 ?>

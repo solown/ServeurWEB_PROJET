@@ -1,9 +1,15 @@
 function sign_up() {
+	console.log("debut de sign_up.js");
 	var xhttp = new XMLHttpRequest();
-
+	
 	xhttp.onreadystatechange = function(){
 		if(this.readyState == 4 && this.status == 200){
-			if(this.responseText == "OK"){
+			if(this.responseText == "NOK"){
+				console.log("mail existe deja");
+				highlight(document.getElementsByName("mail")[0], true);
+				
+			}
+			else {
 				highlight(document.getElementsByName("mail")[0], false);
 				highlight(document.getElementsByName("password")[0], false);
 				xhttp.open("POST", "../controller/register-confirmation.php", true);
@@ -14,11 +20,10 @@ function sign_up() {
 				var year = document.getElementsByName("year")[0].value;
 		
 				xhttp.send("mail=" + mail + "&password=" + password + "&year=" + year);
+				if(xhttp.readyState == 4){
+					window.location.href="../view/register-confirmation.php";
+				}
 				
-			}
-			else {
-				highlight(document.getElementsByName("mail")[0], true);
-				highlight(document.getElementsByName("password")[0], true);
 			}
 		}
 	};
@@ -29,5 +34,6 @@ function sign_up() {
 	var mail = document.getElementsByName("mail")[0].value;
 
 	xhttp.send("mail=" + mail);
+	console.log("end");
 	return false;
 }
