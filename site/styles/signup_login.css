@@ -351,7 +351,7 @@ input[type="checkbox"]:checked+label::before {
 }
 
 
-/**********************************************profil_other_user****************************************/
+/**********************************************profile_other_user****************************************/
 
 .back {
 	position: absolute;
@@ -363,7 +363,7 @@ input[type="checkbox"]:checked+label::before {
 	z-index: -1;
 }
 
-.cloud_profil img {
+.cloud_profile img {
 	position: absolute;
 	left: 10%;
 	top: 25%;
@@ -371,11 +371,11 @@ input[type="checkbox"]:checked+label::before {
 	height: auto;
 }
 
-.cloud_profil {
+.cloud_profile {
 	z-index: 1;
 }
 
-.picture_profil {
+.picture_profile {
 	position: absolute;
 	width: 30vh;
 	height: 30vh;
@@ -384,7 +384,7 @@ input[type="checkbox"]:checked+label::before {
 	margin-top: 5%;
 }
 
-.year_email_profil {
+.year_email_profile {
 	position: absolute;
 	margin-top: 5%;
 	margin-left: 50%;
@@ -393,7 +393,7 @@ input[type="checkbox"]:checked+label::before {
 	color: #707070;
 }
 
-.stats_profil {
+.stats_profile {
 	position: absolute;
 	margin-top: 20%;
 	margin-left: 70%;
@@ -402,7 +402,7 @@ input[type="checkbox"]:checked+label::before {
 	color: #254463;
 }
 
-.name_profil {
+.name_profile {
 	position: absolute;
 	margin-top: 12%;
 	margin-left: 40%;
@@ -412,7 +412,7 @@ input[type="checkbox"]:checked+label::before {
 	z-index: 9;
 }
 
-.adj_profil {
+.adj_profile {
 	position: absolute;
 	margin-top: 21%;
 	margin-left: 19%;
@@ -422,7 +422,7 @@ input[type="checkbox"]:checked+label::before {
 	z-index: 9;
 }
 
-.description_profil {
+.description_profile {
 	width: 30%;
 	text-align: center;
 	position: absolute;

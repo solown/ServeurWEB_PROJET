@@ -46,7 +46,7 @@ if(!isset($_SESSION['id']))
 			</div>
 			<div class="col-6 swipe_profile animated ">
 				<div class="swipe_face">
-					<div class="img_profile swipe_picture"><img id="swipe_picture" src="../images/alice.png" alt="picture"></div>
+					<div class="img_profile swipe_picture"><img class="swipe_picture" id="swipe_picture" src="../images/alice.png" alt="picture"></div>
 				</div>
 				<div class="swipe_profile_content">
 					<div class="swipe_name" id="swipe_name">
