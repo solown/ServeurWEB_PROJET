@@ -28,7 +28,7 @@ function sign_up() {
 						redirect.open("POST", "../view/register-confirmation.php", true);
 						redirect.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 						var mail = document.getElementsByName("mail")[0].value;
-						request.send("&mail=" + mail);
+						redirect.send("&mail=" + mail);
 					}
 				}
 				
