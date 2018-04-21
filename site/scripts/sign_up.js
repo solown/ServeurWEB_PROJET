@@ -4,8 +4,12 @@ function sign_up() {
 	
 	xhttp.onreadystatechange = function(){
 		if(this.readyState == 4 && this.status == 200){
-			if(this.responseText == "OK"){
-				console.log("ok");
+			if(this.responseText == "NOK"){
+				console.log("mail existe deja");
+				highlight(document.getElementsByName("mail")[0], true);
+				
+			}
+			else {
 				highlight(document.getElementsByName("mail")[0], false);
 				highlight(document.getElementsByName("password")[0], false);
 				xhttp.open("POST", "../controller/register-confirmation.php", true);
@@ -16,12 +20,8 @@ function sign_up() {
 				var year = document.getElementsByName("year")[0].value;
 		
 				xhttp.send("mail=" + mail + "&password=" + password + "&year=" + year);
+				window.location.href="../view/register-confirmation.php";
 				
-			}
-			else {
-				console.log("mail existe deja");
-				highlight(document.getElementsByName("mail")[0], true);
-				highlight(document.getElementsByName("password")[0], true);
 			}
 		}
 	};

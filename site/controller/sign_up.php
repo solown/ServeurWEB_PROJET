@@ -7,8 +7,8 @@
 
 	require("../model/sign_up.php");
 
-	if($statement->rowCount() == 0) {
-		echo "OK";
+	if($statement->rowCount()>0) {
+		echo "NOK";
 	}
 	else
 		echo "FAIL";
