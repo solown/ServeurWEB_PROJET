@@ -6,14 +6,14 @@ function register_student($student_name, $student_mail, $password_hash, $student
 
 	$db = db_connect();
 	if($db){
-
+		$default_pic = '..\images\images_student\alice.png';
 		$query = "INSERT INTO STUDENT (surname, email, password_student, year, score, pic) VALUES (:firstname, :mail, :pass, :year, 500, :pic)";
 		$statement = $db->prepare($query);
 		$statement->bindValue(':firstname', $student_name);
 		$statement->bindValue(':mail', $student_mail);
 		$statement->bindValue(':pass', $password_hash);
 		$statement->bindValue(':year', $student_year);
-		$statement->bindValue(':pic', "..\images\images_student\alice.png");
+		$statement->bindValue(':pic', $default_pic);
 		$statement->execute();
 	}
 }
