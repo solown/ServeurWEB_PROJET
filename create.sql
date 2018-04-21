@@ -16,7 +16,7 @@ create table student (
 	email varchar(50) not null UNIQUE,
 	password_student text not null,
 	year integer not null,
-	pic varchar(30), 
+	pic varchar(300), 
 	description text,
 	score integer default 0,
 	adjective_1 integer ,
