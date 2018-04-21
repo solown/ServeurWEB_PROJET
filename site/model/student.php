@@ -35,7 +35,7 @@ class Student {
 	}
 	
 	public function getStringAdjectives() {
-		return $this->adj1." - ".adj2." - ".adj3;
+		return $this->adj1." - ".$this->adj2." - ".$this->adj3;
 	}
 
 	public function getYear(){
