@@ -13,10 +13,10 @@ class Student {
 
 	public function __construct($surname, $description=NULL, $adj1=NULL, $adj2=NULL, $adj3=NULL, $year=NULL, $email=NULL, $pic=NULL) {
 		$this->surname = $surname;
-		$this->description = $description;
-		$this->adj1 = $adj1;
-		$this->adj2 = $adj2;
-		$this->adj3 = $adj3;
+		if(!$description == NULL) $this->description = $description;
+		if(!$adj1 == NULL)	$this->adj1 = $adj1;
+		if(!$adj2 == NULL)	$this->adj2 = $adj2;
+		if(!$adj3 == NULL)	$this->adj3 = $adj3;
 		if(!$year == NULL) 	$this->year = $year;
 		if(!$email == NULL) $this->email = $email;
 		if(!$pic == NULL) 	$this->pic = $pic;
@@ -55,9 +55,9 @@ class Student {
 			'adj1' => $this->adj1,
 			'adj2' => $this->adj2,
 			'adj3' => $this->adj3,
-			/*'year' => $this->year,
+			'year' => $this->year,
 			'email' => $this->email,
-			'pic' => $this->pic*/
+			'pic' => $this->pic
 		);
 		return $return;
 	}
