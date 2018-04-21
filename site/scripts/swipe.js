@@ -32,7 +32,8 @@ function setNewProfile(){
 	var adjs = students[0].adj1 + " - " + students[0].adj2 + " - " + students[0].adj3;
 	document.getElementById("swipe_adj").innerHTML = adjs;
 
-	document.getElementById("swipe_picture").src = students[0].pic;
+	if(students[0].pic != undefined) document.getElementById("swipe_picture").src = students[0].pic;
+	else document.getElementById("swipe_picture").src = '';
 
 	students.splice(0, 1);
 	
