@@ -47,7 +47,7 @@ require("../model/profil_other_user.php");
 			<div>0 parainage</div>
 		</div>
 		<div class="name_profil">
-			<?php echo($student->getName()); ?>
+			<?php echo($student->getSurname()); ?>
 		</div>
 		<div class="adj_profil">
 			<?php echo($student->getStringAdjectives()); ?>
