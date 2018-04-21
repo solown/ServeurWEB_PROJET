@@ -17,4 +17,3 @@ if($db) {
 		$adj1 = $row['adjective_1'];
 	}
 }
-?>

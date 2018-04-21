@@ -24,5 +24,3 @@ function create_token($token_hash, $mail_student) {
 		$insert_statement->execute();
 	}
 }
-
-?>

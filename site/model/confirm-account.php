@@ -16,5 +16,3 @@ if($db){
 	$statement->bindValue(':token', $_GET['token']);
 	$statement->execute();
 }
-
-?>

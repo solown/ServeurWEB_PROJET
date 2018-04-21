@@ -1,4 +1,3 @@
-
 <?php
 /*fichier php updateprofile*/
 	/* A faire !!! 
@@ -92,4 +91,3 @@
 		$result = mysql_query($sql);
 		
 	}
-?>

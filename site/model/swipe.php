@@ -44,4 +44,3 @@ function getArrayStudents() {
 	}
 	return $tab_student;
 }
-?>

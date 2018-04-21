@@ -27,7 +27,7 @@ function checkPassword(field) {
 	}
 }
 
-function checkForm(e) {
+function verifForm(e) {
 
 	var mailOk = checkMail(document.getElementById("mail"));
 	var passwordOK = checkPassword(document.getElementById("password"));
@@ -42,5 +42,5 @@ function checkForm(e) {
 }
 var form = document.getElementById("formsignup");
 form.addEventListener('submit', function () {
-    form.submit.disabled = true;
+	form.submit.disabled = true;
 });

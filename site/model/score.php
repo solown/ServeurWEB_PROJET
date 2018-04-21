@@ -37,5 +37,3 @@ if($db) {
 	$statement->bindValue(':id_s2', ); 
 	$statement->bindValue(':score2', $score2); 
 	$statement->execute();
-	
-?>

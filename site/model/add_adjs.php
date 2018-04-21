@@ -17,5 +17,3 @@ if($db and session_start()) {
 }
 
 header('Location: http://' . $_SERVER['SERVER_NAME'] . '/view/swipe.php');
-
-?>

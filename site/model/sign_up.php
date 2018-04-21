@@ -14,4 +14,3 @@ if($db) {
 		$id_student = $row['id_student'];
 	}
 }
-?>

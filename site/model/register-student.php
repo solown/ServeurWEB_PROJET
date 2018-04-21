@@ -15,5 +15,3 @@ function register_student($student_name, $student_mail, $password_hash, $student
 		$statement->execute();
 	}
 }
-
-?>
