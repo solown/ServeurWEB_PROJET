@@ -50,13 +50,10 @@ if(!isset($_SESSION['id']))
 				</div>
 				<div>
 					<div class="swipe_name" id="swipe_name">
-						Alice
 					</div>
 					<div class="swipe_adj" id="swipe_adj">
-						Belle - Intelligente - Sensible
 					</div>
 					<div class="swipe_description" id="swipe_description"> <!-- TODO : Only keep id -->
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 					</div>
 				</div>
 			</div>

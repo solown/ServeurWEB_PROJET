@@ -39,3 +39,4 @@ function setNewProfile(){
 
 swipe_profil.addEventListener("webkitAnimationEnd", top_back, false);
 swipe_profil.addEventListener("animationend", top_back, false);
+setNewProfile();
