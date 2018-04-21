@@ -13,7 +13,7 @@ body {
 	height: 100%;
 }
 
-.img_profil img {
+.img_profile img {
 	filter: grayscale(100%);
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
@@ -23,7 +23,7 @@ body {
 	height: auto;
 }
 
-.img_profil {
+.img_profile {
 	border-radius: 50%;
 	overflow: hidden;
 }
