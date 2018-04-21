@@ -10,17 +10,18 @@ function sign_up() {
 				
 			}
 			else {
+				var request = new XMLHttpRequest();
 				highlight(document.getElementsByName("mail")[0], false);
 				highlight(document.getElementsByName("password")[0], false);
-				xhttp.open("POST", "../controller/register-confirmation.php", true);
-				xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				request.open("POST", "../controller/register-confirmation.php", true);
+				request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 				var mail = document.getElementsByName("mail")[0].value;
 				var password = document.getElementsByName("password")[0].value;
 				var year = document.getElementsByName("year")[0].value;
 		
-				xhttp.send("mail=" + mail + "&password=" + password + "&year=" + year);
-				if(xhttp.readyState == 4){
+				request.send("mail=" + mail + "&password=" + password + "&year=" + year);
+				if(request.readyState == 4){
 					window.location.href="../view/register-confirmation.php";
 				}
 				
