@@ -24,7 +24,7 @@ function sign_up() {
 
 				request.onreadystatechange = function(){
 					if(request.readyState == 4){
-						window.location.href="../view/register-confirmation.php";
+						window.location.href="../view/register-confirmation.php?mail="+mail;
 					}
 				}
 				
