@@ -258,24 +258,27 @@ input[type="checkbox"]:checked+label::before {
 
 /**********************************************swipe*****************************************/
 
+.swipe_face {
+	position: relative;
+	height: 20vw;
+	margin-top: -2vw;
+}
+
 .swipe_cloud {
-	margin-left: -10vw;
-	margin-top: -3vh;
+	left: 25%;
+	top: 0;
 	width: 15vw;
 	height: auto;
-	position: relative;
+	position: absolute;
 }
 
 .swipe_picture {
 	width: 13vw;
 	height: 13vw;
 	position: absolute;
-	margin-top: 5vh;
-	margin-left: -10vw;
-}
-
-.swipe_profile {
-	text-align: center;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 15%;
 }
 
 .swipe_name {
@@ -312,7 +315,7 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .swipe_picture:hover {
-	transform: scale(1.1);
+	transform: scale(1.1) translateX(-45%);
 }
 
 .heart {
