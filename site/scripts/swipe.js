@@ -41,7 +41,6 @@ function setNewProfile() {
 	if (students[0].pic != undefined) document.getElementById("swipe_picture").src = students[0].pic;
 	else document.getElementById("swipe_picture").src = '';
 	email = students[0].email;
-	console.log(email);
 	students.splice(0, 1);
 
 	top_back();
@@ -52,5 +51,5 @@ swipe_profile.addEventListener("animationend", top_back, false);
 setNewProfile();
 
 profil_link.addEventListener("click", () => {
-	document.location.href = "../views/profil_other_user.php?email=" + email;
+	document.location.href = "../view/profil_other_user.php?email=" + email;
 })
