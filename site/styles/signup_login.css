@@ -314,11 +314,11 @@ input[type="checkbox"]:checked+label::before {
 
 .swipe_picture {
 	cursor: crosshair;
-	transition: all ease-in 0.25s;
+	transition: all cubic-bezier(0.16, 0.84, 0.88, 1.18) 0.25s;
 }
 
 .swipe_picture:hover {
-	transform: scale(1.2);
+	transform: scale(1.1);
 }
 
 
