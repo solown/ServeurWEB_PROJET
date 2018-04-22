@@ -18,7 +18,14 @@ function sign_up() {
 
 				var mail = document.getElementsByName("mail")[0].value;
 				var password = document.getElementsByName("password")[0].value;
-				var year = document.getElementsByName("year")[0].value;
+				var year;
+				if (document.getElementById('first').checked) {
+					year = 1;
+				}
+				if(document.getElementById('second').checked) {
+					year = 2;
+				}
+				
 		
 				request.send("&mail=" + mail + "&password=" + password + "&year=" + year);
 
