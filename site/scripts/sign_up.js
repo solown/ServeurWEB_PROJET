@@ -22,7 +22,7 @@ function sign_up() {
 				if (document.getElementById('first').checked) {
 					year = 1;
 				}
-				if(document.getElementById('second').checked {
+				if(document.getElementById('second').checked) {
 					year = 2:
 				}
 				
