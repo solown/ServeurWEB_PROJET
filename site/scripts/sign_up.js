@@ -23,7 +23,7 @@ function sign_up() {
 					year = 1;
 				}
 				if(document.getElementById('second').checked) {
-					year = 2:
+					year = 2;
 				}
 				
 		
