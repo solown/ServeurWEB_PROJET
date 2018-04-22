@@ -419,14 +419,14 @@ input[type="checkbox"]:checked+label::before {
 	margin-top: 5%;
 	margin-left: 50%;
 	font-family: "Segoe UI";
-	font-size: 2vw;
+	font-size: 1.5vw;
 	color: #707070;
 }
 
 .DUT {
 	font-family: "Fjalla One";
 	font-weight: bold;
-	font-size: 3vw;
+	font-size: 2.5vw;
 }
 
 .stats_profile {
@@ -443,7 +443,7 @@ input[type="checkbox"]:checked+label::before {
 	margin-top: 12%;
 	margin-left: 40%;
 	font-family: "Fjalla One";
-	font-size: 4vw;
+	font-size: 3vw;
 	color: #F05228;
 	z-index: 9;
 }
@@ -453,7 +453,7 @@ input[type="checkbox"]:checked+label::before {
 	margin-top: 21%;
 	margin-left: 19%;
 	font-family: "Fjalla One";
-	font-size: 3vw;
+	font-size: 2.5vw;
 	color: #707070;
 	z-index: 9;
 }
