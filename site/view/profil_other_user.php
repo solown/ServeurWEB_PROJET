@@ -11,10 +11,10 @@ if (isset($_GET['email'])){
 	    header('Location: ../view/notfound.html');
 }
 require("../model/profil_other_user.php"); ?>
-<!DOCTYPE html>
-<html lang="fr">
+	<!DOCTYPE html>
+	<html lang="fr">
 
-<head>
+	<head>
 		<meta charset="utf-8" />
 		<title>Accueil</title>
 		<!--		<CSS>				-->
@@ -39,8 +39,9 @@ require("../model/profil_other_user.php"); ?>
 		<div class="picture_profile img_profile"><img src="<?php echo htmlspecialchars($student->getPic()); ?> " alt=""></div>
 		<div class="cloud_profile"><img src="../images/cloud.svg" alt=""></div>
 		<div class="year_email_profile">
-			DUT
-			<?php echo($student->getYear()); ?> -
+			<span class="DUT">DUT
+			<?php echo($student->getYear()); ?> -</span>
+
 			<?php echo($student->getEmail()); ?>@etu.parisdescartes.fr</div>
 		<div class="stats_profile">
 			<div>2 matchs</div>

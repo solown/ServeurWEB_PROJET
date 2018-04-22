@@ -397,7 +397,7 @@ input[type="checkbox"]:checked+label::before {
 	position: absolute;
 	left: 10%;
 	top: 25%;
-	width: 90vh;
+	width: 45vw;
 	height: auto;
 }
 
@@ -407,8 +407,8 @@ input[type="checkbox"]:checked+label::before {
 
 .picture_profile {
 	position: absolute;
-	width: 30vh;
-	height: 30vh;
+	width: 15vw;
+	height: 15vw;
 	z-index: 9;
 	margin-left: 17%;
 	margin-top: 5%;
@@ -419,8 +419,14 @@ input[type="checkbox"]:checked+label::before {
 	margin-top: 5%;
 	margin-left: 50%;
 	font-family: "Segoe UI";
-	font-size: 3vh;
+	font-size: 2vw;
 	color: #707070;
+}
+
+.DUT {
+	font-family: "Fjalla One";
+	font-weight: bold;
+	font-size: 3vw;
 }
 
 .stats_profile {
@@ -459,7 +465,7 @@ input[type="checkbox"]:checked+label::before {
 	margin-top: 27%;
 	margin-left: 17%;
 	font-family: "Segoe UI";
-	font-size: 2.5vh;
+	font-size: 2vw;
 	color: #707070;
 	z-index: 9;
 }
