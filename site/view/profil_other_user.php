@@ -10,12 +10,11 @@ if (isset($_GET['email'])){
 } else {
 	    header('Location: ../view/notfound.html');
 }
-require("../model/profil_other_user.php");
-?>
-	<!DOCTYPE html>
-	<html lang="fr">
+require("../model/profil_other_user.php"); ?>
+<!DOCTYPE html>
+<html lang="fr">
 
-	<head>
+<head>
 		<meta charset="utf-8" />
 		<title>Accueil</title>
 		<!--		<CSS>				-->
@@ -38,22 +37,22 @@ require("../model/profil_other_user.php");
 		</div>
 		<div class="back"></div>
 		<div class="picture_profile img_profile"><img src="<?php echo htmlspecialchars($student->getPic()); ?> " alt=""></div>
-		<div class="cloud_profil"><img src="../images/cloud.svg" alt=""></div>
-		<div class="year_email_profil">
+		<div class="cloud_profile"><img src="../images/cloud.svg" alt=""></div>
+		<div class="year_email_profile">
 			DUT
 			<?php echo($student->getYear()); ?> -
 			<?php echo($student->getEmail()); ?>@etu.parisdescartes.fr</div>
-		<div class="stats_profil">
+		<div class="stats_profile">
 			<div>2 matchs</div>
 			<div>0 parainage</div>
 		</div>
-		<div class="name_profil">
+		<div class="name_profile">
 			<?php echo($student->getSurname()); ?>
 		</div>
-		<div class="adj_profil">
+		<div class="adj_profile">
 			<?php echo($student->getStringAdjectives()); ?>
 		</div>
-		<div class="description_profil">
+		<div class="description_profile">
 			<?php echo htmlspecialchars($student->getDescription()); ?>
 		</div>
 	</body>
