@@ -4,17 +4,23 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Personality test</title>
+	<title>Personality Test</title>
 	<link rel="stylesheet" href="../styles/main.css">
 	<link rel="stylesheet" href="../styles/signup_login.css">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	
+
 	<style>
-		.adj-input { display:block;
-					 text-align:center; }
-		.title_logo { margin-top:25%; }
+		.adj-input {
+			display: block;
+			text-align: center;
+		}
+		
+		.title_logo {
+			margin-top: 25%;
+		}
+
 	</style>
 </head>
 
@@ -43,8 +49,8 @@
 		</div>
 	</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="../scripts/test.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="../scripts/test.js"></script>
 </body>
 
 </html>

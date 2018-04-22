@@ -16,7 +16,7 @@ require("../model/profil_other_user.php"); ?>
 
 	<head>
 		<meta charset="utf-8" />
-		<title>Accueil</title>
+		<title>Profil Other User</title>
 		<!--		<CSS>				-->
 		<link rel="stylesheet" href="../styles/main.css">
 		<link rel="stylesheet" href="../styles/signup_login.css">

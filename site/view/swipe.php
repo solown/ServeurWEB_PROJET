@@ -12,7 +12,7 @@ if(!isset($_SESSION['id']))
 
 	<head>
 		<meta charset="utf-8" />
-		<title>Log In</title>
+		<title>Swipe</title>
 		<link rel="stylesheet" href="../styles/main.css">
 		<link rel="stylesheet" href="../styles/signup_login.css">
 		<link rel="stylesheet" href="../styles/animate.css">
