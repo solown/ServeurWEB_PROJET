@@ -43,7 +43,7 @@ if(!isset($_SESSION['id']))
 		</div>
 		<div class="row fullscreen_height">
 			<div class="col-3 swipe_icon no">
-				<img src="../images/recycling.png" alt="no">
+				<img class="recycling" src="../images/recycling.png" alt="no">
 			</div>
 			<div class="col-6 swipe_profile animated ">
 				<div class="swipe_face">
@@ -61,7 +61,7 @@ if(!isset($_SESSION['id']))
 				</div>
 			</div>
 			<div class="col-3 swipe_icon yes">
-				<img src="../images/heart.png" alt="yes">
+				<img class="heart" src="../images/heart.png" alt="yes">
 			</div>
 		</div>
 		<script src="../scripts/swipe.js"></script>

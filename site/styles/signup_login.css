@@ -321,6 +321,24 @@ input[type="checkbox"]:checked+label::before {
 	transform: scale(1.1);
 }
 
+.heart {
+	cursor: crosshair;
+	transition: all cubic-bezier(0.16, 0.84, 0.88, 1.18) 0.25s;
+}
+
+.heart:hover {
+	transform: scale(1.1);
+}
+
+.recycling {
+	cursor: crosshair;
+	transition: all cubic-bezier(0.16, 0.84, 0.88, 1.18) 0.25s;
+}
+
+.recycling:hover {
+	transform: scale(1.1);
+}
+
 
 /**********************************************final****************************************/
 
