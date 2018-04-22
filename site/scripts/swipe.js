@@ -50,6 +50,7 @@ swipe_profile.addEventListener("webkitAnimationEnd", top_back, false);
 swipe_profile.addEventListener("animationend", top_back, false);
 setNewProfile();
 
+//go to profil other user
 profil_link.addEventListener("click", () => {
 	document.location.href = "../view/profil_other_user.php?email=" + email;
 })

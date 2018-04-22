@@ -312,6 +312,15 @@ input[type="checkbox"]:checked+label::before {
 	height: auto;
 }
 
+.swipe_picture {
+	cursor: crosshair;
+	transition: all ease-in 0.25s;
+}
+
+.swipe_picture:hover {
+	transform: scale(1.2);
+}
+
 
 /**********************************************final****************************************/
 
