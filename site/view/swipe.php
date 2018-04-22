@@ -47,17 +47,15 @@ if(!isset($_SESSION['id']))
 			</div>
 			<div class="col-6 swipe_profile animated ">
 				<div class="swipe_face">
-					<div class="img_profile swipe_picture"><img id="swipe_picture" src="../images/images_student/alice.png" alt="picture"></div>
-
+					<img class="swipe_cloud" src="../images/cloud.svg" alt="cloud"> -
+					<div class="img_profile swipe_picture"><img id="swipe_picture" src="" alt="picture"></div>
 				</div>
-				<div class="swipe_profile_content">
-					<div class="swipe_name" id="swipe_name">
-					</div>
-					<div class="swipe_adj" id="swipe_adj">
-					</div>
-					<div class="swipe_description" id="swipe_description">
-						<!-- TODO : Only keep id -->
-					</div>
+				<div class="swipe_name" id="swipe_name">
+				</div>
+				<div class="swipe_adj" id="swipe_adj">
+				</div>
+				<div class="swipe_description" id="swipe_description">
+					<!-- TODO : Only keep id -->
 				</div>
 			</div>
 			<div class="col-3 swipe_icon yes">
