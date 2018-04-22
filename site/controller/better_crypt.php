@@ -1,5 +1,4 @@
 <?php
-
 function better_crypt($input, $rounds = 7) {
 	$salt = "";
 	$salt_chars = array_merge(range('A','Z'), range('a','z'), range(0,9));
@@ -8,5 +7,3 @@ function better_crypt($input, $rounds = 7) {
 	}
 	return crypt($input, sprintf('$2a$%02d$', $rounds) . $salt);
 }
-
-?>
