@@ -18,7 +18,7 @@ function sign_up() {
 
 				var mail = document.getElementsByName("mail")[0].value;
 				var password = document.getElementsByName("password")[0].value;
-				var year = document.getElementsByName("year")[0].value;
+				var year = document.getElementsByName("year").value;
 		
 				request.send("&mail=" + mail + "&password=" + password + "&year=" + year);
 
