@@ -236,6 +236,7 @@ input[type="checkbox"]:checked+label::before {
 .menu a:hover {
 	text-decoration: none;
 	color: #4152BC;
+	cursor: crosshair;
 }
 
 .menu a {
