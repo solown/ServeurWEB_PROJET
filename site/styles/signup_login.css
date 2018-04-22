@@ -258,6 +258,10 @@ input[type="checkbox"]:checked+label::before {
 
 /**********************************************swipe*****************************************/
 
+.swipe_profile {
+	text-align: center;
+}
+
 .swipe_face {
 	position: relative;
 	height: 20vw;
