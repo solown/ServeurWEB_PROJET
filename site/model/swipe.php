@@ -27,13 +27,13 @@ function getArrayStudents() {
 			$query_get_student = 
 			"SELECT A.wording as adj1, A2.wording as adj2, A3.wording as adj3, S.surname, S.description, S.pic
 			FROM ADJECTIVE A, ADJECTIVE A2, ADJECTIVE A3, STUDENT S
-			WHERE S.id_student <> :student_id AND year = 2 AND S.score BETWEEN :score_min AND :score_max AND S.adjective_1 = 				A.id_adjective AND S.adjective_2 = A2.id_adjective AND S.adjective_3 = A3.id_adjective AND S.id_student NOT IN (SELECT 				id_student_god_father from match where id_student_god_son <> :student_id)"; 
+			WHERE S.id_student <> :student_id AND year = 2 AND S.score BETWEEN :score_min AND :score_max AND S.adjective_1 = 				A.id_adjective AND S.adjective_2 = A2.id_adjective AND S.adjective_3 = A3.id_adjective AND S.id_student NOT IN (SELECT 				id_student_god_father from match where id_student_god_son = :student_id)"; 
 		}
 		else {
 			$query_get_student = 
 			"SELECT A.wording as adj1, A2.wording as adj2, A3.wording as adj3, S.surname, S.description, S.pic
 			FROM ADJECTIVE A, ADJECTIVE A2, ADJECTIVE A3, STUDENT S
-			WHERE S.id_student <> :student_id AND year = 1 AND S.score BETWEEN :score_min AND :score_max AND S.adjective_1 = 				A.id_adjective AND S.adjective_2 = A2.id_adjective AND S.adjective_3 = A3.id_adjective AND S.id_student NOT IN (SELECT 				id_student_god_son from match where id_student_god_father <> :student_id)"; 
+			WHERE S.id_student <> :student_id AND year = 1 AND S.score BETWEEN :score_min AND :score_max AND S.adjective_1 = 				A.id_adjective AND S.adjective_2 = A2.id_adjective AND S.adjective_3 = A3.id_adjective AND S.id_student NOT IN (SELECT 				id_student_god_son from match where id_student_god_father = :student_id)"; 
 		}
 			
 		$statement_student = $db->prepare($query_get_student);
