@@ -63,7 +63,6 @@ if(!isset($_SESSION['id']))
 		</div>
 		<input class="buttonconfirm" name="updatedescribe" onclick="confirm()" type="submit" value="">
 		</input>
-		<div id="textarea_feedback"></div>
 		<input class="cancelupdate" name="N_cancelupdate" onclick="cancel()" value=""></input>
 		</form>
 		<script src="../scripts/updateprofile.js"></script>
