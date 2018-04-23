@@ -33,6 +33,8 @@ create table match (
 	result boolean default false, 
 	id_student_god_father integer not null,
 	id_student_god_son integer not null,
+	liked_by_god_father boolean default false,
+	liked_by_god_son boolean default false,	
 	foreign key (id_student_god_father) references Student(id_student),
 	foreign key (id_student_god_son) references Student(id_student)
 );
