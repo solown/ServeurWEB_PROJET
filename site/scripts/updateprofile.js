@@ -9,7 +9,7 @@ function update(){
 	document.getElementById('textarea_feedback').display = 'block';
 }
 
-$('textarea').keyup(function (e) {
+/*$('textarea').keyup(function (e) {
     var rows = $(this).val().split("\n");
     $(this).prop('rows', rows.length);
 });

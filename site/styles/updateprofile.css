@@ -144,10 +144,10 @@ center{
 .buttonconfirm{
 	background-image : url(../images/checked.png) !important;
 	width : 15%;
-	height:15%;
+	height:14%;
 	background-repeat : no-repeat !important;
 	z-index : 3;
-	margin-left : 35%;
+	margin-left : 38%;
 	margin-top : 3%;
 	display : none;
 	border:none;
@@ -160,7 +160,7 @@ center{
 	width : 30%;
 	height :14%;
 	z-index : 4;
-	margin-left : 28%;
+	margin-left : 33%;
 	margin-bottom : 15%;
 	border:none;
 	color : white;
@@ -178,7 +178,7 @@ center{
 	border : 2px solid #F5F7FA;
 	width : 5%;
 	display:none;
-	margin-top : 7%;
+	margin-top : 4%;
 	padding-top : 1%;
 	padding-bottom : 1%;
 }

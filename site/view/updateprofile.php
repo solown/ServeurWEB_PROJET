@@ -56,7 +56,8 @@ if(!isset($_SESSION['id']))
 					<?php echo htmlspecialchars($description)?>
 				</div>
 				<input id="inputresume" name="resumestudent" placeholder="Ici tu peux te décrire mais aussi dire si tu cherches de l'aide ou si tu veux en donner ou bien si tu cherches des compagnons de jeux ou de sorties" type="textarea"
-				maxlength="280"></input>
+					maxlength="280" oninput='this.style.height ="";this.style.heigth= this.scrollheight+"px"'>
+				</input>
 		</div>
 		<div class="buttonupdate" onclick="update()">
 		</div>
