@@ -63,9 +63,8 @@ if(!isset($_SESSION['id']))
 		<input class="buttonconfirm" name="updatedescribe" onclick="confirm()" type="submit" value="">
 		</input>
 		<div id="textarea_feedback"></div>
-		<input class="cancelupdate" name="N_cancelupdate" onclick="confirm()" value=""></input>
+		<input class="cancelupdate" name="N_cancelupdate" onclick="cancel()" value=""></input>
 		</form>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="../scripts/updateprofile.js"></script>
 	</body>
 

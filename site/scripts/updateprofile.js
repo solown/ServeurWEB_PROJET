@@ -10,18 +10,25 @@ function update(){
 }
 
 function confirm(){
-	text=document.getElementById('inputresume').value
-	document.getElementsByClassName('resume')[0].innerHTML =  text;
-	document.getElementById('inputresume').style.display = 'none';
-	document.getElementsByClassName('resume')[0].style.display = 'block';
-	document.getElementsByClassName('buttonconfirm')[0].style.display = 'none';
-	document.getElementsByClassName('buttonupdate')[0].style.display = 'block';
-	document.getElementById('textarea_feedback').display = 'none';
+	window.location.reload();
+	
 }
-$('textarea').autoResize();
+function cancel(){
+	window.location.reload();
+}
+var tx = document.getElementsByTagName('textarea');
+for (var i = 0; i < tx.length; i++) {
+  tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px;overflow-y:hidden;');
+  tx[i].addEventListener("input", OnInput, false);
+}
+
+function OnInput() {
+  this.style.height = 'auto';
+  this.style.height = (this.scrollHeight) + 'px';
+}
 
 $(document).ready(function() {
-    var text_max = 99;
+    var text_max = 280;
     $('#textarea_feedback').html(text_max + ' characters remaining');
 
     $('#textarea').keyup(function() {
