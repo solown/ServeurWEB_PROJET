@@ -26,6 +26,9 @@ function top_back() {
 	swipe_profile.classList.add("bounceInDown");
 }
 
+function ajax_liked_someone(){
+	
+}
 
 
 function setNewProfile() {

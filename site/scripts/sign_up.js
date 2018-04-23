@@ -1,11 +1,11 @@
 function sign_up() {
-	console.log("debut de sign_up.js");
+	console.log("we are in sign_up.js");
 	var xhttp = new XMLHttpRequest();
 	
 	xhttp.onreadystatechange = function(){
 		if(this.readyState == 4 && this.status == 200){
 			if(this.responseText == "NOK"){
-				console.log("mail existe deja");
+				console.log("mail already exist");
 				highlight(document.getElementsByName("mail")[0], true);
 				
 			}
