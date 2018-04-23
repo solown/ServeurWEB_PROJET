@@ -44,3 +44,7 @@ var form = document.getElementById("formsignup");
 form.addEventListener('submit', function () {
 	form.submit.disabled = true;
 });
+var form = document.getElementById("form_login");
+form.addEventListener('submit', function () {
+	form.submit.disabled = true;
+});

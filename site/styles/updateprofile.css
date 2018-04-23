@@ -167,6 +167,11 @@ center{
 	background : none;
 	
 }
+#textarea_feedback{
+	font-family: "Open Sans Condensed";
+	z-index : 3;
+	display : none;
+}
 #inputresume {
 	margin-left : 18%;
 	z-index : 3;

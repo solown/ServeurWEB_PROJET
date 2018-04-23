@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Confirmation de votre inscription</title>
+	<title>Register Confirmation</title>
 	<link rel="stylesheet" href="../styles/signup_login.css">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
@@ -25,9 +25,8 @@
 					</div>
 					<div>
 						<div>Un email de confirmation à été envoyé à</div>
-						<span class="purple">
-							<?php echo $_GET['mail']?> </span>
-						<span>@etu.parisdescartes.fr</span>
+						<span class="purple"><?php echo $_GET['mail']?></span>
+						<span class="register_conf_mail">@etu.parisdescartes.fr</span>
 						</br>
 						</br>
 						</br>

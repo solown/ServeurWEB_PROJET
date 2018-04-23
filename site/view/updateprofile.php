@@ -10,7 +10,7 @@ if(!isset($_SESSION['id']))
 
 	<header>
 		<meta charset="utf-8" />
-		<title>Update profile </title>
+		<title>Update Profile</title>
 		<link rel="stylesheet" href="../styles/main.css">
 		<link rel="stylesheet" href="../styles/updateprofile.css">
 		<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
@@ -29,7 +29,8 @@ if(!isset($_SESSION['id']))
 			<p><b>DUT <?php echo htmlspecialchars($yearstudent)?></b></p><span><?php echo htmlspecialchars($mailstudent) ?>@etu.parisdescartes.fr</span>
 		</div>
 		<div id="stats">
-			<h2><?php echo htmlspecialchars($match)?> matchs</h2>
+			<h2>
+				<?php echo htmlspecialchars($match)?> matchs</h2>
 			<h2> 0 filleule </h2>
 		</div>
 		<div id="present">
@@ -44,21 +45,28 @@ if(!isset($_SESSION['id']))
 					<?php echo htmlspecialchars($name) ?> </center>
 			</div>
 			<div class="adj">
-				<center><?php echo htmlspecialchars($word1) ?>-<?php echo htmlspecialchars($word2) ?>-<?php echo htmlspecialchars($word3) ?></center>
+				<center>
+					<?php echo htmlspecialchars($word1) ?>-
+					<?php echo htmlspecialchars($word2) ?>-
+					<?php echo htmlspecialchars($word3) ?>
+				</center>
 			</div>
 			<form method="post">
 				<div class="resume">
 					<?php echo htmlspecialchars($description)?>
 				</div>
-				<input id="inputresume" name="resumestudent" placeholder="Ici tu peux te décrire mais aussi dire si tu cherches de l'aide ou si tu veux en donner ou bien si tu cherches des compagnons de jeux ou de sorties"
-				type="textarea"></input>
+				<input id="inputresume" name="resumestudent" placeholder="Ici tu peux te décrire mais aussi dire si tu cherches de l'aide ou si tu veux en donner ou bien si tu cherches des compagnons de jeux ou de sorties" type="textarea"
+				maxlength="280"></input>
 		</div>
 		<div class="buttonupdate" onclick="update()">
 		</div>
 		<input class="buttonconfirm" name="updatedescribe" onclick="confirm()" type="submit" value="">
 		</input>
-		<input  class="cancelupdate" name="N_cancelupdate" onclick="confirm()"value=""></input>
+		<div id="textarea_feedback"></div>
+		<input class="cancelupdate" name="N_cancelupdate" onclick="confirm()" value=""></input>
 		</form>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="../scripts/updateprofile.js"></script>
 	</body>
-</html>
+
+	</html>

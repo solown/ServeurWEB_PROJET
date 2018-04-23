@@ -30,3 +30,4 @@ function login() {
 	xhttp.send("mail=" + mail + "&password=" + password);
 	return false;
 }
+

@@ -10,7 +10,7 @@ if(!isset($_SESSION['id']))
 
 	<head>
 		<meta charset="utf-8" />
-		<title>Accueil</title>
+		<title>You Find The Right One</title>
 		<!--		<CSS>				-->
 		<link rel="stylesheet" href="../styles/main.css">
 		<link rel="stylesheet" href="../styles/signup_login.css">
@@ -34,7 +34,7 @@ if(!isset($_SESSION['id']))
 				<!--lien vers le profil-->
 				<div class="final_title"><a href="#">parrain</a></div>
 				<!-- ou maraine selon le profil-->
-<div><img src="../images/alice.png" alt=""></div>
+				<div><img src="../images/alice.png" alt=""></div>
 			</div>
 
 			<div class="col-3 offset-6 final_section">
