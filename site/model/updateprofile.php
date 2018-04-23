@@ -75,7 +75,7 @@
 			$statement->bindvalue(':id', $_SESSION['id']);
 			$statement -> execute();
 			$_POST['updatedescribe'] = $resume;
-		
+			echo "<meta http-equiv='refresh' content='0'>";
 	}
 	//UPDATE de l'image
 	if(isset($_POST['input_btn']))

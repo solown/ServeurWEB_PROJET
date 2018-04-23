@@ -9,14 +9,12 @@ function update(){
 	document.getElementById('textarea_feedback').display = 'block';
 }
 
-function confirm(){
-	window.location.reload();
-	
-}
-function cancel(){
-	window.location.reload();
-}
-var tx = document.getElementsByTagName('textarea');
+$('textarea').keyup(function (e) {
+    var rows = $(this).val().split("\n");
+    $(this).prop('rows', rows.length);
+});
+
+/*var tx = document.getElementsByTagName('textarea');
 for (var i = 0; i < tx.length; i++) {
   tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px;overflow-y:hidden;');
   tx[i].addEventListener("input", OnInput, false);
@@ -37,5 +35,5 @@ $(document).ready(function() {
 
         $('#textarea_feedback').html(text_remaining + ' characters remaining');
     });
-});
+});*/
 
