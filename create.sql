@@ -64,6 +64,13 @@ create table token_keep_me_logged (
 	foreign key (id_student) references student(id_student)
 );
 
+create table token_forgot_passwd (
+	birth date,
+	token varchar(32),
+	id_student integer primary key,
+	foreign key (id_student) references student(id_student)
+);
+
 insert into adjective (wording) values ('Froid') ;
 insert into adjective (wording) values ('Calculateur') ;
 insert into adjective (wording) values ('Michto') ;

@@ -44,7 +44,7 @@
 									<label for="keeplog"><span>Keep me loged in</span></label>
 								</div>
 								<div class="inline etu2 maxW">
-									<a href="./view/accueil.html">Forgot your password ?</a>
+									<a href="forgot_passwd.html">Forgot your password ?</a>
 								</div>
 							</div>
 							<div>
