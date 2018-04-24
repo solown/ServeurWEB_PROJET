@@ -42,7 +42,7 @@ if(!isset($_SESSION['id']))
 		<div class="img_profile match_pic_bot">
 			<img src="../images/images_student/alice.png" alt="">
 		</div>
-		<div class="match_slogan">It's start here.</div>
+		<div class="match_slogan">It starts here.</div>
 
 	</body>
 
