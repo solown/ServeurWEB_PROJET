@@ -473,3 +473,63 @@ input[type="checkbox"]:checked+label::before {
 	color: #707070;
 	z-index: 9;
 }
+
+
+/***************************************Match**********************************************/
+
+.match_slogan {
+	font-family: "Fjalla One";
+	font-size: 4vw;
+	color: #4152BC;
+	position: absolute;
+	bottom: 20%;
+	right: 20%;
+}
+
+.match_pic_top {
+	position: absolute;
+	width: 12vw;
+	height: 12vw;
+	left: 49%;
+	bottom: 50%;
+}
+
+.match_pic_bot {
+	position: absolute;
+	width: 15vw;
+	height: 15vw;
+	right: 49%;
+	bottom: 20%;
+}
+
+.match_continue img {
+	position: absolute;
+	width: 20vw;
+	height: auto;
+	left: 30%;
+	top: 10%;
+}
+
+.match_talk img {
+	position: absolute;
+	width: 15vw;
+	height: auto;
+	left: 20%;
+	top: 45%;
+}
+
+.match_continue a:hover {
+	cursor: crosshair;
+}
+
+.match_pic_top a:hover {
+	cursor: crosshair;
+}
+
+.match_talk:hover {
+	cursor: crosshair;
+}
+
+.match_pic_bot:hover {
+	cursor: crosshair;
+}
