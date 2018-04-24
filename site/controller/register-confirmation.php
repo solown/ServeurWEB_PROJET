@@ -29,10 +29,10 @@ $mailer = new Swift_Mailer($transport);
 $root = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
 
 $message = (new Swift_Message("Registration confirmation"))
-	->setFrom(["find.the.r8.one@gmail.com" => "Choose the right one"])
+	->setFrom(["find.the.r8.one@gmail.com" => "Find the right one"])
 	->setTo([$student_mail."@etu.parisdescartes.fr" => $student_name])
-//	->setBody("Please, confirm your registration by clicking on the following link : http://tinder.student.elwinar.com/view/loginPerso.php?token=".$token_hash."&name=".$student_name."\n")
-	->setBody("Please, confirm your registration by clicking on the following link : " . $_SERVER['SERVER_NAME'] . "/view/loginPerso.php?token=".$token_hash."&name=".$student_name."\n")
+	->setBody("Please, confirm your registration by clicking on the following link : http://tinder.student.elwinar.com/view/loginPerso.php?token=".$token_hash."&name=".$student_name."\n")
+//	->setBody("Please, confirm your registration by clicking on the following link : " . $_SERVER['SERVER_NAME'] . "/view/loginPerso.php?token=".$token_hash."&name=".$student_name."\n")
 
 ;
 
