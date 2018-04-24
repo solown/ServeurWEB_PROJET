@@ -24,7 +24,7 @@ $message = (new Swift_Message("Change your password"))
 	->setFrom(["find.the.r8.one@gmail.com" => "Find the right one"])
 	->setTo([$student_mail."@etu.parisdescartes.fr" => $student_name])
 	->setBody("You asked to change your password.\n
-Please, click on the following link to reset your password : http://tinder.student.elwinar.com/controller/change_password.php?token=".$token_hash)
+Please, click on the following link to reset your password : http://tinder.student.elwinar.com/view/change_passwd.php?mail=".$student_mail."&token=".$token_hash)
 ;
 
 $result = $mailer->send($message);
