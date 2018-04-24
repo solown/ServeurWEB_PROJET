@@ -14,7 +14,7 @@ function cancel(){
 	document.getElementsByClassName('buttonconfirm')[0].style.display = 'none';
 }
 /*$("#inputresume").height( $("#inputresume").scrollHeight );*/
-var input = document.getElementsById('inputresume');
+var input = document.getElementById('inputresume');
 
 input.onkeypress = input.onkeydown = function() {
     this.size = ( this.value.length > 50 ) ? this.value.length : 50;
