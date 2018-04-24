@@ -1,9 +1,9 @@
 <?php
 
-require_once("db_connect.php");
+require("db_connect.php");
 
-function create_token($token_hash, $student_mail) {
-	
+function create_forgot_passw_token($token_hash, $student_mail) {
+
 	$db = db_connect();
 
 	if($db){
@@ -16,11 +16,13 @@ function create_token($token_hash, $student_mail) {
 		while($row = $id_statement->fetch(PDO::FETCH_ASSOC))
 			$student_id = $row["id_student"];
 
-		$insert_query = "INSERT INTO token values (:date, :token, true, :id)";
+		$insert_query = "INSERT INTO token_forgot_passwd VALUES (:date, :token, :id)";
 		$insert_statement = $db->prepare($insert_query);
 		$insert_statement->bindValue(":date", date("Y-m-d"));
 		$insert_statement->bindValue(":token", $token_hash);
 		$insert_statement->bindValue(":id", $student_id);
-		$insert_statement->execute();
+		$insert_statement->execute();	
 	}
 }
+
+?>
