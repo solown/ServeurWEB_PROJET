@@ -8,6 +8,13 @@ function update(){
 	document.getElementsByClassName('buttonconfirm')[0].style.display = 'block';
 	document.getElementById('textarea_feedback').display = 'block';
 }
+function cancel(){
+	document.getElementsByClassName('resume')[0].style.display = 'block';
+	document.getElementById('inputresume').style.display = 'none';
+	document.getElementsByClassName('buttonupdate')[0].style.display = 'block';
+	document.getElementsByClassName('buttonconfirm')[0].style.display = 'none';
+}
+$("#inputresume").height( $("textarea")[0].scrollHeight );
 
 /*$('textarea').keyup(function (e) {
     var rows = $(this).val().split("\n");

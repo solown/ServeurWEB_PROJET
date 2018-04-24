@@ -55,8 +55,8 @@ if(!isset($_SESSION['id']))
 				<div class="resume">
 					<?php echo htmlspecialchars($description)?>
 				</div>
-				<input id="inputresume" name="resumestudent" placeholder="Ici tu peux te décrire mais aussi dire si tu cherches de l'aide ou si tu veux en donner ou bien si tu cherches des compagnons de jeux ou de sorties" type="textarea"
-					maxlength="280" oninput='this.style.height ="";this.style.heigth= this.scrollheight+"px"'>
+				<input id="inputresume" name="resumestudent" placeholder="Décris toi ici, n'hésite pas à dire ce que tu aimes ou ce que tu cherches sur notre app :)" type="textarea"
+					maxlength="280" >
 				</input>
 		</div>
 		<div class="buttonupdate" onclick="update()">
@@ -65,6 +65,7 @@ if(!isset($_SESSION['id']))
 		</input>
 		<input class="cancelupdate" name="N_cancelupdate" onclick="cancel()" value=""></input>
 		</form>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="../scripts/updateprofile.js"></script>
 	</body>
 
