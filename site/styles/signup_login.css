@@ -477,13 +477,22 @@ input[type="checkbox"]:checked+label::before {
 
 /***************************************Match**********************************************/
 
+.match_container {
+	position: absolute;
+	width: 60vw;
+	height: 40vw;
+	top: 40%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
 .match_slogan {
 	font-family: "Fjalla One";
 	font-size: 4vw;
 	color: #4152BC;
 	position: absolute;
-	bottom: 20%;
-	right: 20%;
+	bottom: 0;
+	right: 0;
 }
 
 .match_pic_top {
@@ -491,22 +500,22 @@ input[type="checkbox"]:checked+label::before {
 	width: 12vw;
 	height: 12vw;
 	left: 49%;
-	bottom: 50%;
+	bottom: 40%;
 }
 
 .match_pic_bot {
 	position: absolute;
 	width: 15vw;
 	height: 15vw;
-	right: 49%;
-	bottom: 20%;
+	left: 29%;
+	bottom: 4%;
 }
 
 .match_continue img {
 	position: absolute;
 	width: 20vw;
 	height: auto;
-	left: 30%;
+	left: 15%;
 	top: 10%;
 }
 
@@ -514,8 +523,8 @@ input[type="checkbox"]:checked+label::before {
 	position: absolute;
 	width: 15vw;
 	height: auto;
-	left: 20%;
-	top: 45%;
+	left: 0%;
+	top: 50%;
 }
 
 .match_continue a:hover {
