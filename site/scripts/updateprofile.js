@@ -6,7 +6,6 @@ function update(){
 	document.getElementById('inputresume').style.display = 'block';
 	document.getElementsByClassName('buttonupdate')[0].style.display = 'none';
 	document.getElementsByClassName('buttonconfirm')[0].style.display = 'block';
-	document.getElementById('textarea_feedback').display = 'block';
 }
 function cancel(){
 	document.getElementsByClassName('resume')[0].style.display = 'block';
@@ -14,7 +13,12 @@ function cancel(){
 	document.getElementsByClassName('buttonupdate')[0].style.display = 'block';
 	document.getElementsByClassName('buttonconfirm')[0].style.display = 'none';
 }
-$("#inputresume").height( $("textarea")[0].scrollHeight );
+$("#inputresume").height( $("#inputresume").scrollHeight );
+/*var input = document.getElementsById('inputresume');
+
+input.onkeypress = input.onkeydown = function() {
+    this.size = ( this.value.length > 10 ) ? this.value.length : 10;
+};
 
 /*$('textarea').keyup(function (e) {
     var rows = $(this).val().split("\n");
