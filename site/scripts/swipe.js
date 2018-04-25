@@ -27,6 +27,8 @@ function top_back() {
 }
 
 function ajax_liked_someone(){
+	console.log("we are in liked function");
+	var xhttp = new XMLHttpRequest();
 	
 }
 
