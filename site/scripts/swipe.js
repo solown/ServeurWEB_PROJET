@@ -48,6 +48,7 @@ function ajax_liked_someone(){
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-	urlencoded");
 	
 	xhttp.send("mail_student_liked=" + email);
+	console.log(email);
 	console.log("end");
 	return false;
 }
