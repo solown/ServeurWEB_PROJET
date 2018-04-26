@@ -9,9 +9,8 @@ if($db) {
 		
 	//Id of the two student. One come from the session, we get the other one from a post method of the swipe page
 	$id_student_connected = $_SESSION['id'];
-	if (isset($mail_student_liked)){
-		$mail_student_liked = $_GET['mail_student_liked'];
-	}
+	$mail_student_liked = $_POST['mail_student_liked'];
+
 	
 	//We build a student object. That's the student curently connected
 	$query_get_student_connected = "SELECT S.year
