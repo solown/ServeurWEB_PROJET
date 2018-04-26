@@ -37,8 +37,11 @@ function ajax_liked_someone(){
 			if(this.responseText == "MATCH"){
 				document.location.href = "../view/match.php?email=" + email;
 			}
-			else{
+			if else(this.responseText == "LIKE"){
 				return true;
+			}
+			else{
+				console.log(this.responseText);
 			}
 			
 
