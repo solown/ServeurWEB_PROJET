@@ -37,19 +37,17 @@ function ajax_liked_someone(){
 			if(this.responseText == "MATCH"){
 				document.location.href = "../view/match.php?email=" + email;
 			}
-			else if(this.responseText == "LIKE"){
+			else{
 				return true;
 			}
-			else{
-				console.log(this.responseText);
-			}
+			
 
 	}
 	}
 	xhttp.open("POST", "../controller/like_student.php", true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-	urlencoded");
 	
-	xhttp.send("mail" + email);
+	xhttp.send("mail=" + email);
 	console.log(email);
 	console.log("end");
 	return false;
