@@ -1,5 +1,3 @@
-var text;
-
 
 function update(){
 	document.getElementsByClassName('resume')[0].style.display = 'none';

@@ -65,7 +65,6 @@ if(!isset($_SESSION['id']))
 		</input>
 		<input class="cancelupdate" name="N_cancelupdate" onclick="cancel()" value=""></input>
 		</form>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="../scripts/updateprofile.js"></script>
 	</body>
 

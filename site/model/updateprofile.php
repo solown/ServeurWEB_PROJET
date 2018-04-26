@@ -52,18 +52,9 @@
 		$result = $db->prepare($sql);
 		$result -> bindvalue(':id',$id); 
 		$result->execute(); 
-		$match = $result->fetchColumn();
-		/*while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-			$god_father_exist = $row['statement'];
-		}*/
+		$match = $result->fetchColumn();	
 	}
-	/*if ($god_son_exist== true or god_father_exist==true){
-		$god_son_exist = 1;
-		$god_father_exist=1;
-	}else{
-		$god_son_exist = 0;
-		$god_father_exist= 0;
-	}*/
+	
 	
 	//UPDATE de la description
 	if(isset($_POST['updatedescribe'])){
@@ -75,7 +66,8 @@
 			$statement->bindvalue(':id', $_SESSION['id']);
 			$statement -> execute();
 			$_POST['updatedescribe'] = $resume;
-			echo "<meta http-equiv='refresh' content='0'>";
+			/*echo "<meta http-equiv='refresh' content='0'>";*/
+			header("location: https://tinder.student.elwinar.com/view/updateprofile.php");
 	}
 	//UPDATE de l'image
 	if(isset($_POST['input_btn']))
