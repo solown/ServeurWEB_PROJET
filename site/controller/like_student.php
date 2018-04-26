@@ -18,7 +18,7 @@ if($db) {
 	$statement_get_student_connected->bindValue(':id_student_connected', $id_student_connected);
 	$statement_get_student_connected->execute();	
 
-	$row_connected = $statement->fetch(PDO::FETCH_ASSOC);
+	$row_connected = $statement_get_student_connected->fetch(PDO::FETCH_ASSOC);
 	$student_connected = new Student(NULL, NULL, NULL, NULL, NULL, $row_connected['year'], NULL, NULL);
 
 
@@ -30,7 +30,7 @@ if($db) {
 	$statement_get_student_liked->bindValue(':mail_student_liked', $mail_student_liked);
 	$statement_get_student_liked->execute();	
 
-	$row_liked = $statement->fetch(PDO::FETCH_ASSOC);
+	$row_liked = $statement_get_student_liked->fetch(PDO::FETCH_ASSOC);
 	$student_likde = new Student(NULL, NULL, NULL, NULL, NULL, $row_liked['year'], NULL, NULL);
 	$id_student_liked = $row_liked['id_student'];
 
