@@ -30,6 +30,24 @@ function ajax_liked_someone(){
 	console.log("we are in liked function");
 	var xhttp = new XMLHttpRequest();
 	
+
+	xhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			if(this.responseText == "MATCH"){
+				document.location.href = "../view/match.php?email=" + email;
+
+			}
+			else{
+				return true;
+			}
+
+
+	xhttp.open("POST", "../controller/like_student.php", true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-	urlencoded");
+	
+	xhttp.send("mail_student_liked=" + email);
+	console.log("end");
+	return false;
 }
 
 
