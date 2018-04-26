@@ -3,6 +3,7 @@ require("../model/db_connect.php");
 require("../model/student.php");
 
 $db = db_connect();
+session_start();
 
 if($db) {
 		
@@ -90,7 +91,7 @@ if($db) {
 			echo("LIKE");
 		}
 	}
-}
+}	
 
 
 
