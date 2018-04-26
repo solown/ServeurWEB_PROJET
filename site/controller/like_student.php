@@ -11,6 +11,7 @@ if($db) {
 	$id_student_connected = $_SESSION['id'];
 
 	$mail_student_liked = $_POST['mail'];
+	echo($_POST['mail']);
 
 	//We build a student object. That's the student curently connected
 	$query_get_student_connected = "SELECT S.year
