@@ -71,7 +71,7 @@ if($db) {
 		$statement_get_match_second->bindValue(':id_student_connected', $id_student_connected);
 		$statement_get_match_second->execute();
 
-		if($statement_get_match_first->rowCount()>0){
+		if($statement_get_match_second->rowCount()>0){
 			//cela signifie que les deux personnes se sont likée. Result passe à true, on redirige vers la page de match
 			$query_update_match_second= "UPDATE match set liked_by_god_father = true and result = true WHERE id_student_god_father = :id_student_connected AND id_student_god_son = :id_student_liked";
 			$statement_update_match_second = $db->prepare($query_update_match_first);
