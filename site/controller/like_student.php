@@ -11,7 +11,9 @@ if($db) {
 	$id_student_connected = $_SESSION['id'];
 	if (isset($_POST['mail'])){
 		$mail_student_liked = $_POST['mail'];
+		echo($_POST['mail']);
 	}
+	
 	
 
 	//We build a student object. That's the student curently connected
