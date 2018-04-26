@@ -40,9 +40,7 @@ function ajax_liked_someone(){
 			else if(this.responseText == "LIKE"){
 				return true;
 			}
-			else{
-				console.log(this.responseText);
-			}
+
 			
 
 	}
