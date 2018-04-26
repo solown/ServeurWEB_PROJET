@@ -1,6 +1,6 @@
 <?php
-require("db_connect.php");
-require("student.php");
+require("../model/db_connect.php");
+require("../model/student.php");
 
 $db = db_connect();
 
