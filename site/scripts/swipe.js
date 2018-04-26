@@ -11,6 +11,7 @@ yes.addEventListener("click", () => {
 		setNewProfile();
 	}, 1000);
 	swipe_profile.classList.add("bounceOutRight");
+	ajax_liked_someone();
 });
 
 no.addEventListener("click", () => {
@@ -41,7 +42,7 @@ function ajax_liked_someone(){
 				return true;
 			}
 
-
+	}
 	xhttp.open("POST", "../controller/like_student.php", true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-	urlencoded");
 	
