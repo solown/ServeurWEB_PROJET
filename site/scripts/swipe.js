@@ -4,6 +4,8 @@ const no = document.querySelector(".no");
 var recycled = document.querySelector(".bounceOutLeft");
 var hearted = document.querySelector(".bounceOutRight");
 const profil_link = document.querySelector("#swipe_picture");
+const no_more_profile = document.querySelector(".no_more_profile");
+const available_profiles = document.querySelector(".available_profile");
 
 
 yes.addEventListener("click", () => {
@@ -27,48 +29,56 @@ function top_back() {
 	swipe_profile.classList.add("bounceInDown");
 }
 
-function ajax_liked_someone(){
+function ajax_liked_someone() {
 	console.log("we are in liked function");
 	var xhttp = new XMLHttpRequest();
-	
 
-	xhttp.onreadystatechange = function(){
-		if(this.readyState == 4 && this.status == 200){
-			if(this.responseText == "MATCH"){
+
+	xhttp.onreadystatechange = function () {
+		if (this.readyState == 4 && this.status == 200) {
+			if (this.responseText == "MATCH") {
 				document.location.href = "../view/match.php?email=" + email;
-			}
-			else if(this.responseText == "LIKE"){
+			} else if (this.responseText == "LIKE") {
 				return true;
 			}
 
-			
 
-	}
+
+		}
 	}
 	xhttp.open("POST", "../controller/like_student.php", true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	console.log(email);
 	xhttp.send("mail=" + email);
-	
+
 	console.log("end");
 	return false;
 }
 
 
 function setNewProfile() {
-	if (students.length <= 0) return;
+	if (students.length > 0) {
+		available_profiles.style.display = "block";
+		no_more_profile.style.display = "none";
+		document.getElementById("swipe_name").innerHTML = students[0].surname;
+		if (students[0].description != null) //TODO Remove when we'll have a clean DB
+			document.getElementById("swipe_description").innerHTML = students[0].description;
 
-	document.getElementById("swipe_name").innerHTML = students[0].surname;
-	if (students[0].description != null) //TODO Remove when we'll have a clean DB
-		document.getElementById("swipe_description").innerHTML = students[0].description;
+		var adjs = students[0].adj1 + " - " + students[0].adj2 + " - " + students[0].adj3;
+		document.getElementById("swipe_adj").innerHTML = adjs;
 
-	var adjs = students[0].adj1 + " - " + students[0].adj2 + " - " + students[0].adj3;
-	document.getElementById("swipe_adj").innerHTML = adjs;
+		if (students[0].pic != undefined) document.getElementById("swipe_picture").src = students[0].pic;
+		else document.getElementById("swipe_picture").src = '';
+		email = students[0].email;
+		students.splice(0, 1);
+	} else {
+		available_profiles.style.display = "none";
+		no_more_profile.style.display = "block";
 
-	if (students[0].pic != undefined) document.getElementById("swipe_picture").src = students[0].pic;
-	else document.getElementById("swipe_picture").src = '';
-	email = students[0].email;
-	students.splice(0, 1);
+
+	}
+
+
 
 	top_back();
 }
