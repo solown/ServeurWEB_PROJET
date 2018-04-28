@@ -4,11 +4,11 @@ $q = $_GET['q'];
 
 if($q === '')
 {
-	$page = "accueil";
+	$page = 'accueil';
 }
 else if($q === 'swipe'){
-	$page = "swipe";
+	$page = 'swipe';
 }
 
-include 'views/'.$page.'.html';
-//include 'views/'.$page.'.php';
+include 'view/'.$page.'.html';
+include 'view/'.$page.'.php';
