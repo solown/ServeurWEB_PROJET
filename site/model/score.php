@@ -4,14 +4,14 @@
 	if($student_connected_score>$student_liked_score){
 		$student_connected_score = $student_connected_score-$ratio;
 		$student_liked_score = $student_liked_score+$ratio;
-		floor($student_connected_score);
-		ceil($student_liked_score);
+		ceil($student_connected_score);
+		floor($student_liked_score);
 	}
 	else{
 		$student_connected_score = $student_connected_score+$ratio;
 		$student_liked_score = $student_liked_score-$ratio;
-		floor($student_liked_score);
-		ceil($student_connected_score);
+		ceil($student_liked_score);
+		floor($student_connected_score);
 	}
 	$query_update_score1 = "UPDATE student SET score = :score1
 	WHERE id_student = :id_s1";
