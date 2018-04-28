@@ -1,6 +1,7 @@
 <?php
 
 	$ratio = ((abs($student_connected_score - $student_liked_score)**2)/100);
+	ceil($ratio);
 	if($student_connected_score>$student_liked_score){
 		$student_connected_score = $student_connected_score-$ratio;
 		$student_liked_score = $student_liked_score+$ratio;
