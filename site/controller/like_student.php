@@ -71,7 +71,7 @@ if($db) {
 	else{
 		$query_get_match_second = "UPDATE id_student_god_father, id_student_god_son FROM match WHERE id_student_god_father = :id_student_connected AND id_student_god_son = :id_student_liked";
 
-		$statement_get_match_second = $db->prepare($query_get_match_first);
+		$statement_get_match_second = $db->prepare($query_get_match_second);
 		$statement_get_match_second->bindValue(':id_student_liked', $id_student_liked);
 		$statement_get_match_second->bindValue(':id_student_connected', $id_student_connected);
 		$statement_get_match_second->execute();
