@@ -16,7 +16,7 @@ if($db) {
 	
 
 	//We build a student object. That's the student curently connected
-	$query_get_student_connected = "SELECT S.year
+	$query_get_student_connected = "SELECT S.year, S.score
 	FROM student S WHERE S.id_student = :id_student_connected";
 	
 	$statement_get_student_connected = $db->prepare($query_get_student_connected);
@@ -25,10 +25,11 @@ if($db) {
 
 	$row_connected = $statement_get_student_connected->fetch(PDO::FETCH_ASSOC);
 	$student_connected = new Student(NULL, NULL, NULL, NULL, NULL, $row_connected['year'], NULL, NULL);
+	$student_connected_score = $row_connected['score'];
 
 
 	//We build a student object. That's the student who's liked
-	$query_get_student_liked = "SELECT S.year, S.id_student
+	$query_get_student_liked = "SELECT S.year, S.id_student, S.score
 	FROM student S WHERE S.email = :mail_student_liked";
 	
 	$statement_get_student_liked = $db->prepare($query_get_student_liked);
@@ -38,6 +39,7 @@ if($db) {
 	$row_liked = $statement_get_student_liked->fetch(PDO::FETCH_ASSOC);
 	$student_likde = new Student(NULL, NULL, NULL, NULL, NULL, $row_liked['year'], NULL, NULL);
 	$id_student_liked = $row_liked['id_student'];
+	$student_connected_score = $row_liked['score'];
 
 	if($student_connected->getYear()==1){
 		//Now we search if a match exist 
@@ -48,7 +50,7 @@ if($db) {
 		$statement_get_match_first->bindValue(':id_student_connected', $id_student_connected);
 		$statement_get_match_first->execute();
 
-		if($statement_get_match_first->rowCount()>0){
+		if($statement_get_match_first->pg_num_rows()>0){
 			//cela signifie que les deux personnes se sont likée. Result passe à true, on redirige vers la page de match
 			$query_update_match_first = "UPDATE match SET liked_by_god_son = true AND result = true WHERE id_student_god_father = :id_student_liked AND id_student_god_son = :id_student_connected";
 			$statement_update_match_first = $db->prepare($query_update_match_first);
@@ -76,7 +78,7 @@ if($db) {
 		$statement_get_match_second->bindValue(':id_student_connected', $id_student_connected);
 		$statement_get_match_second->execute();
 
-		if($statement_get_match_second->rowCount()>0){
+		if($statement_get_match_second->pg_num_rows()>0){
 			//cela signifie que les deux personnes se sont likée. Result passe à true, on redirige vers la page de match
 			$query_update_match_second= "UPDATE match SET liked_by_god_father = true AND result = true WHERE id_student_god_father = :id_student_connected AND id_student_god_son = :id_student_liked";
 			$statement_update_match_second = $db->prepare($query_update_match_first);

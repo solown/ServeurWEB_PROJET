@@ -1,8 +1,5 @@
 <?php
-session_start();
-require("db_connect.php");
-$db = db_connect();
-if($db) {
+
 	$query_get_score = "SELECT s1.score, s2.score 
 	FROM student s1, student s2 
 	WHERE s1.id_student = :id_s1 AND s2.id_student = :id_s2"
