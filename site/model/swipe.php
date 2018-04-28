@@ -20,8 +20,8 @@ function getArrayStudents() {
 			$student_year = $row['year'];
 		}
 
-		$score_min = $score_student - 10;
-		$score_max = $score_student + 10;
+		$score_min = $score_student - 50;
+		$score_max = $score_student + 50;
 
 		if($student_year == 1){
 			$query_get_student = 
