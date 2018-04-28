@@ -6,6 +6,7 @@ var hearted = document.querySelector(".bounceOutRight");
 const profil_link = document.querySelector("#swipe_picture");
 const no_more_profile = document.querySelector(".no_more_profile");
 const available_profiles = document.querySelector(".available_profile");
+var end_of_swipe = false;
 
 
 yes.addEventListener("click", () => {
@@ -13,7 +14,8 @@ yes.addEventListener("click", () => {
 		setNewProfile();
 	}, 1000);
 	swipe_profile.classList.add("bounceOutRight");
-	ajax_liked_someone();
+	if(!end_of_swipe)
+		ajax_liked_someone();
 });
 
 no.addEventListener("click", () => {
@@ -75,7 +77,7 @@ function setNewProfile() {
 	} else {
 		available_profiles.style.display = "none";
 		no_more_profile.style.display = "block";
-
+		end_of_swipe = true;
 
 	}
 
