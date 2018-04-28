@@ -7,6 +7,7 @@ function sign_up() {
 			if(this.responseText == "NOK"){
 				console.log("mail already exist");
 				highlight(document.getElementsByName("mail")[0], true);
+				document.getElementById("error_message").style.display = "block";
 				
 			}
 			else {

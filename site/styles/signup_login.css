@@ -117,7 +117,9 @@ span {
 	margin-left: 1.5vw;
 }
 
-
+#error_message{
+	display:none;
+}
 /***********************************************register conf*******************************************/
 
 .text_center {
