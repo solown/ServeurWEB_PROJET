@@ -69,9 +69,6 @@ if($db) {
 			$statement_set_match_first->bindValue(':id_student_connected', $id_student_connected);
 			$statement_set_match_first->execute();
 			//on créer le match. Retour au swipe
-			
-			require("../model/score.php");
-
 			echo("LIKE");
 		}
 	}
@@ -104,7 +101,6 @@ if($db) {
 			$statement_set_match_second->execute();
 			//on créer le match. Retour au swipe
 
-			require("../model/score.php");
 
 			echo("LIKE");
 		}
