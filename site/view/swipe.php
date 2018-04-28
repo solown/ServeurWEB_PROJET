@@ -13,12 +13,13 @@ if(!isset($_SESSION['id']))
 	<head>
 		<meta charset="utf-8" />
 		<title>Swipe</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="../styles/animate.css">
 		<link rel="stylesheet" href="../styles/main.css">
 		<link rel="stylesheet" href="../styles/signup_login.css">
-		<link rel="stylesheet" href="../styles/animate.css">
 		<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 	</head>
 
 	<body>
@@ -42,10 +43,12 @@ if(!isset($_SESSION['id']))
 			<a href="../view/logout.php" class="menu_inactive">log out</a>
 		</div>
 		<div class="row fullscreen_height">
+
+
 			<div class="col-3 swipe_icon no">
 				<img class="recycling" src="../images/recycling.png" alt="no">
 			</div>
-			<div class="col-6 swipe_profile animated ">
+			<div class="col-6 swipe_profile available_profile animated ">
 				<div class="swipe_face">
 					<img class="swipe_cloud" src="../images/cloud.svg" alt="cloud"> -
 					<div class="img_profile swipe_picture"><img id="swipe_picture" src="" alt="picture"></div>
@@ -58,9 +61,23 @@ if(!isset($_SESSION['id']))
 					<!-- TODO : Only keep id -->
 				</div>
 			</div>
+			<div class="col-6 no_more_profile swipe_profile animated ">
+				<div class="sad_student">
+					<div><img src="../images/sad_student.svg" alt="no more profile"></div>
+				</div>
+				<div class="no_more_profile_sorry">
+					You have already seen all the profiles you can.
+				</div>
+				<div class="swipe_more_btn">
+					<div>Show me again</div>
+				</div>
+			</div>
 			<div class="col-3 swipe_icon yes">
 				<img class="heart" src="../images/heart.png" alt="yes">
 			</div>
+
+
+
 		</div>
 		<script src="../scripts/swipe.js"></script>
 	</body>
