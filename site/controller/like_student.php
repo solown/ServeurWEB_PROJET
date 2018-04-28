@@ -57,7 +57,8 @@ if($db) {
 			$statement_update_match_first->bindValue(':id_student_liked', $id_student_liked);
 			$statement_update_match_first->bindValue(':id_student_connected', $id_student_connected);
 			$statement_update_match_first->execute();
-			echo("MATCH");
+			if($statement_update_match_first)
+				echo("MATCH");
 		}
 		else{
 			$query_set_match_first = "INSERT INTO match(id_student_god_son, id_student_god_father, liked_by_god_son) VALUES(:id_student_connected,:id_student_liked, true)";
@@ -85,7 +86,8 @@ if($db) {
 			$statement_update_match_second->bindValue(':id_student_liked', $id_student_liked);
 			$statement_update_match_second->bindValue(':id_student_connected', $id_student_connected);
 			$statement_update_match_second->execute();
-			echo("MATCH");
+			if($statement_update_match_second)
+				echo("MATCH");
 		}
 		else{
 			$query_set_match_second = "INSERT INTO match(id_student_god_son, id_student_god_father, liked_by_god_father) VALUES(:id_student_liked,:id_student_connected, true)";
