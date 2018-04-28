@@ -26,8 +26,9 @@ function login() {
 
 	var mail = document.getElementsByName("mail")[0].value;
 	var password = document.getElementsByName("password")[0].value;
+	var stayConnected = document.getElementById('keeplog').value;
 
-	xhttp.send("mail=" + mail + "&password=" + password);
+	xhttp.send("mail=" + mail + "&password=" + password + "&stayConnected=" + stayConnected);
 	return false;
 }
 
