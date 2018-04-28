@@ -1,7 +1,5 @@
 <?php
 
-
-
 $q = $_GET['q'];
 
 if($q === '')
@@ -13,4 +11,4 @@ else if($q === 'swipe'){
 }
 
 include 'views/'.$page.'.html';
-include 'views/'.$page.'.php';
+//include 'views/'.$page.'.php';
