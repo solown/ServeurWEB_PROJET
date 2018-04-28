@@ -57,8 +57,7 @@ if($db) {
 			$statement_update_match_first->bindValue(':id_student_liked', $id_student_liked);
 			$statement_update_match_first->bindValue(':id_student_connected', $id_student_connected);
 			$statement_update_match_first->execute();
-			if($statement_update_match_first)
-				echo("MATCH");
+			echo("MATCH");
 		}
 		else{
 			$query_set_match_first = "INSERT INTO match(id_student_god_son, id_student_god_father, liked_by_god_son) VALUES(:id_student_connected,:id_student_liked, true)";
@@ -82,19 +81,18 @@ if($db) {
 		if($statement_get_match_second->rowCount()>0){
 			//cela signifie que les deux personnes se sont likée. Result passe à true, on redirige vers la page de match
 			$query_update_match_second= "UPDATE match SET liked_by_god_father = true AND result = true WHERE id_student_god_father = :id_student_connected AND id_student_god_son = :id_student_liked";
-			$statement_update_match_second = $db->prepare($query_update_match_first);
+			$statement_update_match_second = $db->prepare($query_update_match_second);
 			$statement_update_match_second->bindValue(':id_student_liked', $id_student_liked);
 			$statement_update_match_second->bindValue(':id_student_connected', $id_student_connected);
 			$statement_update_match_second->execute();
-			if($statement_update_match_second)
-				echo("MATCH");
+			echo("MATCH");
 		}
 		else{
-			$query_set_match_first = "INSERT INTO match(id_student_god_son, id_student_god_father, liked_by_god_father) VALUES(:id_student_liked,:id_student_connected, true)";
-			$statement_set_match_first = $db->prepare($query_set_match_first);
-			$statement_set_match_first->bindValue(':id_student_liked', $id_student_liked);
-			$statement_set_match_first->bindValue(':id_student_connected', $id_student_connected);
-			$statement_set_match_first->execute();
+			$query_set_match_second = "INSERT INTO match(id_student_god_son, id_student_god_father, liked_by_god_father) VALUES(:id_student_liked,:id_student_connected, true)";
+			$statement_set_match_second = $db->prepare($query_set_match_second);
+			$statement_set_match_second->bindValue(':id_student_liked', $id_student_liked);
+			$statement_set_match_second->bindValue(':id_student_connected', $id_student_connected);
+			$statement_set_match_second->execute();
 			//on créer le match. Retour au swipe
 			echo("LIKE");
 		}
