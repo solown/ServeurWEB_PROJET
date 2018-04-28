@@ -12,7 +12,7 @@
 	$query_update_score1 = "UPDATE STUDENT score = :score1
 	WHERE id_student = :id_s1";
 	$statement_update_score1 = $db->prepare($query_update_score1);
-	$statement_update_score1->bindValue(':id_s1' $id_student_connected); 
+	$statement_update_score1->bindValue(':id_s1', $id_student_connected); 
 	$statement_update_score1->bindValue(':score1', $student_connected_score); 
 	$statement_update_score1->execute();
 	
