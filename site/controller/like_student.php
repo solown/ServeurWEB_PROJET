@@ -50,16 +50,7 @@ if($db) {
 		$statement_get_match_first->bindValue(':id_student_connected', $id_student_connected);
 		$statement_get_match_first->execute();
 
-		if($statement_get_match_first->rowCount()==0){
-			$query_set_match_first = "INSERT INTO match(id_student_god_son, id_student_god_father, liked_by_god_son) 				VALUES(:id_student_connected,:id_student_liked, true)";
-			$statement_set_match_first = $db->prepare($query_set_match_first);
-			$statement_set_match_first->bindValue(':id_student_liked', $id_student_liked);
-			$statement_set_match_first->bindValue(':id_student_connected', $id_student_connected);
-			$statement_set_match_first->execute();
-			//on créer le match. Retour au swipe
-			echo("LIKE");
-		}
-		else{
+		if($statement_get_match_first->rowCount()>0){
 			//cela signifie que les deux personnes se sont likée. Result passe à true, on redirige vers la page de match
 			$query_update_match_first = "UPDATE match SET liked_by_god_son = true AND result = true WHERE id_student_god_father = :id_student_liked AND id_student_god_son = :id_student_connected";
 			$statement_update_match_first = $db->prepare($query_update_match_first);
@@ -68,18 +59,8 @@ if($db) {
 			$statement_update_match_first->execute();
 			echo("MATCH");
 		}
-	}
-
-	else{
-		$query_get_match_second = "SELECT id_student_god_father, id_student_god_son FROM match WHERE id_student_god_father = :id_student_connected AND id_student_god_son = :id_student_liked";
-
-		$statement_get_match_second = $db->prepare($query_get_match_second);
-		$statement_get_match_second->bindValue(':id_student_liked', $id_student_liked);
-		$statement_get_match_second->bindValue(':id_student_connected', $id_student_connected);
-		$statement_get_match_second->execute();
-
-		if($statement_get_match_second->rowCount()==0){
-			$query_set_match_first = "INSERT INTO match(id_student_god_son, id_student_god_father, liked_by_god_father) VALUES(:id_student_connected,:id_student_liked, true)";
+		else{
+			$query_set_match_first = "INSERT INTO match(id_student_god_son, id_student_god_father, liked_by_god_son) VALUES(:id_student_connected,:id_student_liked, true)";
 			$statement_set_match_first = $db->prepare($query_set_match_first);
 			$statement_set_match_first->bindValue(':id_student_liked', $id_student_liked);
 			$statement_set_match_first->bindValue(':id_student_connected', $id_student_connected);
@@ -87,7 +68,17 @@ if($db) {
 			//on créer le match. Retour au swipe
 			echo("LIKE");
 		}
-		else{
+	}
+
+	else{
+		$query_get_match_second = "SELECT id_student_god_father, id_student_god_son FROM match WHERE id_student_god_father = :id_student_connected AND id_student_god_son = :id_student_liked";
+
+		$statement_get_match_second = $db->prepare($query_get_match_second);
+		$statement_get_match_second->bindValue(':id_student_connected', $id_student_connected);
+		$statement_get_match_second->bindValue(':id_student_liked', $id_student_liked);
+		$statement_get_match_second->execute();
+
+		if($statement_get_match_second->rowCount()>0){
 			//cela signifie que les deux personnes se sont likée. Result passe à true, on redirige vers la page de match
 			$query_update_match_second= "UPDATE match SET liked_by_god_father = true AND result = true WHERE id_student_god_father = :id_student_connected AND id_student_god_son = :id_student_liked";
 			$statement_update_match_second = $db->prepare($query_update_match_first);
@@ -95,6 +86,15 @@ if($db) {
 			$statement_update_match_second->bindValue(':id_student_connected', $id_student_connected);
 			$statement_update_match_second->execute();
 			echo("MATCH");
+		}
+		else{
+			$query_set_match_first = "INSERT INTO match(id_student_god_son, id_student_god_father, liked_by_god_father) VALUES(:id_student_liked,:id_student_connected, true)";
+			$statement_set_match_first = $db->prepare($query_set_match_first);
+			$statement_set_match_first->bindValue(':id_student_liked', $id_student_liked);
+			$statement_set_match_first->bindValue(':id_student_connected', $id_student_connected);
+			$statement_set_match_first->execute();
+			//on créer le match. Retour au swipe
+			echo("LIKE");
 		}
 	}
 }	
