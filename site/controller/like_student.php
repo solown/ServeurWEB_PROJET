@@ -39,7 +39,7 @@ if($db) {
 	$row_liked = $statement_get_student_liked->fetch(PDO::FETCH_ASSOC);
 	$student_likde = new Student(NULL, NULL, NULL, NULL, NULL, $row_liked['year'], NULL, NULL);
 	$id_student_liked = $row_liked['id_student'];
-	$student_connected_score = $row_liked['score'];
+	$student_liked_score = $row_liked['score'];
 
 	if($student_connected->getYear()==1){
 		//Now we search if a match exist 
@@ -57,6 +57,9 @@ if($db) {
 			$statement_update_match_first->bindValue(':id_student_liked', $id_student_liked);
 			$statement_update_match_first->bindValue(':id_student_connected', $id_student_connected);
 			$statement_update_match_first->execute();
+			
+			require("../model/score.php");			
+
 			echo("MATCH");
 		}
 		else{
@@ -85,6 +88,9 @@ if($db) {
 			$statement_update_match_second->bindValue(':id_student_liked', $id_student_liked);
 			$statement_update_match_second->bindValue(':id_student_connected', $id_student_connected);
 			$statement_update_match_second->execute();
+			
+			require("../model/score.php);	
+
 			echo("MATCH");
 		}
 		else{
