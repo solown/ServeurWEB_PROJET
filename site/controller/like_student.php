@@ -89,7 +89,7 @@ if($db) {
 			$statement_update_match_second->bindValue(':id_student_connected', $id_student_connected);
 			$statement_update_match_second->execute();
 			
-			require("../model/score.php);	
+			require("../model/score.php");	
 
 			echo("MATCH");
 		}
