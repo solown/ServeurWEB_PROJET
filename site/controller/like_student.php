@@ -86,7 +86,7 @@ if($db) {
 			$statement_update_match_second->bindValue(':id_student_liked', $id_student_liked);
 			$statement_update_match_second->bindValue(':id_student_connected', $id_student_connected);
 			$statement_update_match_second->execute();
-			if($statement_update_match_first)
+			if($statement_update_match_second)
 				echo("MATCH");
 		}
 		else{
