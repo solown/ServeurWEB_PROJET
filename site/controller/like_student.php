@@ -50,7 +50,7 @@ if($db) {
 		$statement_get_match_first->bindValue(':id_student_connected', $id_student_connected);
 		$statement_get_match_first->execute();
 
-		if($statement_get_match_first->rowCount()=0){
+		if($statement_get_match_first->rowCount()==0){
 			$query_set_match_first = "INSERT INTO match(id_student_god_son, id_student_god_father, liked_by_god_son) 				VALUES(:id_student_connected,:id_student_liked, true)";
 			$statement_set_match_first = $db->prepare($query_set_match_first);
 			$statement_set_match_first->bindValue(':id_student_liked', $id_student_liked);
@@ -78,7 +78,7 @@ if($db) {
 		$statement_get_match_second->bindValue(':id_student_connected', $id_student_connected);
 		$statement_get_match_second->execute();
 
-		if($statement_get_match_second->rowCount()=0){
+		if($statement_get_match_second->rowCount()==0){
 			$query_set_match_first = "INSERT INTO match(id_student_god_son, id_student_god_father, liked_by_god_father) VALUES(:id_student_connected,:id_student_liked, true)";
 			$statement_set_match_first = $db->prepare($query_set_match_first);
 			$statement_set_match_first->bindValue(':id_student_liked', $id_student_liked);
