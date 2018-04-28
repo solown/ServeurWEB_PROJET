@@ -1,8 +1,16 @@
-<!DOCTYPE html>
-<html>
+<?php
 
-<body>
-	<?php require("./view/accueil.html"); ?>
-</body>
 
-</html>
+
+$q = $_GET['q'];
+
+if($q == '')
+{
+	$page = "accueil";
+}
+else if($q == 'swipe'){
+	$page = "swipe";
+}
+
+include 'views/'.$page.'.html';
+include 'views/'.$page.'.php';
