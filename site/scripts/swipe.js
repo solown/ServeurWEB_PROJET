@@ -24,7 +24,7 @@ no.addEventListener("click", () => {
 });
 
 function top_back() {
-	swipe_profile = document.querySelector(".swipe_profile");
+
 	swipe_profile.classList.remove("bounceOutRight");
 	swipe_profile.classList.remove("bounceOutLeft");
 	swipe_profile.classList.add("bounceInDown");
