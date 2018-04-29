@@ -33,7 +33,7 @@ function verifForm(e) {
 	var passwordOK = checkPassword(document.getElementById("password"));
 	console.log(mailOk + passwordOK);
 	if (passwordOK && mailOk)
-		return;
+		sign_up();
 	else {
 		alert("8 caractères MINIMUM pour le mot de passe et veuillez entrer la partie gauche de votre adresse étudiante");
 		e.preventDefault();
