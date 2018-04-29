@@ -61,7 +61,7 @@ $message = (new Swift_Message("Registration confirmation"))
 		'	<tr>'.
 		'	</tr>'.
 		'		<td align="center">'.
-		'			<a href="http://tinder.student.elwinar.com/view/loginPerso.php?token=".$token_hash."&name=".$student_name."" style="color : #61B8D0; font-size:20px">http://tinder.student.elwinar.com/view/loginPerso.php?token=".$token_hash."&name=".$student_name."</a>'.
+		'			<a href="http://tinder.student.elwinar.com/view/loginPerso.php?token='.$token_hash.'&name='.$student_name.'" style="color : #61B8D0; font-size:20px">http://tinder.student.elwinar.com/view/loginPerso.php?token=".$token_hash."&name=".$student_name."</a>'.
 		'		</td>'.
 		'	</tr>'.
 		'	<tr>'.
