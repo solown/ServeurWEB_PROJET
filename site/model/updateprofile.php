@@ -1,16 +1,19 @@
 <?php
+
+require("../model/db_connect.php");
+require("../controller/uploadfile.php");
 /*fichier php updateprofile*/
 	/* A faire !!! 
-		-Rajouter une requête sql qui compte dans la table match le nombre de filleul et
-		de match 
-		-Ajouter la possibilité d'insérer la photo dans le html/css et l'upload dans la base
+		- Recuperer et afficher la photo stocké dans la base
+		-Match request
+		-change basephoty.jpg par la bonne
 		-Supprimer les tags géo de la photo*/
+		
 	//Connexion à la bd
 	$id = $_SESSION['id'];
-	require("../model/db_connect.php");
 	$db = db_connect();
 	//Récupération des valeurs à afficher via une requête
-	$query = "SELECT surname, description, email, year, adjective_1, adjective_2, adjective_3 FROM student WHERE id_student = :id";
+	$query = "SELECT surname, description, email, year, adjective_1, adjective_2, adjective_3, pic FROM student WHERE id_student = :id";
 	$statement = $db-> prepare($query);
 	$statement -> bindvalue(':id', $id);
 	$statement -> execute();
@@ -20,6 +23,7 @@
 		$name = $row['surname'];
 		$yearstudent = $row['year'];
 		$mailstudent = $row['email'];
+		$picstudent = $row['pic'];
 	}
 	//get adjective in one request
 	$query_get_student = 
@@ -65,21 +69,29 @@
 			$statement->bindvalue(':inputresume',$resume);
 			$statement->bindvalue(':id', $_SESSION['id']);
 			$statement -> execute();
-			$_POST['updatedescribe'] = $resume;
-			/*echo "<meta http-equiv='refresh' content='0'>";*/
+			$filename = randfilename();
+			$filepath = "../images/images_student/";
+			$destination = $filepath . $filename;
+			$succesupload = upload('upload_pic', $destination);
+		if ($succesupload){
+			$query_getpic = "SELECT pic from student where id_student = :id";
+			$statement_getpic = $db -> prepare($query_getpic);
+			$statement_getpic -> bindvalue(':id', $_SESSION['id']);
+			$statement_getpic -> execute();
+			while($row = $statement_getpic->fetch(PDO::FETCH_ASSOC)){
+				$oldpicpath = $row['pic'];
+			}
+			if (strcmp($oldpicpath, "../images/images_student/basephoto.jpg")!=0){
+				unlink($oldpicpath);
+			}
+			$query_updatepic = "UPDATE student SET pic = :picpath WHERE id_student = :id";
+			$statement_updatepic = $db-> prepare($query_updatepic);
+			$statement_updatepic -> bindvalue('id:', $_SESSION['id']);
+			$statement_updatepic -> execute();
+			
+		}
 			header("location: https://tinder.student.elwinar.com/view/updateprofile.php");
 	}
-	//UPDATE de l'image
-	if(isset($_POST['input_btn']))
-	{
-		$filetmp = $_FILES["file_img"]["tmp_name"];
-		$filename = $_FILES["file_img"]["name"];
-		$filetype = $_FILES["file_img"]["type"];
-		$filepath = "profile_pic/".$filename;
+
 		
-		move_uploaded_file($filetmp,$filepath);
-	    
-		$sql = "INSERT INTO student (pic) VALUES ('$filepath')";
-		$result = mysql_query($sql);
 		
-	}

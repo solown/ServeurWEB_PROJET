@@ -351,11 +351,11 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .no_more_profile {
-	display: none;
+	display: block;
 }
 
 .available_profile {
-	display: block;
+	display: none;
 }
 
 .no_more_profile_sorry {
@@ -363,6 +363,13 @@ input[type="checkbox"]:checked+label::before {
 	font-family: "Fjalla One";
 	color: #707070;
 	font-size: 2vw;
+}
+
+.swipe_more_btn div a {
+	font-family: "Fjalla One";
+	color: white;
+	background-color: #4152BC;
+	font-size: 1.5vw;
 }
 
 .swipe_more_btn div {
@@ -374,6 +381,11 @@ input[type="checkbox"]:checked+label::before {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5%;
+}
+
+.swipe_more_btn div a:hover {
+	text-decoration: none;
+	cursor: crosshair;
 }
 
 
@@ -425,7 +437,6 @@ input[type="checkbox"]:checked+label::before {
 	height: 100%;
 	width: 100%;
 	background-color: #F5F7FA;
-	z-index: -1;
 }
 
 .cloud_profile img {
