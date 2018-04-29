@@ -6,7 +6,7 @@ function upload($index,$destination,$maxsize = FALSE, $extensions=FALSE)
 	
 	if($maxsize !== FALSE AND $_FILES[$index]['size'] > $maxsize) return FALSE;
 	$path_part = pathinfo ($_FILES[$index]["name"]);
-	if($extensions !=FALSE AND !in_array($path_parts['extension'], $extensions) return FALSE;
+	if($extensions !=FALSE AND !in_array($path_parts['extension'], $extensions)) return FALSE;
 	
 	return move_uploaded_file($_FILES[$index]['tmp_name'],$destination);
 }
