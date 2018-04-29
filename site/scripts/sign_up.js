@@ -8,7 +8,7 @@ function sign_up() {
 				console.log("mail already exist");
 				highlight(document.getElementsByName("mail")[0], true);
 				document.getElementById("error_message").style.display = "block";
-				
+				console.log("nok");
 			}
 			else {
 				var request = new XMLHttpRequest();
@@ -26,12 +26,13 @@ function sign_up() {
 				if(document.getElementById('second').checked) {
 					year = 2;
 				}
-				
+				console.log("ok");
 		
 				request.send("&mail=" + mail + "&password=" + password + "&year=" + year);
 
 				request.onreadystatechange = function(){
 					if(request.readyState == 4){
+						console.log("final if");
 						window.location.href="../view/register-confirmation.php?mail="+mail;
 					}
 				}
