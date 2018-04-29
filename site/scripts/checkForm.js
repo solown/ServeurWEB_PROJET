@@ -33,7 +33,6 @@ function verifForm(e) {
 	var passwordOK = checkPassword(document.getElementById("password"));
 	console.log(mailOk + passwordOK);
 	if (passwordOK && mailOk){
-		sign_up();
 		return;
 	}
 	else {
@@ -63,3 +62,7 @@ var form = document.getElementById("form_login");
 form.addEventListener('submit', function () {
 	form.submit.disabled = true;
 });
+
+
+
+
