@@ -15,7 +15,7 @@
 	if(crypt($password_entered, $password_hash) == $password_hash and $validate_account) {
 		
 		require_once('../model/stay_connected.php');
-		if($stay_connected){
+		if($stay_connected = TRUE){
 			$cookie = md5($student_mail . date("Y-m-d-h-i-s"));
 			create_stay_connected_token($cookie, $student_mail);	
 			setcookie('fr81_stay_connected', $cookie);
