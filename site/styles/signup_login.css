@@ -607,3 +607,11 @@ input[type="checkbox"]:checked+label::before {
 .passwd_etu {
 	margin-bottom: 2vw;
 }
+
+.register_conf_psw_mail {
+	margin-left: 0;
+}
+
+.psw_size {
+	font-size: 1vw;
+}
