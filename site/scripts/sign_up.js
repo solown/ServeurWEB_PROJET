@@ -1,7 +1,7 @@
 function sign_up(e) {
 	console.log("we are in sign_up.js");
 	var xhttp = new XMLHttpRequest();
-	if(verifFormForgot(e))
+	if(verifFormForgot(e)){
 		xhttp.onreadystatechange = function(){
 			if(this.readyState == 4 && this.status == 200){
 				if(this.responseText == "NOK"){
@@ -50,5 +50,5 @@ function sign_up(e) {
 		xhttp.send("mail=" + mail);
 		console.log("end");
 		return false;
-}
+		}
 }
