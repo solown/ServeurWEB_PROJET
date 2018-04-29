@@ -437,7 +437,6 @@ input[type="checkbox"]:checked+label::before {
 	height: 100%;
 	width: 100%;
 	background-color: #F5F7FA;
-	z-index: -1;
 }
 
 .cloud_profile img {
