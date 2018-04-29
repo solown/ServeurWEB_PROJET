@@ -46,7 +46,7 @@ $message = (new Swift_Message("Registration confirmation"))
 		    '<tbody>'.
 		    	'<tr style="color : #707070; font-size:20px">'.
 			'	<td align="center">'.
-					'Bienvenue <span style="color : #61B8D0">".$student_name."</span>,'.
+					'Bienvenue <span style="color : #61B8D0">'.$student_name.'</span>,'.
 				'</td>'.
 		    	'</tr>'.
 		'	<tr style="color : #707070; font-size:20px">'.
