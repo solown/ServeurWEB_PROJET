@@ -23,7 +23,7 @@ require("../controller/uploadfile.php");
 		$name = $row['surname'];
 		$yearstudent = $row['year'];
 		$mailstudent = $row['email'];
-		$picstudent = $row['pic']
+		$picstudent = $row['pic'];
 	}
 	//get adjective in one request
 	$query_get_student = 
