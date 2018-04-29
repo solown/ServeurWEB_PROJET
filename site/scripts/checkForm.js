@@ -32,8 +32,9 @@ function verifForm(e) {
 	var mailOk = checkMail(document.getElementById("mail"));
 	var passwordOK = checkPassword(document.getElementById("password"));
 	console.log(mailOk + passwordOK);
-	if (passwordOK && mailOk)
+	if (passwordOK && mailOk){
 		return;
+	}
 	else {
 		alert("8 caractères MINIMUM pour le mot de passe et veuillez entrer la partie gauche de votre adresse étudiante");
 		e.preventDefault();
@@ -61,3 +62,7 @@ var form = document.getElementById("form_login");
 form.addEventListener('submit', function () {
 	form.submit.disabled = true;
 });
+
+
+
+
