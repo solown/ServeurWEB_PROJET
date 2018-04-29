@@ -28,6 +28,8 @@ $mailer = new Swift_Mailer($transport);
 
 $root = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
 
+$registration_link = 'http://tinder.student.elwinar.com/view/loginPerso.php?token='.$token_hash.'&name='.$student_name;
+
 $message = (new Swift_Message("Registration confirmation"))
 	->setFrom(["find.the.r8.one@gmail.com" => "Find the right one"])
 	->setTo([$student_mail."@etu.parisdescartes.fr" => $student_name])
@@ -61,7 +63,7 @@ $message = (new Swift_Message("Registration confirmation"))
 		'	<tr>'.
 		'	</tr>'.
 		'		<td align="center">'.
-		'			<a href="http://tinder.student.elwinar.com/view/loginPerso.php?token='.$token_hash.'&name='.$student_name.'" style="color : #61B8D0; font-size:20px">http://tinder.student.elwinar.com/view/loginPerso.php?token=".$token_hash."&name=".$student_name."</a>'.
+		'			<a href="'.$registration_link.'" style="color : #61B8D0; font-size:20px">'.$registration_link.'</a>'.
 		'		</td>'.
 		'	</tr>'.
 		'	<tr>'.
