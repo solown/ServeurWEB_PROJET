@@ -102,7 +102,7 @@ require("../controller/uploadfile.php");
 			}
 			$query_updatepic = "UPDATE student SET pic = :picpath WHERE id_student = :id";
 			$statement_updatepic = $db-> prepare($query_updatepic);
-			$statement_updatepic -> bindvalue('id:'n $_SESSION['id']);
+			$statement_updatepic -> bindvalue('id:', $_SESSION['id']);
 			$statement_updatepic -> execute();
 			
 		}
