@@ -69,26 +69,10 @@ require("../controller/uploadfile.php");
 			$statement->bindvalue(':inputresume',$resume);
 			$statement->bindvalue(':id', $_SESSION['id']);
 			$statement -> execute();
-			// $_POST['updatedescribe'] = $resume;
-			header("location: https://tinder.student.elwinar.com/view/updateprofile.php");
-	}
-	//UPDATE de l'image
-	if(isset($_POST['upload_pic']))
-	{
-		/*$sql = "SELECT pic from student where id_student = :id";
-		$statement = $db -> prepare($query);
-		$statement -> bindvalue(':id', $_SESSION['id']);
-		$statement -> execute();
-		$alreadyapic = $statement -> fetchColumn();
-		
-		if ($alreadyapic > 0){
-			/*somedisplay action to add*/
-			/*select vb yes or no*/
-	
-		$filename = randfilename();
-		$filepath = "../images/images_student/";
-		$destination = $filepath . $filename;
-		$succesupload = upload('upload_pic', $destination);
+			$filename = randfilename();
+			$filepath = "../images/images_student/";
+			$destination = $filepath . $filename;
+			$succesupload = upload('upload_pic', $destination);
 		if ($succesupload){
 			$query_getpic = "SELECT pic from student where id_student = :id";
 			$statement_getpic = $db -> prepare($query_getpic);
@@ -106,6 +90,8 @@ require("../controller/uploadfile.php");
 			$statement_updatepic -> execute();
 			
 		}
-		
-		
+			header("location: https://tinder.student.elwinar.com/view/updateprofile.php");
 	}
+
+		
+		

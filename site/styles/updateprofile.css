@@ -63,8 +63,10 @@
     -webkit-border-radius:50px;
     -moz-border-radius:50px;
     border-radius:50px;
-	width:13%;
-	height:26%;
+	 -webkit-filter: grayscale(100%);/* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+	width:100%;
+	height:auto;
 	background-size:cover;
 	position : absolute;
 	background-repeat : no-repeat;
