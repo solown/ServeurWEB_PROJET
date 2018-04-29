@@ -61,14 +61,14 @@ create table token_keep_me_logged (
 	token varchar(32),
 	is_alive boolean default true,
 	id_student integer primary key,
-	foreign key (id_student) references student(id_student)
+	foreign key (id_student) references student(id_student) on delete cascade
 );
 
 create table token_forgot_passwd (
 	birth date,
 	token varchar(32),
 	id_student integer primary key,
-	foreign key (id_student) references student(id_student)
+	foreign key (id_student) references student(id_student) on delete cascade
 );
 
 insert into adjective (wording) values ('Froid') ;
