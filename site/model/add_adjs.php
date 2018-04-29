@@ -16,4 +16,4 @@ if($db and session_start()) {
 	$statement->execute();
 }
 
-header('Location: http://' . $_SERVER['SERVER_NAME'] . '/view/swipe.php');
+header('Location: http://tinder.student.elwinar.com/view/swipe.php');
