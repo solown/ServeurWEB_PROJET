@@ -88,10 +88,10 @@ $message = (new Swift_Message("Registration confirmation"))
 			'</tr>'.
 			'<tr style="color : #707070">'.
 			'	<td align="center">'.
-			'		Le stockage de mail fait tourner quotidiennement l"'"équivalent de'.
+			'		Le stockage de mail fait tourner quotidiennement l équivalent de'.
 			'	</td>'.
 		'	</tr>'.
-		'	<tr style="color : #707070">'.
+				'<tr style="color : #707070">'.
 		'		<td align="center">'.
 		'			quatre centrales nucléaire dans le monde.'.
 		'		</td>'.
