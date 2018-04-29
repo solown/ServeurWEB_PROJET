@@ -4,7 +4,6 @@ require_once('db_connect.php');
 
 function create_stay_connected_token($token, $student_mail) {
 	$stay_connected = is_stay_connected($_COOKIE['fr81_stay_connected']);
-	error_log(print_r($stay_connected, TRUE));	
 	if($stay_connected == 1) {
 		return 0;
 	}
