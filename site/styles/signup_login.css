@@ -8,6 +8,10 @@
 	background-size: 50% auto, 60% auto;
 }
 
+.upside {
+	transform: rotate(180deg);
+}
+
 .right_part {
 	text-align: left;
 	font-family: "Fjalla One";
@@ -34,7 +38,8 @@
 }
 
 .formulaire {
-	margin-top: 50%;
+	position: absolute;
+	top: 50%;
 	transform: translateY(-50%);
 }
 
@@ -583,4 +588,22 @@ input[type="checkbox"]:checked+label::before {
 
 .match_pic_bot:hover {
 	cursor: crosshair;
+}
+
+
+/*********************************Forgot password**************************************/
+
+.title_logo_password {
+	margin-bottom: 6vw;
+	transform: scale(1.5);
+	text-align: center;
+}
+
+.text_password {
+	font-size: 1vw;
+	margin-bottom: 2vw;
+}
+
+.passwd_etu {
+	margin-bottom: 2vw;
 }

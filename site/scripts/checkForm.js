@@ -40,6 +40,19 @@ function verifForm(e) {
 	}
 
 }
+
+function verifFormForgot(e) {
+
+	var mailOk = checkMail(document.getElementById("mail"));
+	if (mailOk)
+		return;
+	else {
+		alert("Veuillez entrer la partie gauche de votre adresse étudiante");
+		e.preventDefault();
+	}
+
+
+}
 var form = document.getElementById("formsignup");
 form.addEventListener('submit', function () {
 	form.submit.disabled = true;

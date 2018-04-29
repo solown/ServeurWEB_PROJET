@@ -17,40 +17,42 @@
 	<div class="row fullscreen_height">
 		<div class="col-5 right_part ">
 			<div class="row fullscreen_height">
-				<div class="col-6 offset-3 formulaire">
-					<div class="title_logo">
-						<div><img src="../images/login.png" class="cloud2"></div>
+				<div class="col-6 offset-3 ">
+					<div class="formulaire">
+						<div class="title_logo">
+							<div><img src="../images/login.png" class="cloud2"></div>
 
-					</div>
-					<div>
-						<form method="post" onsubmit="return login()">
-							<div>
-								<div class="space_top">
-									<label>Email</label>
+						</div>
+						<div>
+							<form method="post" onsubmit="return login()">
+								<div>
+									<div class="space_top">
+										<label>Email</label>
+									</div>
+									<div class="inline">
+										<input type="text" name="mail"></input>
+									</div>
+									<div class="inline etu">
+										@etu.parisdescartes.fr
+									</div>
 								</div>
-								<div class="inline">
-									<input type="text" name="mail"></input>
+								<div>
+									<div class="space_top"><label>Password</label></div>
+									<input type="password" name="password"></input><br>
 								</div>
-								<div class="inline etu">
-									@etu.parisdescartes.fr
+								<div>
+									<div class="inline etu2"><input type="checkbox" id="keeplog">
+										<label for="keeplog"><span>Keep me loged in</span></label>
+									</div>
+									<div class="inline etu2 maxW">
+										<a href="forgot_passwd.html">Forgot your password ?</a>
+									</div>
 								</div>
-							</div>
-							<div>
-								<div class="space_top"><label>Password</label></div>
-								<input type="password" name="password"></input><br>
-							</div>
-							<div>
-								<div class="inline etu2"><input type="checkbox" id="keeplog">
-									<label for="keeplog"><span>Keep me loged in</span></label>
+								<div>
+									<input type="submit" value="Login"></input>
 								</div>
-								<div class="inline etu2 maxW">
-									<a href="forgot_passwd.html">Forgot your password ?</a>
-								</div>
-							</div>
-							<div>
-								<input type="submit" value="Login"></input>
-							</div>
-						</form>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
