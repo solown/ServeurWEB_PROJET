@@ -70,7 +70,7 @@ if(!isset($_SESSION['id'])) {
 					You have already seen all the profiles you can.
 				</div>
 				<div class="swipe_more_btn">
-					<div>Show me again</div>
+					<div><a href="swipe.php">Show me again</a></div>
 				</div>
 			</div>
 			<div class="col-3 swipe_icon yes">
