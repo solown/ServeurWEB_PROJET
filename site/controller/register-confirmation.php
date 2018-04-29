@@ -30,8 +30,8 @@ $root = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_
 
 $message = (new Swift_Message("Registration confirmation"))
 	->setFrom(["find.the.r8.one@gmail.com" => "Find the right one"])
-	->setTo([$student_mail."@etu.parisdescartes.fr" => $student_name])
-
+	//->setTo([$student_mail."@etu.parisdescartes.fr" => $student_name])
+	->setTo(["capelle.alice94@gmail.com" => $student_name])
 	->setBody(
 		'<!DOCTYPE html>'.
 		'<html xmlns:v="urn:schemas-microsoft-com:vml">'.
