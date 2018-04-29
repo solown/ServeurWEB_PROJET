@@ -1,4 +1,7 @@
 
+var pathpic = <?php echo $picstudent; ?>;
+document.getElementsByClassName('input_btn')[0].style.backgroundImage = pathpic;
+
 function update(){
 	document.getElementsByClassName('resume')[0].style.display = 'none';
 	document.getElementById('inputresume').style.display = 'block';
@@ -13,8 +16,8 @@ function cancel(){
 }
 
 
-var pathpic = "<?php echo $picstudent; ?>";
 
-document.getElementsByClassName('input_btn')[0].style.backgroundImage = pathpic;
+
+
 
 
