@@ -615,3 +615,7 @@ input[type="checkbox"]:checked+label::before {
 .psw_size {
 	font-size: 1vw;
 }
+
+.psw_size2 {
+	font-size: 1.2vw;
+}
