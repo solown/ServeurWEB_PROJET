@@ -100,7 +100,7 @@ $message = (new Swift_Message("Registration confirmation"))
 
 	</html>
 
-")
+", "texte/html")
 
 //	->setBody("Please, confirm your registration by clicking on the following link : http://tinder.student.elwinar.com/view/loginPerso.php?token=".$token_hash."&name=".$student_name."\n")
 //	->setBody("Please, confirm your registration by clicking on the following link : " . $_SERVER['SERVER_NAME'] . "/view/loginPerso.php?token=".$token_hash."&name=".$student_name."\n")
