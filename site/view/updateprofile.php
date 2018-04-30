@@ -35,8 +35,8 @@ if(!isset($_SESSION['id']))
 		</div>
 		<div id="present">
 
-			<div class="image" onclick="addpicture()">
-				<?php echo '<img id="picstudent" src="'.$picstudent.'"/>'?> 
+			<div class="image">
+				<?php echo '<img id="picstudent" src="'.$picstudent.'" alt=""/>'?> 
 				<input class="input_btn" name="upload_pic" type="file" >
 				</input>
 			</div>
