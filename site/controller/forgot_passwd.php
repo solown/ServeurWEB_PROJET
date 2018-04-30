@@ -40,7 +40,7 @@ $message = (new Swift_Message("Change your password"))
 		      '<tbody>'.
 		        '<tr style="color : #707070; font-size:20px">'.
 		    '	<td align="center">'.
-		        'Bienvenue <span style="color : #FF5544">'.$student_name.'</span>,'.
+		        'Bonjour <span style="color : #FF5544">'.$student_name.'</span>,'.
 		      '</td>'.
 		        '</tr>'.
 		  '	<tr style="color : #707070; font-size:20px">'.
