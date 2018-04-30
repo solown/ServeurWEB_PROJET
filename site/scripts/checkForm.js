@@ -81,7 +81,7 @@ function verifForm(e) {
 }
 
 function verifFormForgot(e) {
-	var passwdOK = checkPassword(document.getElementsById("new_password"));
+	var passwdOK = checkPassword(document.getElementById("new_password"));
 	if (passwdOK){
 		var request = new XMLHttpRequest();
 		var token = document.getElementsByName("token");
