@@ -626,8 +626,6 @@ input[type="checkbox"]:checked+label::before {
 	height:100%;
 	background-repeat : no-repeat;
 	z-index : 3;
-	margin-left : 35%;
-	margin-top : 3%;
 	
 }
 .buttonconfirm{
@@ -636,8 +634,6 @@ input[type="checkbox"]:checked+label::before {
 	height:14%;
 	background-repeat : no-repeat !important;
 	z-index : 3;
-	margin-left : 38%;
-	margin-top : 1%;
 	display : none;
 	border:none;
 	color : white;
@@ -649,8 +645,7 @@ input[type="checkbox"]:checked+label::before {
 	width : 30%;
 	height :14%;
 	z-index : 4;
-	margin-left : 33%;
-	margin-bottom : 15%;
+	
 	border:none;
 	color : white;
 	background : none;
