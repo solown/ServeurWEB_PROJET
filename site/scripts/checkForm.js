@@ -25,7 +25,7 @@ function mailexist(){
 				if(this.readyState == 4 && this.status == 200){
 					if(this.responseText == "NOK"){
 						var request = new XMLHttpRequest();
-						request.open("POST", "../controller/change_passwd.php", true);
+						request.open("POST", "../controller/forgot_passwd.php", true);
 						request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 						var mail = document.getElementsByName("mail")[0].value;
 						request.send("mail=" + mail);
