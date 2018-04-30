@@ -18,6 +18,37 @@ function checkMail(field) {
 	}
 }
 
+function mailexist(){
+		console.log("we are in mailexist");
+		var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function(){
+				if(this.readyState == 4 && this.status == 200){
+					if(this.responseText == "NOK"){
+						console.log("exist");
+						return true;
+					}
+					else {
+						console.log("mail don't exist");
+						highlight(document.getElementsByName("mail")[0], true);
+						document.getElementById("mail_dont_existe").style.display = "block";
+						console.log("nok");
+					}
+
+				}
+			};
+
+			xhttp.open("POST", "../controller/sign_up.php", true);
+			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+			var mail = document.getElementsByName("mail")[0].value;
+
+			xhttp.send("mail=" + mail);
+			console.log("end");
+			return false;
+			}
+	}
+
+}
 
 function checkPassword(field) {
 	if (field.value.length < 8) {
