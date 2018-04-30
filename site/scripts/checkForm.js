@@ -13,6 +13,7 @@ function checkMail(field) {
 		return false;
 	} else {
 		highlight(field, false);
+		document.getElementById("mail_not_valid").style.display = "none";
 		return true;
 	}
 }
@@ -25,6 +26,7 @@ function checkPassword(field) {
 		return false;
 	} else {
 		highlight(field, false);
+		document.getElementById("password_not_valid").style.display = "none";
 		return true;
 	}
 }
