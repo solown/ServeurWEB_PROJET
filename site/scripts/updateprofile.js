@@ -1,6 +1,4 @@
 
-var pathpic = <?php echo $picstudent; ?>;
-document.getElementsByClassName('input_btn')[0].style.backgroundImage = pathpic;
 
 function update(){
 	document.getElementsByClassName('resume')[0].style.display = 'none';
