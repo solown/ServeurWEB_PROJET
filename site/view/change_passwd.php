@@ -27,7 +27,7 @@
 						<span class="purple psw_size"><?= $_GET['mail'] ?></span>
 						<span class="register_conf_psw_mail psw_size">@etu.parisdescartes.fr</span>
 						<div>
-							<form method="POST" onsubmit="return verifFormForgot(this)">
+							<form id="form_changepasswd" method="POST" onsubmit="return verifFormForgot(this)">
 								<input name="token" type="hidden" value="<?php echo htmlspecialchars($_GET['token']) ?>" />
 								<div class="space_top"><label>Nouveau mot de passe</label></div>
 								<input type="password" name="passwd" id="new_password" onblur="checkPassword(this)"></input>
