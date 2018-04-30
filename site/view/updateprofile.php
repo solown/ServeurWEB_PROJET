@@ -33,7 +33,7 @@ include("../model/updateprofile.php");
 			<a href="../view/logout.php" class="menu_inactive">log out</a>
 		</div>
 		<div class="back"></div>
-		<form action="upload.php" id="imageForm" method="post" enctype="multipart/form-data">
+		<form action="#" id="imageForm" method="post" enctype="multipart/form-data">
 			<label for="fileToUpload">
 					<div class="picture_profile img_profile modify-image"><img src="<?php echo htmlspecialchars($student->getPic()); ?>" alt=""></div>
  			</label>
