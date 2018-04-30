@@ -1,7 +1,7 @@
 <?php
 
 require("../model/db_connect.php");
-require("../controller/uploadfile.php");
+require_once("student.php");
 /*fichier php updateprofile*/
 	/* A faire !!!
 		- Recuperer et afficher la photo stocké dans la base
