@@ -44,7 +44,7 @@ require("../model/profil_other_user.php"); ?>
 
 			<?php echo($student->getEmail()); ?>@etu.parisdescartes.fr</div>
 		<div class="stats_profile">
-			<div><?php echo($match); ?></div>
+			<div><?php echo($match); ?> matchs</div>
 			<div>0 parainage</div>
 		</div>
 		<div class="name_profile">
