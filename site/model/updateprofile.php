@@ -52,7 +52,7 @@ require("../controller/uploadfile.php");
 		}*/
 	}
 	else if($yearstudent==1){
-		$sql = "SELECT COUNT (*) from match WHERE id_student_god_son =:id";
+		$sql = "SELECT COUNT (*) from match WHERE id_student_god_son =:id and result = true";
 		$result = $db->prepare($sql);
 		$result -> bindvalue(':id',$id);
 		$result->execute();

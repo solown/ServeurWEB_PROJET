@@ -6,7 +6,7 @@ if(!isset($_SESSION['id']))
 }
 
 if (isset($_GET['email'])){
-	$student_mail = $_GET['email']; 
+	$student_mail = $_GET['email'];
 } else {
 	    header('Location: ../view/notfound.html');
 }
@@ -44,7 +44,7 @@ require("../model/profil_other_user.php"); ?>
 
 			<?php echo($student->getEmail()); ?>@etu.parisdescartes.fr</div>
 		<div class="stats_profile">
-			<div>2 matchs</div>
+			<div><?php echo($match); ?></div>
 			<div>0 parainage</div>
 		</div>
 		<div class="name_profile">
