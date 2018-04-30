@@ -26,9 +26,9 @@ function mailexist(){
 					if(this.responseText == "NOK"){
 						var request = new XMLHttpRequest();
 						request.open("POST", "../controller/change_passwd.php", true);
-						xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+						request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 						var mail = document.getElementsByName("mail")[0].value;
-						xhttp.send("mail=" + mail);
+						request.send("mail=" + mail);
 						console.log("exist");
 						return true;
 					}
