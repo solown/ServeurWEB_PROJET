@@ -3,7 +3,7 @@
 	require("better_crypt.php");
 	
 	
-	$student_mail =	 $_POST['mail'];
+	$student_mail =	$_POST['mail'];
 
 	require("../model/sign_up.php");
 

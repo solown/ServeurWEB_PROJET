@@ -6,7 +6,7 @@ require("../model/register-student.php");
 $student_name =	explode('.', $_POST['mail'])[0];
 $student_name = strtoupper($student_name[0]) . substr($student_name, 1, strlen($student_name) -1 );
 $student_mail =	 $_POST['mail'];
-$password_hash = better_crypt($_POST['password'], 10);
+$password_hash = better_crypt(strval($_POST['password']), 10);
 $student_year =  $_POST['year'];
 
 register_student($student_name, $student_mail, $password_hash, $student_year);
