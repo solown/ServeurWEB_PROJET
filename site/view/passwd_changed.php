@@ -19,26 +19,38 @@
 						&#139; Home Page</a>
 				<div class="col-6 offset-3 ">
 					<div class="formulaire">
-						<div class="title_logo_password">
-							<div><img src="../images/password.png" class="cloud2"></div>
+						<div class="title_logo">
+							<div><img src="../images/allGood.jpg" class="cloud2"></div>
 						</div>
-						<p class="text_password">Nous allons t'envoyer un lien par mail pour réinitialiser ton mot de passe</p>
 						<div>
-							<form method="POST" id="formsignup" onsubmit="return mailexist()">
+							<form method="post" id="form_login" onsubmit="return login()">
 								<div>
 									<div class="space_top">
 										<label>Email</label>
 									</div>
 									<div class="inline">
-										<input type="text" name="mail"></input>
+										<input type="text" name="mail" onblur="checkMail(this)"></input>
 									</div>
-									<div class="inline etu passwd_etu">
+									<div class="inline etu">
 										@etu.parisdescartes.fr
 									</div>
-									<div class="error_message" id="mail_dont_existe">Adresse mail inconnue</div>
+									<p class="error_message" id="mail_not_valid">Adresse mail invalide !</p>
 								</div>
 								<div>
-									<input type="submit" value="Validate"></input>
+									<div class="space_top"><label>Mot de passe</label></div>
+									<input type="password" name="password" onblur="checkPassword(this)"></input><br>
+									<p class="error_message" id="password_not_valid">Mot de passe trop court</p>
+								</div>
+								<div>
+									<div class="inline etu2"><input type="checkbox" name="keeplog" id="keeplog">
+										<label for="keeplog"><span>Restez connecté</span></label>
+									</div>
+									<div class="inline etu2 maxW">
+										<a href="forgot_passwd.html">Mot de passe oublié ?</a>
+									</div>
+								</div>
+								<div>
+									<input type="submit" value="Login"></input>
 								</div>
 							</form>
 						</div>
@@ -46,7 +58,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-7 left_part upside">
+		<div class="col-7 left_part">
 
 		</div>
 	</div>

@@ -619,3 +619,65 @@ input[type="checkbox"]:checked+label::before {
 .psw_size2 {
 	font-size: 1.2vw;
 }
+
+
+/******************************************Update profile Instable et moche******************************/
+
+.edit_profile {
+	position: absolute;
+	top: 35vw;
+	left: 40vw;
+}
+
+.edit_profile img {
+	height: 5vw;
+}
+
+.edit_profile .confirm,
+.cancel {
+	display: none;
+}
+
+.new_description {
+	display: none;
+}
+
+.modify-image img {
+	transition: all linear 0.2s;
+}
+
+
+/*
+.modify-image img:hover {
+	filter: blur(3px) grayscale(1) brightness(0.5)
+}
+*/
+
+#fileToUpload {
+	visibility: hidden;
+}
+
+.modify-image {
+	cursor: crosshair;
+}
+
+.hover_modify {
+	text-align: center;
+	display: none;
+	top: 40%;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 10;
+	color: #ffffff;
+	transition: all linear 0.2s;
+	font-size: 1.5vw;
+}
+
+.modify-image:hover img {
+	filter: blur(3px) grayscale(1) brightness(0.5)
+}
+
+.modify-image:hover .hover_modify {
+	display: block;
+}

@@ -1,7 +1,6 @@
 function sign_up(e) {
 	console.log("we are in sign_up.js");
 	var xhttp = new XMLHttpRequest();
-	console.log(verifFormForgot(e));
 	if(verifForm(e)){
 		xhttp.onreadystatechange = function(){
 			if(this.readyState == 4 && this.status == 200){

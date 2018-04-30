@@ -22,8 +22,8 @@
 						<div class="title_logo_password">
 							<div><img src="../images/password.png" class="cloud2"></div>
 						</div>
-						<p class="psw_size2">Un email de réinitialisation à été envoyé à</p>
-						<span class="purple psw_size"><?=$student_mail?></span>
+						<p class="psw_size2">Un email de réinitialisation a été envoyé à</p>
+						<span class="purple psw_size"> <?php echo $_GET['mail']?> </span>
 						<span class="register_conf_psw_mail psw_size">@etu.parisdescartes.fr</span>
 
 					</div>

@@ -24,7 +24,7 @@
 
 					</div>
 					<div>
-						<div>Un email de confirmation à été envoyé à</div>
+						<div>Un email de confirmation a été envoyé à</div>
 						<span class="purple"><?php echo $_GET['mail']?></span>
 						<span class="register_conf_mail">@etu.parisdescartes.fr</span>
 						</br>

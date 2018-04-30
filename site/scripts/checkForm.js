@@ -19,34 +19,42 @@ function checkMail(field) {
 }
 
 function mailexist(){
-		console.log("we are in mailexist");
-		var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function(){
-				if(this.readyState == 4 && this.status == 200){
-					if(this.responseText == "NOK"){
-						var request = new XMLHttpRequest();
-						request.open("POST", "../controller/change_passwd.php", true);
-						console.log("exist");
-						return true;
+	console.log("we are in mailexist");
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			if(this.responseText == "NOK"){
+				console.log("exist");
+				var request = new XMLHttpRequest();
+				request.open("POST", "../controller/forgot_passwd.php", true);
+				request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				var mail = document.getElementsByName("mail")[0].value;
+				request.send("mail=" + mail);
+				request.onreadystatechange = function(){
+					if(request.readyState == 4){
+						console.log("final if")
+							window.location.href="../view/forgot_passwd_sent.php?mail="+mail;
 					}
-					else {
-						console.log("mail don't exist");
-						highlight(document.getElementsByName("mail")[0], true);
-						document.getElementById("mail_dont_existe").style.display = "block";
-						console.log("nok");
-					}
-
 				}
-			};
+			}
+			else {
+				console.log("mail don't exist");
+				highlight(document.getElementsByName("mail")[0], true);
+				document.getElementById("mail_dont_existe").style.display = "block";
+				console.log("nok");
+			}
 
-			xhttp.open("POST", "../controller/sign_up.php", true);
-			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		}
+	};
 
-			var mail = document.getElementsByName("mail")[0].value;
+	xhttp.open("POST", "../controller/sign_up.php", true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-			xhttp.send("mail=" + mail);
-			console.log("end");
-			return false;
+	var mail = document.getElementsByName("mail")[0].value;
+
+	xhttp.send("mail=" + mail);
+	console.log("end");
+	return false;
 }
 
 
@@ -73,22 +81,38 @@ function verifForm(e) {
 }
 
 function verifFormForgot(e) {
+	var passwdOK = checkPassword(document.getElementById("new_password"));
+	if (!passwdOK) return false;
 
-	var mailOk = checkMail(document.getElementById("mail"));
-	if (mailOk)
-		return;
-	else {
-		alert("Veuillez entrer la partie gauche de votre adresse étudiante");
-		e.preventDefault();
+	var request = new XMLHttpRequest();
+	var token = document.getElementsByName("token")[0].value;
+	var passwd = document.getElementsByName("passwd")[0].value;
+
+	request.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			console.log("final if");
+			window.location.href="../view/passwd_changed.php";
+		}
 	}
 
-
+	request.open("POST", "../controller/change_passwd.php", true);
+	request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	request.send("passwd=" + passwd + "&token=" + token);
+	return false;
 }
+
+
+
 var form = document.getElementById("formsignup");
 form.addEventListener('submit', function () {
 	form.submit.disabled = true;
 });
 var form = document.getElementById("form_login");
+form.addEventListener('submit', function () {
+	form.submit.disabled = true;
+});
+
+var form = document.getElementById("form_changepasswd");
 form.addEventListener('submit', function () {
 	form.submit.disabled = true;
 });
