@@ -13,7 +13,7 @@ if(!isset($_SESSION['id']))
 		<title>Update profile</title>
 		<!--		<CSS>				-->
 		<link rel="stylesheet" href="../styles/main.css">
-		<link rel="stylesheet" href="../styles/signup_login.css">
+		<link rel="stylesheet" href="../styles/updateprofile.css">
 		<!--		<font>				-->
 		<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
@@ -30,27 +30,29 @@ if(!isset($_SESSION['id']))
 			<a href="#" class="menu_inactive">messages</a>
 			<a href="../view/logout.php" class="menu_inactive">log out</a>
 		</div>
-		<div class="back"></div>
-		<div class="picture_profile img_profile"><img src="<?php echo htmlspecialchars($picstudent); ?> " alt=""></div>
-		<div class="cloud_profile"><img src="../images/cloud.svg" alt=""></div>
-		<div class="year_email_profile">
-			<span class="DUT">DUT
-			<?php echo htmlspecialchars($yearstudent); ?> -</span>
+		<form method="post">
+			<div class="back"></div>
+			<div class="picture_profile img_profile"><img src="<?php echo htmlspecialchars($picstudent); ?> " alt=""></div>
+			<div class="cloud_profile"><img src="../images/cloud.svg" alt=""></div>
+			<div class="year_email_profile">
+				<span class="DUT">DUT
+				<?php echo htmlspecialchars($yearstudent); ?> -</span>
 
-			<?php echo htmlspecialchars($mailstudent); ?>@etu.parisdescartes.fr</div>
-		<div class="stats_profile">
-			<div><?php echo htmlspecialchars($match); ?> matchs</div>
-			<div>0 parainage</div>
-		</div>
-		<div class="name_profile">
-			<?php echo htmlspecialchars($name); ?>
-		</div>
-		<div class="adj_profile">
-			<?php echo htmlspecialchars($word1); ?>-<?php echo htmlspecialchars($word2); ?>-<?php echo htmlspecialchars($word3); ?>
-		</div>
-		<div class="description_profile">
-			<?php echo htmlspecialchars($description); ?>
-		</div>
+				<?php echo htmlspecialchars($mailstudent); ?>@etu.parisdescartes.fr</div>
+			<div class="stats_profile">
+				<div><?php echo htmlspecialchars($match); ?> matchs</div>
+				<div>0 parainage</div>
+			</div>
+			<div class="name_profile">
+				<?php echo htmlspecialchars($name); ?>
+			</div>
+			<div class="adj_profile">
+				<?php echo htmlspecialchars($word1); ?>-<?php echo htmlspecialchars($word2); ?>-<?php echo htmlspecialchars($word3); ?>
+			</div>
+			<div class="description_profile">
+				<?php echo htmlspecialchars($description); ?>
+			</div>
+		</form>
 	</body>
 
 	</html>
