@@ -22,15 +22,15 @@
 						<div class="title_logo_password">
 							<div><img src="../images/set_up_new_psd.png" class="cloud2"></div>
 						</div>
-						<p class="psw_size2">Enter your new passeword for
+						<p class="psw_size2">Ecrit ton nouveau mot de passe pour
 						</p>
 						<span class="purple psw_size"><?= $_GET['mail'] ?></span>
 						<span class="register_conf_psw_mail psw_size">@etu.parisdescartes.fr</span>
 						<div>
 							<form method="POST" onsubmit="return verifFormForgot(this)">
 								<input name="token" type="hidden" value="<?php echo htmlspecialchars($_GET['token']) ?>" />
-								<div class="space_top"><label>New Password</label></div>
-																	<input type="password" name="passwd" id="new_password" onblur="checkPassword(this)"></input>
+								<div class="space_top"><label>Nouveau mot de passe</label></div>
+								<input type="password" name="passwd" id="new_password" onblur="checkPassword(this)"></input>
 								<p class="error_message" id="password_not_valid">Mot de passe trop court</p>
 								<input type="submit" value="Confirm"></input>
 							</form>
