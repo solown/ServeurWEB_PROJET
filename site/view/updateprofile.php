@@ -72,7 +72,7 @@ include("../model/updateprofile.php");
 		<p>
 			<?= $errorMessage ?>
 		</p>
-		<?php end foreach; ?>
+		<?php endforeach; ?>
 
 		<script src="../scripts/updateprofile.js"></script>
 	</body>
