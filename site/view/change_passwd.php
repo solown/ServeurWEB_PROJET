@@ -27,10 +27,10 @@
 						<span class="purple psw_size"><?= $_GET['mail'] ?></span>
 						<span class="register_conf_psw_mail psw_size">@etu.parisdescartes.fr</span>
 						<div>
-							<form method="POST" onsubmit="return verifForm(this)" action="../controller/change_passwd.php">
+							<form method="POST" onsubmit="return verifFormForgot(this)">
 								<input name="token" type="hidden" value="<?php echo htmlspecialchars($_GET['token']) ?>" />
 								<div class="space_top"><label>New Password</label></div>
-								<input type="password" name="passwd" onblur="checkPassword(this)"></input>
+																	<input type="password" name="passwd" id="new_password" onblur="checkPassword(this)"></input>
 								<p class="error_message" id="password_not_valid">Mot de passe trop court</p>
 								<input type="submit" value="Confirm"></input>
 							</form>
