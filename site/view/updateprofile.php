@@ -23,6 +23,7 @@ if(!isset($_SESSION['id']))
 	</head>
 
 	<body>
+		<?php include('../model/updateprofile.php') ?>
 		<div class="menu">
 			<a href="../view/swipe.php" class="menu_inactive">swipe</a>
 			<a href="../view/updateprofile.php" class="menu_inactive">my account</a>
