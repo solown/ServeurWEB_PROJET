@@ -1,0 +1,621 @@
+/*******************************************sign up et tout le reste*****************************************************/
+
+.left_part {
+	background-color: #F5F7FA;
+	background-image: url(../images/five.png), url(../images/cloud.svg);
+	background-repeat: no-repeat;
+	background-position: center 40%, center 40%;
+	background-size: 50% auto, 60% auto;
+}
+
+.upside {
+	transform: rotate(180deg);
+}
+
+.right_part {
+	text-align: left;
+	font-family: "Fjalla One";
+	color: #707070;
+	font-size: 1.5vw;
+}
+
+.home-btn {
+	margin: 5%;
+	display: inline-block;
+	position: absolute;
+	font-family: "Fjalla One";
+	font-size: 1.5vw;
+}
+
+.cloud2 {
+	width: 70%;
+	height: auto;
+}
+
+.title_logo {
+	margin-bottom: 5vh;
+	text-align: center;
+}
+
+.formulaire {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.inline {
+	display: inline-block;
+	width: 45%;
+}
+
+.etu {
+	font-size: 1vw;
+}
+
+.etu2 {
+	font-size: 0.8vw;
+}
+
+.space_top {
+	margin-top: 2vh;
+	margin-bottom: -1vh;
+}
+
+input {
+	border: solid 1px #707070;
+	height: 2em;
+	font-size: 1vw;
+}
+
+input[type="submit"] {
+	margin-top: 3vh;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #4152BC;
+	font-family: "Fjalla One";
+	border: none;
+	font-size: 1.7vw;
+	color: white;
+}
+
+input[type="password"] {
+	width: 100%;
+	color: #707070;
+}
+
+input[type="text"] {
+	width: 100%;
+	color: #707070;
+}
+
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+	position: absolute;
+	left: -9999px;
+}
+
+input[type="radio"]+label::before {
+	margin-top: 5%;
+	content: '';
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	/* dim. de la case */
+	border: 1px solid #707070;
+}
+
+input[type="radio"]:checked+label::before {
+	background: #4152BC;
+}
+
+[type="radio"]:not(:checked)+label,
+[type="radio"]:checked+label {
+	position: relative;
+	/* permet de positionner les pseudo-éléments */
+	cursor: crosshair;
+	/* affiche un curseur adapté */
+	margin-right: 15%;
+}
+
+span {
+	margin-left: 1.5vw;
+}
+
+.error_message {
+	display: none;
+	color: #707070;
+}
+
+
+/***********************************************register conf*******************************************/
+
+.text_center {
+	text-align: center;
+}
+
+.purple {
+	color: #4152BC;
+}
+
+.register_conf_mail {
+	margin-left: 0;
+}
+
+
+/************************************************login*****************************************/
+
+a {
+	text-decoration: none;
+	text-align: right;
+}
+
+.maxW {
+	width: 52%;
+	text-align: right;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+	position: absolute;
+	left: -9999px;
+}
+
+input[type="checkbox"]+label::before {
+	margin-top: 5%;
+	content: '';
+	position: absolute;
+	width: 1.2em;
+	height: 1.2em;
+	/* dim. de la case */
+	border: 1px solid #707070;
+}
+
+input[type="checkbox"]:checked+label::before {
+	background: #4152BC;
+}
+
+[type="checkbox"]:not(:checked)+label,
+[type="checkbox"]:checked+label {
+	position: relative;
+	/* permet de positionner les pseudo-éléments */
+	cursor: crosshair;
+	/* affiche un curseur adapté */
+	margin-right: 15%;
+}
+
+
+/*****************************************************loginPerso*****************************************/
+
+.left_part2 {
+	font-family: "Fjalla One";
+	background-color: #F5F7FA;
+	background-image: url(../images/cloud.svg);
+	background-repeat: no-repeat;
+	background-position: center 40%;
+	background-size: 70% auto;
+	text-align: center;
+}
+
+.welcome {
+	margin-top: 40%;
+	transform: translateY(-70%);
+}
+
+.big_grey {
+	font-size: 6vw;
+	color: #707070;
+}
+
+.big_orange {
+	font-size: 4vw;
+	color: #F05228;
+}
+
+.welcome2 {
+	position: absolute;
+	top: 30%;
+	transform: translateY(-60%);
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+
+/**********************************************Start the test*****************************************/
+
+.violet_button {
+	width: 16vw;
+	background-color: #4152BC;
+	position: absolute;
+	top: 150%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.violet_button a {
+	color: white;
+	text-decoration: none;
+	font-size: 2.5em;
+	cursor: crosshair;
+}
+
+.violet_button a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+
+/**********************************************menu*****************************************/
+
+.menu a:hover {
+	text-decoration: none;
+	color: #4152BC;
+	cursor: crosshair;
+}
+
+.menu a {
+	margin-right: 15px;
+}
+
+.menu_active {
+	font-family: "Fjalla One";
+	color: #4152BC;
+	font-size: 2vw;
+}
+
+.menu_inactive {
+	text-decoration: none;
+	font-family: "Segoe UI";
+	color: #254463;
+	font-size: 1vw;
+}
+
+
+/**********************************************swipe*****************************************/
+
+.swipe_profile {
+	text-align: center;
+}
+
+.swipe_face {
+	position: relative;
+	height: 20vw;
+	margin-top: -2vw;
+}
+
+.swipe_cloud {
+	left: 25%;
+	top: 0;
+	width: 15vw;
+	height: auto;
+	position: absolute;
+}
+
+.swipe_picture {
+	width: 13vw;
+	height: 13vw;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 15%;
+}
+
+.swipe_name {
+	color: #F05228;
+	font-family: "Fjalla One";
+	font-size: 5vw;
+}
+
+.swipe_adj {
+	color: #707070;
+	font-family: "Fjalla One";
+	font-size: 3vw;
+}
+
+.swipe_description {
+	color: #707070;
+	font-family: "Segoe UI";
+	font-size: 1.5vw;
+}
+
+.swipe_icon {
+	text-align: center;
+}
+
+.swipe_icon img {
+	margin-top: 75%;
+	width: 10vw;
+	height: auto;
+}
+
+.swipe_picture {
+	cursor: crosshair;
+	transition: all cubic-bezier(0.16, 0.84, 0.88, 1.18) 0.25s;
+}
+
+.swipe_picture:hover {
+	transform: scale(1.1) translateX(-45%);
+}
+
+.heart {
+	cursor: crosshair;
+	transition: all cubic-bezier(0.16, 0.84, 0.88, 1.18) 0.25s;
+}
+
+.heart:hover {
+	transform: scale(1.1);
+}
+
+.recycling {
+	cursor: crosshair;
+	transition: all cubic-bezier(0.16, 0.84, 0.88, 1.18) 0.25s;
+}
+
+.recycling:hover {
+	transform: scale(1.1);
+}
+
+.no_more_profile {
+	display: block;
+}
+
+.available_profile {
+	display: none;
+}
+
+.no_more_profile_sorry {
+	margin-top: 5%;
+	font-family: "Fjalla One";
+	color: #707070;
+	font-size: 2vw;
+}
+
+.swipe_more_btn div a {
+	font-family: "Fjalla One";
+	color: white;
+	background-color: #4152BC;
+	font-size: 1.5vw;
+}
+
+.swipe_more_btn div {
+	font-family: "Fjalla One";
+	color: white;
+	background-color: #4152BC;
+	font-size: 1.5vw;
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+}
+
+.swipe_more_btn div a:hover {
+	text-decoration: none;
+	cursor: crosshair;
+}
+
+
+/**********************************************final****************************************/
+
+.slogan2 {
+	position: absolute;
+	bottom: 5%;
+	width: 100%;
+	font-family: "Fjalla One";
+	font-size: 2.5vw;
+	color: #F05228;
+	text-align: center;
+}
+
+.final_section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 15vh;
+}
+
+.final_title a {
+	font-family: "Fjalla One";
+	font-size: 2.5vw;
+	color: #4152BC;
+	opacity: 0.5;
+}
+
+.final_section img {
+	width: 15vw;
+	height: auto;
+}
+
+.final_title a:hover {
+	color: #4152BC;
+	opacity: 1;
+	text-decoration: none;
+}
+
+
+/**********************************************profile_other_user****************************************/
+
+.back {
+	position: absolute;
+	top: 0;
+	left: 25vw;
+	height: 100%;
+	width: 100%;
+	background-color: #F5F7FA;
+}
+
+.cloud_profile img {
+	position: absolute;
+	left: 10%;
+	top: 25%;
+	width: 45vw;
+	height: auto;
+}
+
+.cloud_profile {
+	z-index: 1;
+}
+
+.picture_profile {
+	position: absolute;
+	width: 15vw;
+	height: 15vw;
+	z-index: 9;
+	margin-left: 17%;
+	margin-top: 5%;
+}
+
+.year_email_profile {
+	position: absolute;
+	margin-top: 5%;
+	margin-left: 50%;
+	font-family: "Segoe UI";
+	font-size: 1.5vw;
+	color: #707070;
+}
+
+.DUT {
+	font-family: "Fjalla One";
+	font-weight: bold;
+	font-size: 2.5vw;
+}
+
+.stats_profile {
+	position: absolute;
+	margin-top: 20%;
+	margin-left: 70%;
+	font-family: "Fjalla One";
+	font-size: 4vw;
+	color: #254463;
+}
+
+.name_profile {
+	position: absolute;
+	margin-top: 12%;
+	margin-left: 40%;
+	font-family: "Fjalla One";
+	font-size: 3vw;
+	color: #F05228;
+	z-index: 9;
+}
+
+.adj_profile {
+	position: absolute;
+	margin-top: 21%;
+	margin-left: 19%;
+	font-family: "Fjalla One";
+	font-size: 2.5vw;
+	color: #707070;
+	z-index: 9;
+}
+
+.description_profile {
+	width: 30%;
+	text-align: center;
+	position: absolute;
+	margin-top: 27%;
+	margin-left: 17%;
+	font-family: "Segoe UI";
+	font-size: 1vw;
+	color: #707070;
+	z-index: 9;
+}
+
+
+/***************************************Match**********************************************/
+
+.match_container {
+	position: absolute;
+	width: 60vw;
+	height: 40vw;
+	top: 40%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.match_slogan {
+	font-family: "Fjalla One";
+	font-size: 4vw;
+	color: #4152BC;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.match_pic_top {
+	position: absolute;
+	width: 12vw;
+	height: 12vw;
+	left: 49%;
+	bottom: 40%;
+}
+
+.match_pic_bot {
+	position: absolute;
+	width: 15vw;
+	height: 15vw;
+	left: 29%;
+	bottom: 4%;
+}
+
+.match_continue img {
+	position: absolute;
+	width: 20vw;
+	height: auto;
+	left: 15%;
+	top: 10%;
+}
+
+.match_talk img {
+	position: absolute;
+	width: 15vw;
+	height: auto;
+	left: 0%;
+	top: 50%;
+}
+
+.match_continue a:hover {
+	cursor: crosshair;
+}
+
+.match_pic_top a:hover {
+	cursor: crosshair;
+}
+
+.match_talk:hover {
+	cursor: crosshair;
+}
+
+.match_pic_bot:hover {
+	cursor: crosshair;
+}
+
+
+/*********************************Forgot password**************************************/
+
+.title_logo_password {
+	margin-bottom: 6vw;
+	transform: scale(1.5);
+	text-align: center;
+}
+
+.text_password {
+	font-size: 1vw;
+	margin-bottom: 2vw;
+}
+
+.passwd_etu {
+	margin-bottom: 2vw;
+}
+
+.register_conf_psw_mail {
+	margin-left: 0;
+}
+
+.psw_size {
+	font-size: 1vw;
+}
+
+.psw_size2 {
+	font-size: 1.2vw;
+}

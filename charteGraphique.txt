@@ -1,6 +1,6 @@
 couleurs
 
-#F5F7FA		bleu claire
+#E6F0F5		bleu claire
 #F05228		orange
 #F5F7FA		bleu blanc
 #707070		gris

@@ -1,8 +1,30 @@
 * {
-    margin:0;
-    padding:0;
+	margin: 0;
+	padding: 0;
 }
 
-html, body {
-    height:100%;
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	background-color: #F5F7FA;
+}
+
+.row {
+	height: 100%;
+}
+
+.img_profile img {
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	width: 100%;
+	height: auto;
+}
+
+.img_profile {
+	border-radius: 50%;
+	overflow: hidden;
 }
