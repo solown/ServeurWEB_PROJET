@@ -81,17 +81,20 @@ function verifForm(e) {
 }
 
 function verifFormForgot(e) {
-
-	var mailOk = checkMail(document.getElementById("mail"));
-	if (mailOk)
-		return;
-	else {
-		alert("Veuillez entrer la partie gauche de votre adresse étudiante");
-		e.preventDefault();
+	var passwd = document.getElementByName("passwd");
+	var passwdOK = checkPassword(passwd);
+	if (passwdOK){
+		var request = new XMLHttpRequest();
+		var token = document.getElementByName("token");
+		request.open("POST", "../controller/change_passwd.php", true);
+		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.send("passwd=" + passwd + "&token" + token);
 	}
 
-
+	}
 }
+
 var form = document.getElementById("formsignup");
 form.addEventListener('submit', function () {
 	form.submit.disabled = true;
