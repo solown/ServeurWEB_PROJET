@@ -13,7 +13,7 @@ if(!isset($_SESSION['id']))
 		<title>Update profile</title>
 		<!--		<CSS>				-->
 		<link rel="stylesheet" href="../styles/main.css">
-		<link rel="stylesheet" href="../styles/updateprofile.css">
+		<link rel="stylesheet" href="../styles/signup_login.css">
 		<!--		<font>				-->
 		<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
@@ -52,6 +52,16 @@ if(!isset($_SESSION['id']))
 			<div class="description_profile">
 				<?php echo htmlspecialchars($description); ?>
 			</div>
+			<input id="inputresume" name="resumestudent" placeholder="Décris toi ici, n'hésite pas à dire ce que tu aimes ou ce que tu cherches sur notre app :)" type="textarea"
+					maxlength="280" >
+			</input>
+			<div class="buttonupdate" onclick="update()">
+			</div>
+			<input class="buttonconfirm" name="updatedescribe" onclick="confirm()" type="submit" value="">
+			</input>
+			<input class="cancelupdate" name="N_cancelupdate" onclick="cancel()" value=""></input>
+			</form>
+		<script src="../scripts/updateprofile.js"></script>
 		</form>
 	</body>
 
