@@ -49,6 +49,7 @@ if($db) {
 		$statement->bindvalue(':newDescription',$newDescription);
 		$statement->bindvalue(':id', $id);
 		$statement -> execute();
+		header('Location:http://tinder.student.elwinar.com/view/updateprofile.php')
 	}
 }
 
