@@ -54,10 +54,12 @@ if($db) {
 }
 if(isset($_FILES["fileToUpload"])){
 	$target_dir = "../images/images_student/";
-	$target_file = $target_dir . preg_replace('#[^\pL\pN\./-]+#', '', $student->getEmail());
+	$file_type = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$imageFileType = strtolower(pathinfo($file_type,PATHINFO_EXTENSION));
+	$target_file = $target_dir . preg_replace('#[^\pL\pN\./-]+#', '', $student->getEmail()).".".imageFileType;
 	$uploadOk = 1;
 	$errorMessages = [];
-	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+	
 	// Check if image file is a actual image 
 	if(isset($_POST["submit"])) {
 		$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
