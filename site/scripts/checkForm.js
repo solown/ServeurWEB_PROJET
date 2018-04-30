@@ -81,15 +81,18 @@ function verifForm(e) {
 }
 
 function verifFormForgot(e) {
-	var passwd = document.getElementByName("passwd");
+	var passwd = document.getElementsByName("passwd");
 	var passwdOK = checkPassword(passwd);
 	if (passwdOK){
 		var request = new XMLHttpRequest();
-		var token = document.getElementByName("token");
+		var token = document.getElementsByName("token");
 		request.open("POST", "../controller/change_passwd.php", true);
 		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		xhttp.send("passwd=" + passwd + "&token" + token);
+	}
+	else {
+		return false;
 	}
 
 	}
