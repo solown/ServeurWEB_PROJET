@@ -7,7 +7,7 @@ if(!isset($_SESSION['id']))
 
 include("../model/updateprofile.php"); 
 
-//echo htmlspecialchars($student->getPic()); 
+
 ?>
 	<!DOCTYPE html>
 	<html lang="fr">
@@ -35,7 +35,7 @@ include("../model/updateprofile.php");
 		<div class="back"></div>
 		<form action="upload.php" id="imageForm" method="post" enctype="multipart/form-data">
 			<label for="fileToUpload">
-					<div class="picture_profile img_profile modify-image"><img src="../images/images_student/alice.png" alt=""></div>
+					<div class="picture_profile img_profile modify-image"><img src="<?php echo htmlspecialchars($student->getPic()); ?>" alt=""></div>
  			</label>
 			<input type="file" name="fileToUpload" id="fileToUpload">
 		</form>

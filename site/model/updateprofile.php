@@ -56,7 +56,7 @@ if($db) {
 	$target_dir = "../images/images_student/";
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
-	$errorMessages = []
+	$errorMessages = [];
 	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 	// Check if image file is a actual image 
 	if(isset($_POST["submit"])) {
