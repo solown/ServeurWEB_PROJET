@@ -47,10 +47,8 @@ function mailexist(){
 			xhttp.send("mail=" + mail);
 			console.log("end");
 			return false;
-			}
-	}
-
 }
+
 
 function checkPassword(field) {
 	if (field.value.length < 8) {
