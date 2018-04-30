@@ -32,10 +32,12 @@
 										<input type="text" name="mail" id="mail" onblur="checkMail(this)"></input>
 									</div>
 									<div class="inline etu">@etu.parisdescartes.fr</div>
-									<p id="error_message"> Ce mail existe déjà !</p>
+									<p class="error_message" id="mail_already_exist"> Ce mail exite déjà !</p>
+									<p class="error_message" id="mail_not_valid">Adresse mail invalide !</p>
 								</div>
 								<div>
 									<div class="space_top"><label>Password</label></div>
+									<p class="error_message" id="password_not_valid"></p>
 									<input type="password" name="password" id="password" placeholder="8 characters required" onblur="checkPassword(this)"></input><br>
 								</div>
 								<div>

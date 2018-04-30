@@ -9,6 +9,7 @@ function checkMail(field) {
 	var regex = /^[a-z]+\.[a-z]+[0-9]*$/;
 	if (!regex.test(field.value)) {
 		highlight(field, true);
+		document.getElementById("mail_not_valid").style.display = "block";
 		return false;
 	} else {
 		highlight(field, false);
@@ -20,6 +21,7 @@ function checkMail(field) {
 function checkPassword(field) {
 	if (field.value.length < 8) {
 		highlight(field, true);
+		document.getElementById("password_not_valid").style.display = "block";
 		return false;
 	} else {
 		highlight(field, false);
@@ -35,11 +37,6 @@ function verifForm(e) {
 	if (passwordOK && mailOk){
 		return true;
 	}
-	else {
-		alert("8 caractères MINIMUM pour le mot de passe et veuillez entrer la partie gauche de votre adresse étudiante");
-		e.preventDefault();
-	}
-
 }
 
 function verifFormForgot(e) {
@@ -62,7 +59,3 @@ var form = document.getElementById("form_login");
 form.addEventListener('submit', function () {
 	form.submit.disabled = true;
 });
-
-
-
-
