@@ -25,7 +25,17 @@ function mailexist(){
 				if(this.readyState == 4 && this.status == 200){
 					if(this.responseText == "NOK"){
 						console.log("exist");
-						return true;
+						var request = new XMLHttpRequest();
+						request.open("POST", "../controller/forgot_passwd.php", true);
+						request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+						var mail = document.getElementsByName("mail")[0].value;
+						request.send("mail=" + mail);
+						request.onreadystatechange = function(){
+							if(request.readyState == 4){
+								console.log("final if")
+								window.location.href="../view/forgot_passwd_sent.php?mail="+mail;
+							}
+						}
 					}
 					else {
 						console.log("mail don't exist");
@@ -45,10 +55,8 @@ function mailexist(){
 			xhttp.send("mail=" + mail);
 			console.log("end");
 			return false;
-			}
-	}
-
 }
+
 
 function checkPassword(field) {
 	if (field.value.length < 8) {
