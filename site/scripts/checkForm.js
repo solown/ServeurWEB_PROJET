@@ -93,7 +93,7 @@ function verifFormForgot(e) {
 	}
 
 	}
-}
+
 
 var form = document.getElementById("formsignup");
 form.addEventListener('submit', function () {
