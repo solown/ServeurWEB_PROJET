@@ -5,7 +5,8 @@ if(!isset($_SESSION['id']))
     header('Location: ../view/logout.php');
 }
 
-require("../model/updateprofile.php"); ?>
+//require("../model/updateprofile.php"); 
+?>
 	<!DOCTYPE html>
 	<html lang="fr">
 
