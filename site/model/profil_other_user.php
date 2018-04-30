@@ -16,7 +16,7 @@ if($db) {
 	$student = new Student($row['surname'], $row['description'], $row['adj1'], $row['adj2'], $row['adj3'], $row['year'], $row['email'], $row['pic']);
 
 
-	if ($yearstudent == 2){
+	if ($student->getYear() == 2){
 		$sql = "SELECT count(*) FROM match WHERE id_student_god_father =:id and result = true";
 		$result = $db->prepare($sql);
 		$result -> bindvalue(':id',$id);
@@ -26,7 +26,7 @@ if($db) {
 			$god_son_exist = $row['statement'];
 		}*/
 	}
-	else if($yearstudent==1){
+	else if($student->getYear()==1){
 		$sql = "SELECT COUNT (*) from match WHERE id_student_god_son =:id and result = true";
 		$result = $db->prepare($sql);
 		$result -> bindvalue(':id',$id);
