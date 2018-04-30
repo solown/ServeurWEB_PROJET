@@ -24,12 +24,16 @@ function mailexist(){
 			xhttp.onreadystatechange = function(){
 				if(this.readyState == 4 && this.status == 200){
 					if(this.responseText == "NOK"){
+						console.log("exist");
 						var request = new XMLHttpRequest();
 						request.open("POST", "../controller/forgot_passwd.php", true);
 						request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 						var mail = document.getElementsByName("mail")[0].value;
 						request.send("mail=" + mail);
-						console.log("exist");
+						if(request.readyState == 4){
+							console.log("final if")
+							window.location.href="../view/forgot_passwd_sent.html";
+						}
 						return true;
 					}
 					else {
