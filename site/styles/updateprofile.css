@@ -81,6 +81,14 @@
 	color : white;
 	background : none;
 }
+#picstudent{
+	position: absolute;
+	width: 15vw;
+	height: 15vw;
+	z-index: 9;
+	margin-left: 17%;
+	margin-top: 5%;
+}
 #background{
 	background-image : url(../images/cloud.svg);
 	width:75%;
@@ -88,7 +96,7 @@
 	background-repeat :  no-repeat;
 	margin-left : 10%;
 	position:absolute;
-	z-index:1;
+	z-index:0;
 }
 .name{
 	z-index:2; 
