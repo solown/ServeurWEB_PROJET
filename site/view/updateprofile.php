@@ -68,7 +68,7 @@ include("../model/updateprofile.php");
 			<img class="confirm" src="../images/checked.png" alt="edit">
 			<img class="cancel" src="../images/cancel-button-3.png" alt="edit">
 		</div>
-		<?php foreach $errorMessages as $errorMessage; ?>
+		<?php foreach ($errorMessages as $errorMessage); ?>
 		<p>
 			<?= $errorMessage ?>
 		</p>
