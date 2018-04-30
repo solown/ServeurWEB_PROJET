@@ -30,11 +30,12 @@ function mailexist(){
 						request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 						var mail = document.getElementsByName("mail")[0].value;
 						request.send("mail=" + mail);
-						if(request.readyState == 4){
-							console.log("final if")
-							window.location.href="../view/forgot_passwd_sent.html";
+						request.onreadystatechange = function(){
+							if(request.readyState == 4){
+								console.log("final if")
+								window.location.href="../view/forgot_passwd_sent.html";
+							}
 						}
-						return true;
 					}
 					else {
 						console.log("mail don't exist");
