@@ -41,10 +41,9 @@ if($db) {
 		$result->execute();
 		$match = $result->fetchColumn();
 	}
-
-}
-if(isset($_POST['description'])){
-	if(!empty($_POST['description'])){
+	
+	if(isset($_POST["description"])){
+	if(!empty($_POST["description"])){
 		$newDescription = $_POST['description'];
 		$query = "UPDATE student SET description = :newDescription WHERE id_student = :id";
 		$statement = $db->prepare($query);
@@ -52,6 +51,9 @@ if(isset($_POST['description'])){
 		$statement->bindvalue(':id', $id);
 		$statement -> execute();
 	}
+}
+
+
 }
 
 //
