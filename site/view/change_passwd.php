@@ -22,7 +22,7 @@
 						<div class="title_logo_password">
 							<div><img src="../images/set_up_new_psd.png" class="cloud2"></div>
 						</div>
-						<p class="psw_size2">Ecrit ton nouveau mot de passe pour
+						<p class="psw_size2">Ecris ton nouveau mot de passe pour
 						</p>
 						<span class="purple psw_size"><?= $_GET['mail'] ?></span>
 						<span class="register_conf_psw_mail psw_size">@etu.parisdescartes.fr</span>

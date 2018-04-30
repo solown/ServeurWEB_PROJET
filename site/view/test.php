@@ -31,8 +31,8 @@
 
 		<div class="col-4">
 			<div class="title_logo">
-				<h1>Who are you ?</h1>
-				<h3>Click on what describes you the best !</h3>
+				<h1>Qui es-tu  ?</h1>
+				<h3>Clique sur ce qui te décris le mieux!</h3>
 			</div>
 			<form method="POST" action="../model/add_adjs.php">
 				<input class="adj-input" type="text" name="adj1" onkeypress="return false"></input>

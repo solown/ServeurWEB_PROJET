@@ -43,7 +43,7 @@
 								</div>
 								<div>
 									<div class="inline etu2"><input type="checkbox" name="keeplog" id="keeplog">
-										<label for="keeplog"><span>Rester connecté</span></label>
+										<label for="keeplog"><span>Restez connecté</span></label>
 									</div>
 									<div class="inline etu2 maxW">
 										<a href="forgot_passwd.html">Mot de passe oublié ?</a>

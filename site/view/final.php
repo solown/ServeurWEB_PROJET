@@ -39,7 +39,7 @@ if(!isset($_SESSION['id']))
 
 			<div class="col-3 offset-6 final_section">
 				<!--lien vers le profil-->
-				<div class="final_title"><a href="#">fieul</a></div>
+				<div class="final_title"><a href="#">filleul</a></div>
 				<!--ou fieule selon le profil-->
 				<div><img src="../images/magne.png" alt=""></div>
 			</div>

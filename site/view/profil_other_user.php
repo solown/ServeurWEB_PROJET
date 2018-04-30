@@ -45,7 +45,7 @@ require("../model/profil_other_user.php"); ?>
 		<div class="stats_profile">
 			<div>
 				<?php echo($match); ?> matchs</div>
-			<div>0 parainage</div>
+			<div>0 parrainage</div>
 		</div>
 		<div class="name_profile">
 			<?php echo($student->getSurname()); ?>

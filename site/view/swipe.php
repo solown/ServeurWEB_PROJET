@@ -67,10 +67,10 @@ if(!isset($_SESSION['id'])) {
 					<div><img src="../images/sad_student.svg" alt="no more profile"></div>
 				</div>
 				<div class="no_more_profile_sorry">
-					You have already seen all the profiles you can.
+					Vous avez déjà vu tous les profiles que vous pouviez voir.
 				</div>
 				<div class="swipe_more_btn">
-					<div><a href="swipe.php">Show me again</a></div>
+					<div><a href="swipe.php">Voir encore</a></div>
 				</div>
 			</div>
 			<div class="col-3 swipe_icon yes">
