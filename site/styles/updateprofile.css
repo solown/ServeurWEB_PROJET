@@ -58,19 +58,10 @@
 	font-family : "Open Sans Condensed";
 	font-size: 160%;
 }
-.image{
-    position: absolute;
-	width: 15vw;
-	height: 15vw;
-	z-index: 9;
-	margin-left: 17%;
-	margin-top: 5%;
-	
-}
 
 .input_btn{
-	width:15vw;
-	height:15vw;
+	width:13vw;
+	height:13vw;
 	margin-left: 17%;
 	margin-top: 5%;
 	display : none;
@@ -88,6 +79,7 @@
 	z-index: 9;
 	margin-left: 17%;
 	margin-top: 5%;
+	border-radius : 100%;
 }
 #background{
 	background-image : url(../images/cloud.svg);
@@ -96,7 +88,7 @@
 	background-repeat :  no-repeat;
 	margin-left : 10%;
 	position:absolute;
-	z-index:0;
+	z-index:-1;
 }
 .name{
 	z-index:2; 

@@ -34,12 +34,9 @@ if(!isset($_SESSION['id']))
 			<h2> 0 filleule </h2>
 		</div>
 		<div id="present">
-
-			<div class="image">
 				<?php echo '<img id="picstudent" src="'.$picstudent.'" alt=""/>'?> 
 				<input class="input_btn" name="upload_pic" type="file" >
 				</input>
-			</div>
 			<div id="background">
 			</div>
 			<div class="name">
