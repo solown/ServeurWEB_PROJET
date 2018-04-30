@@ -95,6 +95,7 @@ function verifFormForgot(e) {
 				console.log("final if")
 				window.location.href="../view/passwd_changed.php";
 			}
+		}
 	}
 	else {
 		return false;
