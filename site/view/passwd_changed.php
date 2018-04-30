@@ -20,7 +20,7 @@
 				<div class="col-6 offset-3 ">
 					<div class="formulaire">
 						<div class="title_logo">
-							<div><img src="../images/all_good.jpeg" class="cloud2"></div>
+							<div><img src="../images/all_good.jpg" class="cloud2"></div>
 						</div>
 						<div>
 							<form method="post" id="form_login" onsubmit="return login()">
