@@ -58,30 +58,28 @@
 	font-family : "Open Sans Condensed";
 	font-size: 160%;
 }
-.image{
-    overflow:hidden;
-    -webkit-border-radius:50px;
-    -moz-border-radius:50px;
-    border-radius:50px;
-	 -webkit-filter: grayscale(100%);/* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-	width:100%;
-	height:auto;
-	background-size:cover;
-	position : absolute;
-	background-repeat : no-repeat;
-	margin-left : 17%;
-	
-}
 
 .input_btn{
-	-webkit-border-radius:50px;
-    -moz-border-radius:50px;
-    border-radius:50px;
-	width:100%;
-	height:100%;
+	width:13vw;
+	height:13vw;
+	margin-left: 17%;
+	margin-top: 5%;
 	display : none;
 	background-image : url(../images/add.png);
+	background-repeat : no-repeat !important;
+	z-index : 9;
+	border:none;
+	color : white;
+	background : none;
+}
+#picstudent{
+	position: absolute;
+	width: 15vw;
+	height: 15vw;
+	z-index: 9;
+	margin-left: 17%;
+	margin-top: 5%;
+	border-radius : 100%;
 }
 #background{
 	background-image : url(../images/cloud.svg);
