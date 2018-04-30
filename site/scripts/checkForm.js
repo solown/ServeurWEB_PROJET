@@ -90,6 +90,11 @@ function verifFormForgot(e) {
 		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		request.send("passwd=" + passwd + "&token" + token);
+		request.onreadystatechange = function(){
+			if(request.readyState == 4){
+				console.log("final if")
+				window.location.href="../view/passwd_changed.php";
+			}
 	}
 	else {
 		return false;
