@@ -35,7 +35,7 @@ include("../model/updateprofile.php");
 		<div class="back"></div>
 		<form action="#" id="imageForm" method="post" enctype="multipart/form-data">
 			<label for="fileToUpload">
-					<div class="picture_profile img_profile modify-image"><img src="<?php echo htmlspecialchars($student->getPic()); ?>" alt=""></div>
+					<div class="picture_profile img_profile modify-image"><div class="hover_modify">Modifier la photo</div><img src="<?php echo htmlspecialchars($student->getPic()); ?>" alt=""></div>
  			</label>
 			<input type="file" name="fileToUpload" id="fileToUpload">
 		</form>

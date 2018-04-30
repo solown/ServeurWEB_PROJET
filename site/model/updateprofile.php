@@ -84,6 +84,7 @@ if(isset($_FILES["fileToUpload"])){
 	if ($uploadOk == 1)  {
 		if(file_exists($target_file)){
 			unlink($target_file);
+			
 		}
 		move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 		header('Location:http://tinder.student.elwinar.com/view/updateprofile.php');
