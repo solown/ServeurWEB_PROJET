@@ -52,7 +52,7 @@ if($db) {
 		header('Location:http://tinder.student.elwinar.com/view/updateprofile.php');
 	}
 }
-if(isset($_FILES)){
+if(isset($_FILES["fileToUpload"])){
 	$target_dir = "../images/images_student/";
 	$target_file = $target_dir . preg_replace('#[^\pL\pN\./-]+#', '', $student->getEmail());
 	$uploadOk = 1;
