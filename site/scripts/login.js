@@ -1,3 +1,6 @@
+const MAX_TRIES = 5;
+var tries = 0;
+
 function login() {
 	var xhttp = new XMLHttpRequest();
 	console.log("we are in login.js");
@@ -17,7 +20,10 @@ function login() {
 			else {
 				highlight(document.getElementsByName("mail")[0], true);
 				highlight(document.getElementsByName("password")[0], true);
+				++tries;
 			}
+			if(tries >= MAX_TRIES)
+				window.location.href = "../view/forgot_passwd.html";
 		}
 	};
 
