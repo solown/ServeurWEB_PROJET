@@ -111,3 +111,8 @@ var form = document.getElementById("form_login");
 form.addEventListener('submit', function () {
 	form.submit.disabled = true;
 });
+
+var form = document.getElementById("form_changepasswd");
+form.addEventListener('submit', function () {
+	form.submit.disabled = true;
+});
