@@ -33,7 +33,7 @@ function mailexist(){
 						request.onreadystatechange = function(){
 							if(request.readyState == 4){
 								console.log("final if")
-								window.location.href="../view/forgot_passwd_sent.html";
+								window.location.href="../view/forgot_passwd_sent.html?mail="+mail;
 							}
 						}
 					}
