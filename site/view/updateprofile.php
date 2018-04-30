@@ -6,6 +6,8 @@ if(!isset($_SESSION['id']))
 }
 
 include("../model/updateprofile.php"); 
+
+//echo htmlspecialchars($student->getPic()); 
 ?>
 	<!DOCTYPE html>
 	<html lang="fr">
@@ -31,7 +33,13 @@ include("../model/updateprofile.php");
 			<a href="../view/logout.php" class="menu_inactive">log out</a>
 		</div>
 		<div class="back"></div>
-		<div class="picture_profile img_profile"><img src="<?php echo htmlspecialchars($student->getPic()); ?> " alt=""></div>
+		<form action="upload.php" id="imageForm" method="post" enctype="multipart/form-data">
+			<label for="fileToUpload">
+					<div class="picture_profile img_profile modify-image"><img src="../images/images_student/alice.png" alt=""></div>
+ 			</label>
+			<input type="file" name="fileToUpload" id="fileToUpload">
+		</form>
+
 		<div class="cloud_profile"><img src="../images/cloud.svg" alt=""></div>
 		<div class="year_email_profile">
 			<span class="DUT">DUT
@@ -60,6 +68,11 @@ include("../model/updateprofile.php");
 			<img class="confirm" src="../images/checked.png" alt="edit">
 			<img class="cancel" src="../images/cancel-button-3.png" alt="edit">
 		</div>
+		<?php foreach $errorMessages as $errorMessage; ?>
+		<p>
+			<?= $errorMessage ?>
+		</p>
+		<?php end foreach; ?>
 
 		<script src="../scripts/updateprofile.js"></script>
 	</body>

@@ -52,6 +52,42 @@ if($db) {
 		header('Location:http://tinder.student.elwinar.com/view/updateprofile.php');
 	}
 }
+	
+	$target_dir = "../images/images_student/";
+	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$uploadOk = 1;
+	$errorMessages = []
+	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+	// Check if image file is a actual image 
+	if(isset($_POST["submit"])) {
+		$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+		if($check !== false) {
+			$uploadOk = 1;
+		} else {
+			$errorMessages += "Le fichier choisi n'est pas une image";
+			$uploadOk = 0;
+		}
+	}
+	// Check file size
+	if ($_FILES["fileToUpload"]["size"] > 2000000) {
+		$errorMessages += "La taille maximale autorisée est de 2Mb";
+		$uploadOk = 0;
+	}
+	// Allow certain file formats
+	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
+		$errorMessages += "Seuls les fichiers JPG, JPEG et PNG sont autorisés";
+		$uploadOk = 0;
+	}
+	// Check if $uploadOk is set to 0 by an error
+	if ($uploadOk == 1)  {
+		move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+		header('Location:http://tinder.student.elwinar.com/view/updateprofile.php');
+		$query = "UPDATE student SET pic = :image WHERE id_student = :id";
+		$statement = $db->prepare($query);
+		$statement->bindvalue(':image', $target_file);
+		$statement->bindvalue(':id', $id);
+		$statement -> execute();
+	}
 
 
 }

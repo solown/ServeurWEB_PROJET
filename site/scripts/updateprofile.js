@@ -4,7 +4,8 @@ const cancel = document.querySelector('.cancel')
 const newDescription = document.querySelector('.new_description')
 const oldDescription = document.querySelector('.old_description')
 const form = document.querySelector('#changeDescription')
-
+const imageForm = document.querySelector('#imageForm')
+const fileUploaded = document.getElementById("fileToUpload")
 
 edit.addEventListener('click', () => {
 	edit.style.display = 'none'
@@ -30,3 +31,7 @@ cancel.addEventListener('click', () => {
 	newDescription.value = ''
 
 })
+
+fileUploaded.onchange = function () {
+	imageForm.submit();
+};
