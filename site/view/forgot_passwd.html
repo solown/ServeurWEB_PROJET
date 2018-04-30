@@ -24,17 +24,18 @@
 						</div>
 						<p class="text_password">Enter your email, so we can send you a link to setup a new password</p>
 						<div>
-							<form method="POST" action="../controller/forgot_passwd.php" id="formsignup" onsubmit=" return veriFormForgot(this)">
+							<form method="POST" action="../controller/forgot_passwd.php" id="formsignup" onsubmit="return mailexist()">
 								<div>
 									<div class="space_top">
 										<label>Email</label>
 									</div>
 									<div class="inline">
-										<input type="text" name="mail" onblur="checkMail(this)"></input>
+										<input type="text" name="mail"></input>
 									</div>
 									<div class="inline etu passwd_etu">
 										@etu.parisdescartes.fr
 									</div>
+									<div class="error_message" id="mail_dont_existe">Adresse mail inconnu</div>
 								</div>
 								<div>
 									<input type="submit" value="Validate"></input>
