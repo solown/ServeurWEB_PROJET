@@ -88,8 +88,8 @@ function verifFormForgot(e) {
 		var passwd = document.getElementsByName("passwd");
 		request.open("POST", "../controller/change_passwd.php", true);
 		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		xhttp.send("passwd=" + passwd + "&token" + token);
+		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		request.send("passwd=" + passwd + "&token" + token);
 	}
 	else {
 		return false;
